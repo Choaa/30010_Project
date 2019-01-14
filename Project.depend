@@ -211,7 +211,7 @@
 
 1547217108 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\charset.h
 
-1547220928 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\lcd.c
+1547460759 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\lcd.c
 	"lcd.h"
 	<string.h>
 
@@ -237,7 +237,7 @@
 1547217108 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\system_stm32f30x.c
 	"stm32f30x.h"
 
-1547220827 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
+1547470603 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -247,11 +247,11 @@
 	"input.h"
 	<string.h>
 
-1547221489 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\input.c
+1547461608 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\input.c
 	"lcd.h"
 	<string.h>
 
-1547219766 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\input.h
+1547221090 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\input.h
 	"stm32f30x_conf.h"
 	"charset.h"
 	<stdio.h>
