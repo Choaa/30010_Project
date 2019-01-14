@@ -1,0 +1,37 @@
+#include "lcd.h"
+#include <string.h>
+
+// Check if w is pressed
+int check_w(char *in) {
+    char w[1] = "w";
+    int cmp = strncmp(in,w,1);
+    return cmp;
+}
+
+// Check if a is pressed
+int check_a(char *in) {
+    char a[1] = "a";
+    int cmp = strncmp(in,a,1);
+    return cmp;
+}
+
+// Check if s is pressed
+int check_s(char *in) {
+    char s[1] = "s";
+    int cmp = strncmp(in,s,1);
+    return cmp;
+}
+
+// Check if d is pressed
+int check_d(char *in) {
+    char d[1] = "d";
+    int cmp = strncmp(in,d,1);
+    return cmp;
+}
+
+// Check if r is pressed
+int check_r(char *in) {
+    char r[1] = "r";
+    int cmp = strncmp(in,r,1);
+    return cmp;
+}

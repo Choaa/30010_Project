@@ -89,6 +89,12 @@
 		<Unit filename="cmsis\core_cm4_simd.h" />
 		<Unit filename="cmsis\core_cmFunc.h" />
 		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="inc\30010_io.h" />
+		<Unit filename="inc\ansi.h" />
+		<Unit filename="inc\charset.h" />
+		<Unit filename="inc\input.h" />
+		<Unit filename="inc\lcd.h" />
+		<Unit filename="inc\mc_io.h" />
 		<Unit filename="inc\stm32f30x.h" />
 		<Unit filename="inc\stm32f30x_conf.h" />
 		<Unit filename="inc\system_stm32f30x.h" />
@@ -181,7 +187,25 @@
 		<Unit filename="SPL\src\stm32f30x_wwdg.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\30010_io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\ansi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\charset.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\mc_io.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\startup_stm32f30x.S">

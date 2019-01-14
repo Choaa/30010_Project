@@ -7,7 +7,7 @@
 #include <string.h>
 
 void lcd_write_string(char str[], uint8_t* buffer, int slice, int line);
-void lcd_draw_hearts(int amount, uint8_t* buffer, int pos, int row);
-
+void lcd_draw_hearts(int amount, uint8_t* buffer, int pos, int row, int player);
+void lcd_draw_missiles(int amount, uint8_t* buffer, int pos, int row, int player);
 
 #endif /*! _LCD_H_ */
