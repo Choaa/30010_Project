@@ -18,72 +18,14 @@
 #include "charset.h"
 #include "lcd.h"
 #include "input.h"
+#include "motion.h"
+#include "LUT.h"
 #include <string.h>
 
 #define ESC 0x1B
 
-struct spaceship {
-    int x,y,vx,vy;
-};
+int main(void) {
 
-void initship(struct spaceship *s) {
-    s->x = 20;
-    s->y = 20;
-    s->vx = 0;
-    s->vy = 0;
-}
-
-void shipspeed(struct spaceship *s, int dir) {
-    if (dir == 1) {
-        int vx = s->vx + 1;
-        if (vx < 3)
-            s->vx = vx;
-    }
-    else if (dir == 2) {
-        int vx = s->vx - 1;
-        if (vx > -3)
-            s->vx = vx;
-    }
-    else if (dir == 3) {
-        int vy = s->vy + 1;
-        s->vy = vy;
-        if (vy < 3)
-            s->vy = vy;
-    }
-    else if (dir == 4) {
-        int vy = s->vy - 1;
-        if (vy > -3)
-            s->vy = vy;
-    }
-}
-
-void shippos(struct spaceship *s) {
-        int x = s->x + s->vx * 1;
-        int y = s->y + s->vy * 1;
-        if (x < 300)
-            s->x = x;
-        else if (x > 300)
-            s->x = 2;
-        if (y < 100)
-            s->y = y;
-        else if (y > 100)
-            s->y = 2;
-}
-
-void drawship(struct spaceship *s) {
-    printf("%c[%d;%dH",ESC,s->y,s->x);
-    printf("%c",169);
-    printf("%c[H",ESC);
-}
-
-void clearship(struct spaceship *s) {
-    printf("%c[%d;%dH",ESC,s->y,s->x);
-    printf("%c",32);
-    printf("%c[H",ESC);
-}
-
-int main(void)
-{
     uart_init(115200);
     uart_clear();
 
@@ -98,13 +40,23 @@ int main(void)
     int missiles1 = 3;
     int missiles2 = 3;
 
-    windowbasic(1,1,301,101,1);
+    struct TVector shipangle = { 1,0 };
 
     struct spaceship myspaceship;
+    struct projectile projectile;
+    struct projectile bomb;
 
-    initship(&myspaceship);
+    shipinit(&myspaceship);
 
-    while(1){
+    initVector(&shipangle);
+
+    int angle = 360;
+
+    shipdraw(&myspaceship,angle);
+
+    windowbasic(1,1,1199,359,1);
+
+    while(1) {
 
     // Create array that reads last pressed key
     char input[2];
@@ -114,25 +66,70 @@ int main(void)
     // Check if the current pressed key is w / a / s / d
     int cmpw = check_w(input);
     if (cmpw == 0) {
-        shipspeed(&myspaceship,4);
+        shipclear(&myspaceship,angle);
+        shippos(&myspaceship,&shipangle,0);
+        shipdraw(&myspaceship,angle);
     }
 
     int cmpa = check_a(input);
     if (cmpa == 0) {
-        shipspeed(&myspaceship,2);
-    }
+        /*
+        shipclear(&myspaceship);
+        shippos(&myspaceship,2);
+        */
+        shipclear(&myspaceship,angle);
+        angle -= 15;
+        if (angle == 0)
+            angle = 360;
+        if (angle == 375)
+            angle = 15;
 
+        rotVector(&shipangle,angle);
+        shipdraw(&myspaceship,angle);
+    }
     int cmps = check_s(input);
     if (cmps == 0) {
-        shipspeed(&myspaceship,3);
+        shipclear(&myspaceship,angle);
+        shippos(&myspaceship,&shipangle,1);
+        shipdraw(&myspaceship,angle);
     }
-
     int cmpd = check_d(input);
     if (cmpd == 0) {
-
-        shipspeed(&myspaceship,1);
+        /*
+        shipclear(&myspaceship);
+        shippos(&myspaceship,1);
+        */
+        shipclear(&myspaceship,angle);
+        angle += 15;
+        if (angle == 0)
+            angle = 360;
+        if (angle == 375)
+            angle = 15;
+        rotVector(&shipangle,angle);
+        shipdraw(&myspaceship,angle);
     }
 
+    /*
+    int cmpspace = check_space(input);
+    if (cmpspace == 0) {
+        bulletinit(&myspaceship,&projectile);
+    }
+
+    int cmpv = check_v(input);
+    if (cmpv == 0) {
+        bulletinit(&myspaceship,&bomb);
+        missiles1--;
+    }
+    */
+    bulletclear(&bomb);
+    bombdraw(&bomb);
+
+    bulletclear(&projectile);
+    bulletpos(&projectile,&shipangle);
+    bulletdraw(&projectile);
+
+
+    /*
     int cmpr = check_r(input);
     if (cmpr == 0) {
         life1 = 3;
@@ -140,7 +137,7 @@ int main(void)
         missiles1 = 3;
         missiles2 = 3;
     }
-
+    */
     // Fill the LCD with 0 (Clearing it)
     memset(buffer,0x00,512);
 
@@ -154,8 +151,19 @@ int main(void)
     lcd_draw_hearts(life2,buffer,120,2,2);
     lcd_draw_missiles(missiles2,buffer,120,3,2);
 
+    // Draw angle
+    char ang[50];
+    sprintf(ang, "%d",angle);
+    lcd_write_string(ang,buffer,52,3);
 
-    // Test timer
+    // Draw to the LCD
+    lcd_push_buffer(buffer);
+
+    }
+}
+
+/*
+// Test timer
     char hundsec[50];
     int hs = get_hs();
     sprintf(hundsec,"%02d", hs);
@@ -172,15 +180,4 @@ int main(void)
     lcd_write_string(second,buffer,16+a,4);
     lcd_write_string(".",buffer,27+a,4);
     lcd_write_string(hundsec,buffer,31+a,4);
-
-    if (hs % 1 == 0) {
-    clearship(&myspaceship);
-    shippos(&myspaceship);
-    drawship(&myspaceship);
-    }
-
-    // Draw to the LCD
-    lcd_push_buffer(buffer);
-
-    }
-}
+*/

@@ -4,7 +4,7 @@
 // Check if w is pressed
 int check_w(char *in) {
     char w[1] = "w";
-    int cmp = strncmp(in,w,1);
+    int cmp = strncmp(in,"w",1);
     return cmp;
 }
 
@@ -33,5 +33,18 @@ int check_d(char *in) {
 int check_r(char *in) {
     char r[1] = "r";
     int cmp = strncmp(in,r,1);
+    return cmp;
+}
+
+int check_v(char *in) {
+    char v[1] = "v";
+    int cmp = strncmp(in,v,1);
+    return cmp;
+}
+
+// Check if space is pressed
+int check_space(char *in) {
+    char space[1] = " ";
+    int cmp = strncmp(in,space,1);
     return cmp;
 }

@@ -94,10 +94,47 @@
 		<Unit filename="inc\charset.h" />
 		<Unit filename="inc\input.h" />
 		<Unit filename="inc\lcd.h" />
+		<Unit filename="inc\LUT.h" />
 		<Unit filename="inc\mc_io.h" />
+		<Unit filename="inc\motion.h" />
+		<Unit filename="inc\sprites.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="inc\stm32f30x.h" />
 		<Unit filename="inc\stm32f30x_conf.h" />
 		<Unit filename="inc\system_stm32f30x.h" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_adc.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_can.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_comp.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_crc.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_dac.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_dbgmcu.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_dma.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_exti.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_flash.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_gpio.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_i2c.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_iwdg.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_misc.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_opamp.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_pwr.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_rcc.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_rtc.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_spi.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_syscfg.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_tim.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_usart.d" />
+		<Unit filename="obj\Debug\SPL\src\stm32f30x_wwdg.d" />
+		<Unit filename="obj\Debug\src\30010_io.d" />
+		<Unit filename="obj\Debug\src\ansi.d" />
+		<Unit filename="obj\Debug\src\charset.d" />
+		<Unit filename="obj\Debug\src\input.d" />
+		<Unit filename="obj\Debug\src\lcd.d" />
+		<Unit filename="obj\Debug\src\main.d" />
+		<Unit filename="obj\Debug\src\mc_io.d" />
+		<Unit filename="obj\Debug\src\motion.d" />
+		<Unit filename="obj\Debug\src\startup_stm32f30x.d" />
+		<Unit filename="obj\Debug\src\system_stm32f30x.d" />
 		<Unit filename="readme.txt" />
 		<Unit filename="SPL\inc\stm32f30x_adc.h" />
 		<Unit filename="SPL\inc\stm32f30x_can.h" />
@@ -202,12 +239,19 @@
 		<Unit filename="src\lcd.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\LUT.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\mc_io.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\motion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sprites.h" />
 		<Unit filename="src\startup_stm32f30x.S">
 			<Option compilerVar="CC" />
 		</Unit>
