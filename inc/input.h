@@ -12,6 +12,8 @@ int check_s(char *in);
 int check_d(char *in);
 int check_r(char *in);
 int check_v(char *in);
+int check_p(char *in);
+int check_l(char *in);
 int check_space(char *in);
 
 #endif /*! _INPUT_H_ */

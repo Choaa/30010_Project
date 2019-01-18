@@ -4,7 +4,7 @@
 // Check if w is pressed
 int check_w(char *in) {
     char w[1] = "w";
-    int cmp = strncmp(in,"w",1);
+    int cmp = strncmp(in,w,1);
     return cmp;
 }
 
@@ -39,6 +39,18 @@ int check_r(char *in) {
 int check_v(char *in) {
     char v[1] = "v";
     int cmp = strncmp(in,v,1);
+    return cmp;
+}
+
+int check_p(char *in) {
+    char p[1] = "p";
+    int cmp = strncmp(in,p,1);
+    return cmp;
+}
+
+int check_l(char *in) {
+    char l[1] = "l";
+    int cmp = strncmp(in,l,1);
     return cmp;
 }
 

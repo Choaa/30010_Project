@@ -12,4 +12,5 @@ obj\debug\src\main.o: src\main.c inc/stm32f30x_conf.h \
  SPL\inc/stm32f30x_tim.h SPL\inc/stm32f30x_usart.h \
  SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/30010_io.h \
  inc/ansi.h inc/mc_io.h inc/charset.h inc/lcd.h inc/charset.h inc/input.h \
- inc/motion.h inc/LUT.h
+ inc/motion.h inc/struct.h inc/LUT.h inc/ship.h inc/struct.h \
+ inc/projectile.h inc/objects.h inc/draw.h

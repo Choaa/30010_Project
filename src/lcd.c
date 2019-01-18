@@ -14,15 +14,12 @@ void lcd_write_string(char str[], uint8_t* buffer, int slice, int line) {
     }
 }
 
-void lcd_draw_hearts(int amount, uint8_t* buffer, int pos, int row, int player) {
+void lcd_draw_hearts(int amount, uint8_t* buffer, int pos, int row) {
 
     int i = 0;
     for (i = 0; i < amount; i++) {
         int offset;
-        if (player == 1)
-            offset = pos+i*8+(row-1)*128;
-        else if (player == 2)
-            offset = pos-i*8+(row-1)*128;
+        offset = pos+i*8+(row-1)*128;
 
         memset(buffer+offset,0b00001100,1);
         memset(buffer+offset+1,0b00011110,1);
@@ -32,17 +29,27 @@ void lcd_draw_hearts(int amount, uint8_t* buffer, int pos, int row, int player) 
         memset(buffer+offset+5,0b00011110,1);
         memset(buffer+offset+6,0b00001100,1);
     }
+    i = 3;
+    for (i = 3; i > amount; i--) {
+        int offset;
+        offset = pos+(i-1)*8+(row-1)*128;
+
+        memset(buffer+offset,0b00001100,1);
+        memset(buffer+offset+1,0b00010010,1);
+        memset(buffer+offset+2,0b00100010,1);
+        memset(buffer+offset+3,0b01000100,1);
+        memset(buffer+offset+4,0b00100010,1);
+        memset(buffer+offset+5,0b00010010,1);
+        memset(buffer+offset+6,0b00001100,1);
+    }
 }
 
-void lcd_draw_missiles(int amount, uint8_t* buffer, int pos, int row, int player) {
+void lcd_draw_missiles(int amount, uint8_t* buffer, int pos, int row) {
 
     int i = 0;
     for (i = 0; i < amount; i++) {
         int offset;
-        if (player == 1)
-            offset = pos+i*8+(row-1)*128;
-        else if (player == 2)
-            offset = pos-i*8+(row-1)*128;
+        offset = pos+i*8+(row-1)*128;
 
         memset(buffer+offset,0b00000000,1);
         memset(buffer+offset+1,0b11100000,1);
@@ -51,5 +58,40 @@ void lcd_draw_missiles(int amount, uint8_t* buffer, int pos, int row, int player
         memset(buffer+offset+4,0b01111100,1);
         memset(buffer+offset+5,0b11100000,1);
         memset(buffer+offset+6,0b00000000,1);
+    }
+    i = 3;
+    for (i = 3; i > amount; i--) {
+        int offset;
+        offset = pos+(i-1)*8+(row-1)*128;
+
+        memset(buffer+offset,0b00000000,1);
+        memset(buffer+offset+1,0b11100000,1);
+        memset(buffer+offset+2,0b01011100,1);
+        memset(buffer+offset+3,0b00100011,1);
+        memset(buffer+offset+4,0b01011100,1);
+        memset(buffer+offset+5,0b11100000,1);
+        memset(buffer+offset+6,0b00000000,1);
+    }
+}
+
+void lcd_draw_bullets(int amount, uint8_t* buffer, int pos, int row) {
+
+    int i = 0;
+    for (i = 0; i < amount; i++) {
+        int offset;
+        offset = pos+i*4+(row-1)*128;
+
+        memset(buffer+offset,0b01111100,1);
+        memset(buffer+offset+1,0b01111010,1);
+        memset(buffer+offset+2,0b01111100,1);
+    }
+    i = 20;
+    for (i = 20; i > amount; i--) {
+        int offset;
+        offset = pos+(i-1)*4+(row-1)*128;
+
+        memset(buffer+offset,0b01111100,1);
+        memset(buffer+offset+1,0b01000010,1);
+        memset(buffer+offset+2,0b01111100,1);
     }
 }

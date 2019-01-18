@@ -11,6 +11,38 @@
 // -----------------------------------------------------------------------
 // SIN: a 512 long LUT of 16bit values in 2.14 format
 // sin(x*pi/256)
+const signed short SIN[24]=
+{
+	0x0000,0x1050,0x1F8C,0x2D41,0x374B,0x3DAF,0x4000,0x3DE3,
+	0x37B0,0x2D41,0x203A,0x1112,0x0000,0xEFB0,0xE074,0xD2BF,
+	0xC8B5,0xC251,0xC000,0xC21D,0xC850,0xD2BF,0xDFC6,0xEEEE,
+};
+
+int32_t calcsin(int angle){
+    if (angle < 0)
+        return (int32_t)-SIN[(-angle%360)*24/360];
+    return (int32_t)SIN[(angle%360)*24/360];
+}
+
+int32_t calccos(int angle){
+    return calcsin(angle+90);
+}
+
+
+/*
+// =====================================================================
+//	  Look-Up Tables
+//		SIN: sin(x*pi/256)
+//
+//	Exported by Cearn's excellut v1.0
+//	(comments, kudos, flames to daytshen@hotmail.com)
+//
+// =====================================================================
+
+#include "LUT.h"
+// -----------------------------------------------------------------------
+// SIN: a 512 long LUT of 16bit values in 2.14 format
+// sin(x*pi/256)
 const signed short SIN[512]=
 {
 	0x0000,0x00C9,0x0192,0x025B,0x0324,0x03ED,0x04B5,0x057E,
@@ -95,3 +127,4 @@ int32_t calcsin(int angle){
 int32_t calccos(int angle){
     return calcsin(angle+90);
 }
+*/

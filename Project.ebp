@@ -92,17 +92,21 @@
 		<Unit filename="inc\30010_io.h" />
 		<Unit filename="inc\ansi.h" />
 		<Unit filename="inc\charset.h" />
+		<Unit filename="inc\draw.h" />
+		<Unit filename="inc\equations.h" />
 		<Unit filename="inc\input.h" />
 		<Unit filename="inc\lcd.h" />
 		<Unit filename="inc\LUT.h" />
 		<Unit filename="inc\mc_io.h" />
 		<Unit filename="inc\motion.h" />
-		<Unit filename="inc\sprites.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="inc\objects.h" />
+		<Unit filename="inc\projectile.h" />
+		<Unit filename="inc\ship.h" />
 		<Unit filename="inc\stm32f30x.h" />
 		<Unit filename="inc\stm32f30x_conf.h" />
+		<Unit filename="inc\struct.h" />
 		<Unit filename="inc\system_stm32f30x.h" />
+		<Unit filename="obj\Debug\inc\sprites.d" />
 		<Unit filename="obj\Debug\SPL\src\stm32f30x_adc.d" />
 		<Unit filename="obj\Debug\SPL\src\stm32f30x_can.d" />
 		<Unit filename="obj\Debug\SPL\src\stm32f30x_comp.d" />
@@ -128,12 +132,17 @@
 		<Unit filename="obj\Debug\src\30010_io.d" />
 		<Unit filename="obj\Debug\src\ansi.d" />
 		<Unit filename="obj\Debug\src\charset.d" />
+		<Unit filename="obj\Debug\src\equations.d" />
 		<Unit filename="obj\Debug\src\input.d" />
 		<Unit filename="obj\Debug\src\lcd.d" />
+		<Unit filename="obj\Debug\src\lut.d" />
 		<Unit filename="obj\Debug\src\main.d" />
 		<Unit filename="obj\Debug\src\mc_io.d" />
 		<Unit filename="obj\Debug\src\motion.d" />
+		<Unit filename="obj\Debug\src\projectile.d" />
+		<Unit filename="obj\Debug\src\ship.d" />
 		<Unit filename="obj\Debug\src\startup_stm32f30x.d" />
+		<Unit filename="obj\Debug\src\struct.d" />
 		<Unit filename="obj\Debug\src\system_stm32f30x.d" />
 		<Unit filename="readme.txt" />
 		<Unit filename="SPL\inc\stm32f30x_adc.h" />
@@ -233,6 +242,12 @@
 		<Unit filename="src\charset.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\draw.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\equations.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\input.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -251,7 +266,15 @@
 		<Unit filename="src\motion.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="src\sprites.h" />
+		<Unit filename="src\objects.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\projectile.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\ship.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\startup_stm32f30x.S">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -263,7 +286,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Debug" active_interface="OpenOCD">
+				<target_debugging_settings target="Release" active_interface="OpenOCD">
 					<debug_interface interface_id="OpenOCD" ip_address="localhost" ip_port="3333" path="C:\Users\Mathi\Documents\DTU\30010 Programmeringsprojekt\Programs\openocd\bin-x64" executable="openocd.exe" description="" dont_start_server="false" backoff_time="100" options="0" reg_filter="0" active_family="All" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="All">
 							<option opt_id="ID_BOARD_CH" opt_value="" />
@@ -294,7 +317,7 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Release" active_interface="OpenOCD">
+				<target_debugging_settings target="Debug" active_interface="OpenOCD">
 					<debug_interface interface_id="OpenOCD" ip_address="localhost" ip_port="3333" path="C:\Users\Mathi\Documents\DTU\30010 Programmeringsprojekt\Programs\openocd\bin-x64" executable="openocd.exe" description="" dont_start_server="false" backoff_time="100" options="0" reg_filter="0" active_family="All" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="All">
 							<option opt_id="ID_BOARD_CH" opt_value="" />
