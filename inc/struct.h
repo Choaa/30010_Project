@@ -9,7 +9,11 @@ struct angle {
 };
 
 struct spaceship {
-    int x,y,vx,vy;
+    int x,y,vx,vy,hp;
+};
+
+struct monster {
+    int x,y,alive;
 };
 
 struct projectile {
@@ -17,8 +21,12 @@ struct projectile {
     int32_t vx,vy,ax,ay;
 };
 
+struct monsterprojectile {
+    int x,y,rx,ry,alive;
+};
+
 struct planet {
     int x,y,m,active;
 };
 
-#endif /* _STRUCT_H_ */
+#endif /*! _STRUCT_H_ */

@@ -8,7 +8,7 @@
 #define FIX_MULT(a, b) ( (a)*(b) >> SHIFT_AMOUNT )
 #define FIX_DIV(a, b) ( ((a) << SHIFT_AMOUNT) / b )
 
-#define MAX_A 3
+#define MAX_A 1
 #define MAX_V 16
 
 #define ESC 0x1B
@@ -81,9 +81,17 @@ void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int
         active = active + (c+i)->active;
     }
     for(i = 0; i < active;i++) {
-        int32_t dist = newton_sqrt(((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))*((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))+((c+i)->y-((p+n)->y >> SHIFT_AMOUNT))*((c+i)->y-((p+n)->y >> SHIFT_AMOUNT)),500);
-        int32_t ax = (p+n)->ax + ((((c+i)->x << SHIFT_AMOUNT)-(p+n)->x)*gm)/(dist*dist*dist);
-        int32_t ay = (p+n)->ay + ((((c+i)->y << SHIFT_AMOUNT)-(p+n)->y)*gm)/(dist*dist*dist);
+        int32_t dist = newton_sqrt(((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))*((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))*2+((c+i)->y-((p+n)->y >> SHIFT_AMOUNT))*((c+i)->y-((p+n)->y >> SHIFT_AMOUNT)),500);
+        int32_t ax = 0;
+        int32_t ay = 0;
+        if (dist <= 50) {
+            ax = (p+n)->ax + ((((c+i)->x << SHIFT_AMOUNT)-(p+n)->x)*gm)/(dist*dist*dist);
+            ay = (p+n)->ay + ((((c+i)->y << SHIFT_AMOUNT)-(p+n)->y)*gm)/(dist*dist*dist);
+        }
+        else if (dist > 50) {
+            ax = (p+n)->ax;
+            ay = (p+n)->ay;
+        }
         if (abs(ax >> SHIFT_AMOUNT) > MAX_A) {
             ax = MAX_A * ax/abs(ax);
             ax = ax << SHIFT_AMOUNT;
@@ -117,18 +125,32 @@ void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int
 
 void projectile_draw(struct projectile *p, int n) {
     if  ((p+n)->alive == 1) {
-        printf("%c[%d;%dH",ESC,(p+n)->y,(p+n)->x);
-        fgcolor(1);
-        printf("%c%c",223,223);
+        printf("%c[%d;%dH",ESC,(p+n)->y-1,(p+n)->x);
+        fgcolor(2);
+        printf("%c",223);
+        fgcolor(15);
+        printf("%c[%d;%dH",ESC,(p+n)->y,(p+n)->x-1);
+        fgcolor(2);
+        printf("%c%c%c",223,223,223);
+        fgcolor(15);
+        printf("%c[%d;%dH",ESC,(p+n)->y+1,(p+n)->x);
+        fgcolor(2);
+        printf("%c",223);
         fgcolor(15);
         printf("%c[H",ESC);
     }
 }
 
 void projectile_clear(struct projectile *p, int n) {
-    printf("%c[%d;%dH",ESC,(p+n)->y,(p+n)->x);
-    printf("%c%c",32,32);
-    printf("%c[H",ESC);
+    if ((p+n)->alive == 1) {
+        printf("%c[%d;%dH",ESC,(p+n)->y-1,(p+n)->x);
+        printf("%c",32);
+        printf("%c[%d;%dH",ESC,(p+n)->y,(p+n)->x-1);
+        printf("%c%c%c",32,32,32);
+        printf("%c[%d;%dH",ESC,(p+n)->y+1,(p+n)->x);
+        printf("%c",32);
+        printf("%c[H",ESC);
+    }
 }
 
 void projectile_despawn(struct projectile *p, int n) {

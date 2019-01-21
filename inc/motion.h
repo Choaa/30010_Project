@@ -5,8 +5,8 @@
 #ifndef _MOTION_H_
 #define _MOTION_H_
 
-void initVector(struct angle *v);
-void rotVector(struct angle *v, int angle);
+void vector_init(struct angle *v);
+void vector_rot(struct angle *v, int angle);
 
 
 void bombdraw(struct projectile *p);

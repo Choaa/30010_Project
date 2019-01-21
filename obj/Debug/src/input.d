@@ -10,4 +10,5 @@ obj\debug\src\input.o: src\input.c inc/lcd.h inc/stm32f30x_conf.h \
  SPL\inc/stm32f30x_opamp.h SPL\inc/stm32f30x_pwr.h \
  SPL\inc/stm32f30x_rcc.h SPL\inc/stm32f30x_rtc.h SPL\inc/stm32f30x_spi.h \
  SPL\inc/stm32f30x_tim.h SPL\inc/stm32f30x_usart.h \
- SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/charset.h
+ SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/charset.h \
+ inc/30010_io.h

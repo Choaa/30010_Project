@@ -13,5 +13,4 @@ void projectile_clear(struct projectile *p, int n);
 void projectile_despawn(struct projectile *p, int n);
 
 
-
-#endif /* _SHIP_H_ */
+#endif /*! _PROJECTILE_H_ */

@@ -15,12 +15,12 @@
 
 // Rotate vector
 
-void initVector(struct angle *v) {
+void vector_init(struct angle *v) {
     v->x = v->x << 14;
     v->y = v->y << 14;
 }
 
-void rotVector(struct angle *v, int angle) {
+void vector_rot(struct angle *v, int angle) {
      int x = FIX14_MULT(1 << 14,calccos(angle)) - FIX14_MULT(0 << 14,calcsin(angle));
      int y = FIX14_MULT(1 << 14,calcsin(angle)) + FIX14_MULT(0 << 14,calccos(angle));
      v->x = x;

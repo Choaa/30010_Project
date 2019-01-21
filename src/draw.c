@@ -2,13 +2,13 @@
 
 #define ESC 0x1B
 
-void draw_matrix(int cornerx, int cornery, int length, int heigth, const uint8_t sprite[][58], int drawempty) {
+void draw_matrix(int cornerx, int cornery, int height, int length, const uint8_t sprite[][58], int drawempty) {
 
     int i = 0;
     int n = 0;
     printf("%c[%d;%dH",ESC,cornery,cornerx);
     for (i = 0; i<length;i++) {
-        for(n = 0; n<heigth;n++) {
+        for(n = 0; n<height;n++) {
             if (sprite[i][n] == 1)
                 printf("%c",219);
             else if (sprite[i][n] == 0) {

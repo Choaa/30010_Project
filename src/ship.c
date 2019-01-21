@@ -1,4 +1,5 @@
 #include "ship.h"
+#include "mc_io.h"
 
 #define ESC 0x1B
 
@@ -8,6 +9,7 @@ void ship_init(struct spaceship *s) {
     s->y = 20;
     s->vx = 0;
     s->vy = 0;
+    s->hp = 3;
 }
 
 // Calculate the position of the ship
@@ -465,3 +467,17 @@ void ship_clear(struct spaceship *s, int angle) {
     }
 }
 
+void ship_health(struct spaceship *s) {
+    if (s->hp == 3) {
+        RGB_set(2);
+    }
+    else if (s->hp == 2) {
+        RGB_set(4);
+    }
+    else if (s->hp == 1) {
+        RGB_set(1);
+    }
+    else if (s->hp == 0) {
+        RGB_set(0);
+    }
+}

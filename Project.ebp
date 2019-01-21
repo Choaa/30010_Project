@@ -92,12 +92,17 @@
 		<Unit filename="inc\30010_io.h" />
 		<Unit filename="inc\ansi.h" />
 		<Unit filename="inc\charset.h" />
+		<Unit filename="inc\collision.h" />
 		<Unit filename="inc\draw.h" />
 		<Unit filename="inc\equations.h" />
 		<Unit filename="inc\input.h" />
 		<Unit filename="inc\lcd.h" />
 		<Unit filename="inc\LUT.h" />
+		<Unit filename="inc\main.h" />
 		<Unit filename="inc\mc_io.h" />
+		<Unit filename="inc\menu.h" />
+		<Unit filename="inc\monster.h" />
+		<Unit filename="inc\monsterprojectile.h" />
 		<Unit filename="inc\motion.h" />
 		<Unit filename="inc\objects.h" />
 		<Unit filename="inc\projectile.h" />
@@ -242,6 +247,10 @@
 		<Unit filename="src\charset.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\collision,c" />
+		<Unit filename="src\collision.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\draw.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -261,6 +270,15 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\mc_io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\monster.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\monsterprojectile.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\motion.c">
@@ -286,7 +304,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Release" active_interface="OpenOCD">
+				<target_debugging_settings target="Debug" active_interface="OpenOCD">
 					<debug_interface interface_id="OpenOCD" ip_address="localhost" ip_port="3333" path="C:\Users\Mathi\Documents\DTU\30010 Programmeringsprojekt\Programs\openocd\bin-x64" executable="openocd.exe" description="" dont_start_server="false" backoff_time="100" options="0" reg_filter="0" active_family="All" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="All">
 							<option opt_id="ID_BOARD_CH" opt_value="" />
@@ -317,7 +335,7 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Debug" active_interface="OpenOCD">
+				<target_debugging_settings target="Release" active_interface="OpenOCD">
 					<debug_interface interface_id="OpenOCD" ip_address="localhost" ip_port="3333" path="C:\Users\Mathi\Documents\DTU\30010 Programmeringsprojekt\Programs\openocd\bin-x64" executable="openocd.exe" description="" dont_start_server="false" backoff_time="100" options="0" reg_filter="0" active_family="All" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="All">
 							<option opt_id="ID_BOARD_CH" opt_value="" />

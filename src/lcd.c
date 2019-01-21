@@ -29,6 +29,7 @@ void lcd_draw_hearts(int amount, uint8_t* buffer, int pos, int row) {
         memset(buffer+offset+5,0b00011110,1);
         memset(buffer+offset+6,0b00001100,1);
     }
+
     i = 3;
     for (i = 3; i > amount; i--) {
         int offset;
@@ -82,7 +83,7 @@ void lcd_draw_bullets(int amount, uint8_t* buffer, int pos, int row) {
         offset = pos+i*4+(row-1)*128;
 
         memset(buffer+offset,0b01111100,1);
-        memset(buffer+offset+1,0b01111010,1);
+        memset(buffer+offset+1,0b01111110,1);
         memset(buffer+offset+2,0b01111100,1);
     }
     i = 20;

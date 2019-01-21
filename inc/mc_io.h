@@ -7,13 +7,17 @@
 #define UART_BUFFER_LENGTH 256
 
 int16_t readIO();
-void setLeeXd(int color);
-void timer_init();
-void time_init(int h, int m, int s, int hs);
+void RGB_init();
+void RGB_set(int color);
+
 int get_hs();
-int get_s();
-int get_m();
-int get_h();
+
+void time_init();
+void time_set(int hs);
 void time_update();
+
+int get_flag();
+void flag_update();
+void flag_reset();
 
 #endif /* _MC_IO_H_ */

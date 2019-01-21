@@ -66,7 +66,7 @@ int16_t readIO() {
     return (valu + vald + valc + valr + vall);
 }
 
-void setLeeXd(int color) {
+void RGB_init() {
 
     // BLUE - A9
     // Enable clock for PA
@@ -106,52 +106,53 @@ void setLeeXd(int color) {
 
     GPIOC->MODER &= ~(0x00000003 << (7 * 2));
     GPIOC->MODER |= (0x0000001 << (7 * 2));
+}
 
-    switch(color) {
-        case 0 : //BLACK
-            GPIOA->ODR |= (0x0001 << 9);
-            GPIOB->ODR |= (0x0001 << 4);
-            GPIOC->ODR |= (0x0001 << 7);
-            break;
-        case 1 : //RED
-            GPIOA->ODR |= (0x0001 << 9);
-            GPIOB->ODR &= (0x0000 << 4);
-            GPIOC->ODR |= (0x0001 << 7);
-            break;
-        case 2 : //GREEN
-            GPIOA->ODR |= (0x0001 << 9);
-            GPIOB->ODR |= (0x0001 << 4);
-            GPIOC->ODR &= (0x0000 << 7);
-            break;
-        case 3 : //BLUE
-            GPIOA->ODR &= (0x0000 << 9);
-            GPIOB->ODR |= (0x0001 << 4);
-            GPIOC->ODR |= (0x0001 << 7);
-            break;
-        case 4 : //REDGREEN
-            GPIOA->ODR |= (0x0001 << 9);
-            GPIOB->ODR &= (0x0000 << 4);
-            GPIOC->ODR &= (0x0000 << 7);
-            break;
-        case 5 : //REDBLUE
-            GPIOA->ODR &= (0x0000 << 9);
-            GPIOB->ODR &= (0x0000 << 4);
-            GPIOC->ODR |= (0x0001 << 7);
-            break;
-        case 6 : //BLUEGREEN
-            GPIOA->ODR &= (0x0000 << 9);
-            GPIOB->ODR |= (0x0001 << 4);
-            GPIOC->ODR &= (0x0000 << 7);
-            break;
-        case 7 : //WHITE
-            GPIOA->ODR &= (0x0000 << 9);
-            GPIOB->ODR &= (0x0000 << 4);
-            GPIOC->ODR &= (0x0000 << 7);
-            break;
+void RGB_set(int color) {
+
+    if (color == 0) {
+        GPIOA->ODR |= (0x0001 << 9);
+        GPIOB->ODR |= (0x0001 << 4);
+        GPIOC->ODR |= (0x0001 << 7);
+    }
+    else if (color == 1) {
+        GPIOA->ODR |= (0x0001 << 9);
+        GPIOB->ODR &= ~(0x0001 << 4);
+        GPIOC->ODR |= (0x0001 << 7);
+    }
+    else if (color == 2) {
+        GPIOA->ODR |= (0x0001 << 9);
+        GPIOB->ODR |= (0x0001 << 4);
+        GPIOC->ODR &= ~(0x0001 << 7);
+    }
+    else if (color == 3) {
+        GPIOA->ODR &= ~(0x0001 << 9);
+        GPIOB->ODR |= (0x0001 << 4);
+        GPIOC->ODR |= (0x0001 << 7);
+    }
+    else if (color == 4) {
+        GPIOA->ODR |= (0x0001 << 9);
+        GPIOB->ODR &= ~(0x0001 << 4);
+        GPIOC->ODR &= ~(0x0001 << 7);
+    }
+    else if (color == 5) {
+        GPIOA->ODR &= ~(0x0001 << 9);
+        GPIOB->ODR &= ~(0x0001 << 4);
+        GPIOC->ODR |= (0x0001 << 7);
+    }
+    else if (color == 6) {
+        GPIOA->ODR &= ~(0x0001 << 9);
+        GPIOB->ODR |= (0x0001 << 4);
+        GPIOC->ODR &= ~(0x0001 << 7);
+    }
+    else if (color == 7) {
+        GPIOA->ODR &= ~(0x0001 << 9);
+        GPIOB->ODR &= ~(0x0001 << 4);
+        GPIOC->ODR &= ~(0x0001 << 7);
     }
 }
 
-void timer_init() {
+void time_init() {
     RCC->APB1ENR |= RCC_APB1Periph_TIM2;
     TIM2->CR1 = 0x000000000000000;
     TIM2->ARR = 0x9C3FF;
@@ -165,59 +166,42 @@ void timer_init() {
     TIM2->CR1 |= 0x01;
 }
 
-
 struct time {
-    int h,m,s,hs;
+    int hs;
 };
 
-volatile struct time mytime;
+volatile struct time timer;
 
-void time_init(int h, int m, int s, int hs) {
-    mytime.h = h;
-    mytime.m = m;
-    mytime.s = s;
-    mytime.hs = hs;
+void time_set(int hs) {
+    timer.hs = hs;
 }
 
 void time_update() {
-    {
-    int hs = mytime.hs + 1;
-    mytime.hs = hs;
-    if (hs % 100 == 0) {
-        mytime.hs = 0;
-        int s = mytime.s + 1;
-        mytime.s = s;
-        if (s % 60 == 0) {
-            mytime.s = 0;
-            int m = mytime.m + 1;
-            mytime.m = m;
-            if (m % 60 == 0) {
-                mytime.m = 0;
-                int h = mytime.h + 1;
-                mytime.h = h;
-            }
-        }
+    int hs = timer.hs + 1;
+    timer.hs = hs;
+}
+
+int flag = 0;
+
+void flag_update() {
+    if (flag == 0) {
+        flag = 1;
+    }
+    else if (flag == 1) {
+        flag = 0;
     }
 }
+
+int get_flag() {
+    return flag;
 }
 
 int get_hs() {
-    return mytime.hs;
-}
-
-int get_s() {
-    return mytime.s;
-}
-
-int get_m() {
-    return mytime.m;
-}
-
-int get_h() {
-    return mytime.h;
+    return timer.hs;
 }
 
 void TIM2_IRQHandler(void) {
     time_update();
+    flag_update();
     TIM2->SR &= ~0x0001;
 }
