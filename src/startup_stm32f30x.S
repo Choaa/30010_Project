@@ -157,7 +157,7 @@ Reset_Handler:
  *      copied to. Both must be aligned to 4 bytes boundary.  */
 
 
-        ldr    r1, =__etext
+    ldr    r1, =__etext
     ldr    r2, =__data_start__
     ldr    r3, =__data_end__
 

@@ -68,7 +68,6 @@ void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int
     if ((p+n)->alive == 1) {
     int32_t gm = 100;
     int i = 0;
-    int active = 0;
 
     (p+n)->x = (p+n)->x << SHIFT_AMOUNT;
     (p+n)->y = (p+n)->y << SHIFT_AMOUNT;
@@ -77,31 +76,30 @@ void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int
     (p+n)->ax = (p+n)->ax << SHIFT_AMOUNT;
     (p+n)->ay = (p+n)->ay << SHIFT_AMOUNT;
 
-    for(i = 0; i < 20;i++) {
-        active = active + (c+i)->active;
-    }
-    for(i = 0; i < active;i++) {
-        int32_t dist = newton_sqrt(((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))*((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))*2+((c+i)->y-((p+n)->y >> SHIFT_AMOUNT))*((c+i)->y-((p+n)->y >> SHIFT_AMOUNT)),500);
-        int32_t ax = 0;
-        int32_t ay = 0;
-        if (dist <= 50) {
-            ax = (p+n)->ax + ((((c+i)->x << SHIFT_AMOUNT)-(p+n)->x)*gm)/(dist*dist*dist);
-            ay = (p+n)->ay + ((((c+i)->y << SHIFT_AMOUNT)-(p+n)->y)*gm)/(dist*dist*dist);
+    for(i = 0; i < 10; i++) {
+        if ((c+i)->active == 1) {
+            int32_t dist = newton_sqrt(((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))*((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))+((c+i)->y-((p+n)->y >> SHIFT_AMOUNT))*((c+i)->y-((p+n)->y >> SHIFT_AMOUNT)),500);
+            int32_t ax = 0;
+            int32_t ay = 0;
+            if (dist <= 100) {
+                ax = (p+n)->ax + ((((c+i)->x << SHIFT_AMOUNT)-(p+n)->x)*gm)/(dist*dist*dist);
+                ay = (p+n)->ay + ((((c+i)->y << SHIFT_AMOUNT)-(p+n)->y)*gm)/(dist*dist*dist);
+            }
+            else if (dist > 100) {
+                ax = 0;
+                ay = 0;
+            }
+            if (abs(ax >> SHIFT_AMOUNT) > MAX_A) {
+                ax = MAX_A * ax/abs(ax);
+                ax = ax << SHIFT_AMOUNT;
+            }
+            if (abs(ay >> SHIFT_AMOUNT) > MAX_A) {
+                ay = MAX_A * ay/abs(ay);
+                ay = ay << SHIFT_AMOUNT;
+            }
+            (p+n)->ax = ax;
+            (p+n)->ay = ay;
         }
-        else if (dist > 50) {
-            ax = (p+n)->ax;
-            ay = (p+n)->ay;
-        }
-        if (abs(ax >> SHIFT_AMOUNT) > MAX_A) {
-            ax = MAX_A * ax/abs(ax);
-            ax = ax << SHIFT_AMOUNT;
-        }
-        if (abs(ay >> SHIFT_AMOUNT) > MAX_A) {
-            ay = MAX_A * ay/abs(ay);
-            ay = ay << SHIFT_AMOUNT;
-        }
-        (p+n)->ax = ax;
-        (p+n)->ay = ay;
     }
     int32_t vx = (p+n)->vx+(p+n)->ax;
     int32_t vy = (p+n)->vy+(p+n)->ay;

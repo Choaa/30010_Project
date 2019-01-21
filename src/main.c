@@ -9,7 +9,6 @@
    Last changed by:    $Author: $
    Last changed date:  $Date:  $
    ID:                 $Id:  $
-
 **********************************************************************/
 #include "stm32f30x_conf.h"
 #include "30010_io.h"
@@ -269,7 +268,6 @@ int main(void) {
     char minute[50];
     int minu = get_m();
     sprintf(minute, "%02d", minu);
-
     int a = 36;
     lcd_write_string(minute,buffer,1+a,4);
     lcd_write_string(":",buffer,12+a,4);
