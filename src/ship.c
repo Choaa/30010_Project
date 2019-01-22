@@ -6,7 +6,7 @@
 // Start position and speed for the ship
 void ship_init(struct spaceship *s) {
     s->x = 20;
-    s->y = 20;
+    s->y = 100;
     s->vx = 0;
     s->vy = 0;
     s->hp = 3;

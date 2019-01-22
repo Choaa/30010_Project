@@ -5,7 +5,7 @@
 #include "stm32f30x_conf.h"
 #include <stdio.h>
 
-void planet_init(struct planet *p);
-void planet_draw(int x, int y);
+void planet_init(struct planet *p, int x, int y, int n);
+void planet_draw(struct planet *p);
 
 #endif /*! _EQUATIONS_H_ */

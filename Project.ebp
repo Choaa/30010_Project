@@ -98,7 +98,6 @@
 		<Unit filename="inc\input.h" />
 		<Unit filename="inc\lcd.h" />
 		<Unit filename="inc\LUT.h" />
-		<Unit filename="inc\main.h" />
 		<Unit filename="inc\mc_io.h" />
 		<Unit filename="inc\menu.h" />
 		<Unit filename="inc\monster.h" />
@@ -107,6 +106,7 @@
 		<Unit filename="inc\objects.h" />
 		<Unit filename="inc\projectile.h" />
 		<Unit filename="inc\ship.h" />
+		<Unit filename="inc\stage.h" />
 		<Unit filename="inc\stm32f30x.h" />
 		<Unit filename="inc\stm32f30x_conf.h" />
 		<Unit filename="inc\struct.h" />
@@ -293,6 +293,9 @@
 		<Unit filename="src\ship.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\stage.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\startup_stm32f30x.S">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -304,7 +307,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Debug" active_interface="OpenOCD">
+				<target_debugging_settings target="Release" active_interface="OpenOCD">
 					<debug_interface interface_id="OpenOCD" ip_address="localhost" ip_port="3333" path="C:\Users\Mathi\Documents\DTU\30010 Programmeringsprojekt\Programs\openocd\bin-x64" executable="openocd.exe" description="" dont_start_server="false" backoff_time="100" options="0" reg_filter="0" active_family="All" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="All">
 							<option opt_id="ID_BOARD_CH" opt_value="" />
@@ -335,7 +338,7 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Release" active_interface="OpenOCD">
+				<target_debugging_settings target="Debug" active_interface="OpenOCD">
 					<debug_interface interface_id="OpenOCD" ip_address="localhost" ip_port="3333" path="C:\Users\Mathi\Documents\DTU\30010 Programmeringsprojekt\Programs\openocd\bin-x64" executable="openocd.exe" description="" dont_start_server="false" backoff_time="100" options="0" reg_filter="0" active_family="All" gdb_before_conn="" gdb_after_conn="">
 						<family_options family_id="All">
 							<option opt_id="ID_BOARD_CH" opt_value="" />
