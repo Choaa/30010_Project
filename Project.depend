@@ -221,14 +221,14 @@
 	<stdio.h>
 	<string.h>
 
-1548069937 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\mc_io.c
+1548170416 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\mc_io.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"mc_io.h"
 	<stdlib.h>
 	<stdio.h>
 
-1548069798 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\mc_io.h
+1548170388 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\mc_io.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 
@@ -237,7 +237,7 @@
 1547217108 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\system_stm32f30x.c
 	"stm32f30x.h"
 
-1548168540 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
+1548194657 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -298,12 +298,12 @@
 
 1547561262 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\sprites.h
 
-1548064430 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\ship.h
+1548195779 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\ship.h
 	"stm32f30x_conf.h"
 	"struct.h"
 	<stdio.h>
 
-1548167300 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\ship.c
+1548195590 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\ship.c
 	"ship.h"
 	"mc_io.h"
 
@@ -313,7 +313,7 @@
 
 1547647661 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\struct.c
 
-1548086533 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\projectile.c
+1548171467 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\projectile.c
 	"projectile.h"
 	"ansi.h"
 	"equations.h"
@@ -337,7 +337,7 @@
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1548167848 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\objects.c
+1548168656 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\objects.c
 	"equations.h"
 	"struct.h"
 
@@ -413,7 +413,7 @@
 	"objects.h"
 	"ship.h"
 
-1548168535 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\stage.c
+1548172063 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\stage.c
 	"stage.h"
 	"struct.h"
 	"ship.h"

@@ -13,16 +13,16 @@ void ship_init(struct spaceship *s) {
 }
 
 // Calculate the position of the ship
-void ship_pos(struct spaceship *s, struct angle *v, int on) {
-    if (on == 0) {
-        s->x = s->x + (v->x*8 >> 14)*2;
-        s->y = s->y + (v->y*8 >> 14);
-    }
-    else if (on == 1) {
-        s->x = s->x - (v->x*8 >> 14)*2;
-        s->y = s->y - (v->y*8 >> 14);
+void ship_pos(struct spaceship *s, struct angle *v) {
+    s->x = s->x + (v->x*8 >> 14) * 2;
+    s->y = s->y + (v->y*8 >> 14);
+}
 
-    }
+void ship_drift(struct spaceship *s, int angx, int angy, int drift) {
+    angx = (angx*8 >> 14) * 2;
+    angy = (angy*8 >> 14);
+    s->x = s->x + angx / (drift / 2);
+    s->y = s->y + angy / (drift / 2);
 }
 
 // Draw the ship

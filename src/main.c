@@ -87,6 +87,12 @@ int main(void) {
     int bullets = 20;
     int score = 0;
     int angle = 360;
+    int reloadtime = 0;
+    int reloading = 0;
+    int toggledrift = 0;
+    int drift = 0;
+    int saveanglex = 0;
+    int saveangley = 0;
 
     // Projectile variables
     int n = 0;
@@ -100,14 +106,14 @@ int main(void) {
     struct monster monster[10];
     struct monsterprojectile monsterprojectile[20];
 
-    // Initialize stage
-    stage_init(stage, &playership, angle, planet);
-
     monster_init(monster);
     monsterprojectile_init(monsterprojectile);
     projectile_init(playerprojectile);
     vector_init(&shipangle);
+    ship_init(&playership);
 
+    // Initialize stage
+    stage_init(stage, &playership, angle, planet);
 
 
     srand(get_hs());
@@ -162,7 +168,7 @@ int main(void) {
             stage_init(stage,&playership,angle,planet);
         }
 
-        int flag = get_flag();
+        int flag = get_flag2();
 
         if (flag == 1) {
 
@@ -172,13 +178,28 @@ int main(void) {
             input[0] = uart_get_char();
             // Check if the current pressed key is w / a / s / d
 
-
             // Move in the direction of the ship
             if (check_char(input,"w") == 0) {
                 ship_clear(&playership,angle);
-                ship_pos(&playership,&shipangle,0);
+                ship_pos(&playership,&shipangle);
                 ship_draw(&playership,angle);
+                toggledrift = 1;
+                drift = 0;
+                saveanglex = shipangle.x;
+                saveangley = shipangle.y;
             }
+
+            if (toggledrift == 1 && hs % 10 == 0 && check_char(input,"w") != 0) {
+                drift++;
+                ship_clear(&playership,angle);
+                ship_drift(&playership,saveanglex,saveangley,drift);
+                ship_draw(&playership,angle);
+                if (drift >= 35) {
+                    toggledrift = 0;
+                    drift = 0;
+                }
+            }
+
 
             // Turn the ship counter clockwise
             if (check_char(input,"a") == 0) {
@@ -208,9 +229,19 @@ int main(void) {
             if (check_char(input," ") == 0) {
                 missiles--;
             }
+
             // Reload the ammunition with r
             if (check_char(input,"r") == 0) {
+                if (reloading == 0 && bullets < 20) {
+                    reloadtime = get_hs();
+                    bullets = 0;
+                    reloading = 1;
+                }
+            }
+            // Reload timer
+            if (reloading == 1 && get_hs() > reloadtime + 50) {
                 bullets = 20;
+                reloading = 0;
             }
 
             // Read Joystick input
@@ -265,10 +296,20 @@ int main(void) {
             player_stage_collision(&playership, angle, 1, 1, 400, 225);
 
             // Move the enemies
+
+            if (hs < 2000) {
             if (hs % 10 == 0) {
             monster_clear(monster);
             monster_pos(monster,playerprojectile);
             monster_draw(monster);
+            }
+            }
+            else if (hs >= 2000) {
+            if (hs % 5 == 0) {
+            monster_clear(monster);
+            monster_pos(monster,playerprojectile);
+            monster_draw(monster);
+            }
             }
 
             if (hs % 200 == 0) {
@@ -325,7 +366,7 @@ int main(void) {
             // Draw to the LCD
             lcd_push_buffer(buffer);
 
-            flag_update();
+            flag2_update();
         }
     }
 }

@@ -16,8 +16,7 @@ void time_init();
 void time_set(int hs);
 void time_update();
 
-int get_flag();
-void flag_update();
-void flag_reset();
+int get_flag2();
+void flag2_update();
 
 #endif /* _MC_IO_H_ */

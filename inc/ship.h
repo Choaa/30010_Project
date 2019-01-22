@@ -6,7 +6,8 @@
 #define _SHIP_H_
 
 void ship_init(struct spaceship *s);
-void ship_pos(struct spaceship  *s, struct angle *v, int on);
+void ship_pos(struct spaceship  *s, struct angle *v);
+void ship_drift(struct spaceship *s, int angx, int angy, int drift);
 void ship_draw(struct spaceship *s, int angle);
 void ship_clear(struct spaceship *s, int angle);
 void ship_health(struct spaceship *s);

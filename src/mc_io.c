@@ -181,19 +181,20 @@ void time_update() {
     timer.hs = hs;
 }
 
-int flag = 0;
+int flag2 = 0;
+int flag3 = 0;
 
-void flag_update() {
-    if (flag == 0) {
-        flag = 1;
+void flag2_update() {
+    if (flag2 == 0) {
+        flag2 = 1;
     }
-    else if (flag == 1) {
-        flag = 0;
+    else if (flag2 == 1) {
+        flag2 = 0;
     }
 }
 
-int get_flag() {
-    return flag;
+int get_flag2() {
+    return flag2;
 }
 
 int get_hs() {
@@ -202,6 +203,6 @@ int get_hs() {
 
 void TIM2_IRQHandler(void) {
     time_update();
-    flag_update();
+    flag2_update();
     TIM2->SR &= ~0x0001;
 }
