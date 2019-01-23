@@ -13,12 +13,16 @@ struct spaceship {
 };
 
 struct monster {
-    int x,y,alive;
+    int x,y,alive,animation;
 };
 
 struct projectile {
     int x,y,dir,alive;
     int32_t vx,vy,ax,ay;
+};
+
+struct bomb {
+    int x,y,vx,vy,alive;
 };
 
 struct monsterprojectile {

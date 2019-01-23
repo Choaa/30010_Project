@@ -60,6 +60,7 @@ void monster_init(struct monster *m) {
         (m+i)->x = 380;
         (m+i)->y = 200;
         (m+i)->alive = 0;
+        (m+i)->animation = 0;
     }
 }
 
@@ -78,21 +79,47 @@ void monster_pos(struct monster *m, struct projectile *p) {
 
 void monster_despawn(struct monster *m, int n) {
     monster_clear(m);
+    (m+n)->animation = 1;
     (m+n)->alive = 0;
-    /*
-    draw_matrix((m+n)->x-4,(m+n)->y-2,8,5,monsterclear,0);
-    */
-    (m+n)->x = 380;
-    (m+n)->y = 200;
+}
+
+void monster_animation(struct monster *m, int n) {
+    if ((m+n)->animation == 1) {
+        printf("%c[%d;%dH",ESC,(m+n)->y-2,(m+n)->x+1);
+        printf("%c%c%c",219,219,219);
+        printf("%c[%d;%dH",ESC,(m+n)->y-1,(m+n)->x-1);
+        printf("%c%c %c",219,219,219);
+        printf("%c[%d;%dH",ESC,(m+n)->y,(m+n)->x-3);
+        printf("%c%c  %c",219,219,219);
+        printf("%c[%d;%dH",ESC,(m+n)->y+1,(m+n)->x-1);
+        printf("%c%c %c",219,219,219);
+        printf("%c[%d;%dH",ESC,(m+n)->y+2,(m+n)->x+1);
+        printf("%c%c%c",219,219,219);
+    }
+    if ((m+n)->animation > 0 && (m+n)->animation < 11) {
+        (m+n)->animation++;
+    }
+    if ((m+n)->animation > 10) {
+        (m+n)->animation = 0;
+        printf("%c[%d;%dH",ESC,(m+n)->y-2,(m+n)->x+1);
+        printf("%c%c%c",32,32,32);
+        printf("%c[%d;%dH",ESC,(m+n)->y-1,(m+n)->x-1);
+        printf("%c%c %c",32,32,32);
+        printf("%c[%d;%dH",ESC,(m+n)->y,(m+n)->x-3);
+        printf("%c%c  %c",32,32,32);
+        printf("%c[%d;%dH",ESC,(m+n)->y+1,(m+n)->x-1);
+        printf("%c%c %c",32,32,32);
+        printf("%c[%d;%dH",ESC,(m+n)->y+2,(m+n)->x+1);
+        printf("%c%c%c",32,32,32);
+        (m+n)->x = 380;
+        (m+n)->y = 200;
+    }
 }
 
 void monster_clear(struct monster *m) {
     int i = 0;
     for (i = 0; i < 10; i++) {
         if ((m+i)->alive == 1) {
-            /*
-            draw_matrix((m+i)->x-4,(m+i)->y-2,8,5,monsterclear,0);
-            */
             printf("%c[%d;%dH",ESC,(m+i)->y-2,(m+i)->x+1);
             printf("%c%c%c%c",32,32,32,32);
             printf("%c[%d;%dH",ESC,(m+i)->y-1,(m+i)->x-1);
@@ -106,13 +133,11 @@ void monster_clear(struct monster *m) {
         }
     }
 }
+
 void monster_draw(struct monster *m) {
     int i = 0;
     for (i = 0; i < 10; i++) {
         if ((m+i)->alive == 1) {
-            /*
-            draw_matrix(m->x-4,m->y-2,8,5,monstersprite,0);
-            */
             printf("%c[%d;%dH",ESC,(m+i)->y-2,(m+i)->x+1);
             printf("%c%c%c%c",219,219,219,219);
             printf("%c[%d;%dH",ESC,(m+i)->y-1,(m+i)->x-1);

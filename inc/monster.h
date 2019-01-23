@@ -12,6 +12,7 @@ void monster_pos(struct monster *m, struct projectile *p);
 void monster_despawn(struct monster *m, int n);
 void monster_clear(struct monster *m);
 void monster_draw(struct monster *m);
+void monster_animation(struct monster *m, int n);
 
 
 #endif /*! _MONSTER_H_ */

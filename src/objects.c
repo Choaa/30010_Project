@@ -14,7 +14,7 @@ void planet_init(struct planet *p, int x, int y, int n) {
 void planet_draw(struct planet *p) {
     int i = 0;
     for (i = 0; i < 10; i++) {
-        if ((p+i)->active == 1) {
+            if ((p+i)->active == 1) {
             printf("%c[%d;%dH",ESC,(p+i)->y+4,(p+i)->x-2);
             printf("%c%c%c%c%c",219,219,219,219,219);
             printf("%c[%d;%dH",ESC,(p+i)->y+3,(p+i)->x-3);

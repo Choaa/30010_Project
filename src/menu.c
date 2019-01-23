@@ -22,9 +22,9 @@ void menu_main_draw(uint8_t *buffer) {
 void menu_start_draw(uint8_t *buffer) {
     memset(buffer,0x00,512);
     lcd_write_string("STAGE SELECT         ",buffer,1,1);
-    lcd_write_string("              1 2 3 4",buffer,1,2);
-    lcd_write_string("              5 6 7 8",buffer,1,3);
-    lcd_write_string("0. BACK          9   ",buffer,1,4);
+    lcd_write_string("           1. STAGE 1",buffer,1,2);
+    lcd_write_string("           2. STAGE 2",buffer,1,3);
+    lcd_write_string("0. BACK    3. STAGE 3",buffer,1,4);
     lcd_push_buffer(buffer);
 }
 
@@ -50,7 +50,7 @@ void menu_help3_draw(uint8_t *buffer) {
     memset(buffer,0x00,512);
     lcd_write_string("HELP           PAGE 3",buffer,1,1);
     lcd_write_string("RELOAD:             R",buffer,1,2);
-    lcd_write_string("MISSILES:       SPACE",buffer,1,3);
+    lcd_write_string("NUKE:           SPACE",buffer,1,3);
     lcd_write_string("0. BACK              ",buffer,1,4);
     lcd_push_buffer(buffer);
 }
@@ -64,10 +64,34 @@ void menu_stage_draw(uint8_t *buffer, char *name) {
     lcd_push_buffer(buffer);
 }
 
-int menu(uint8_t *buffer, char input[], char *menu) {
+void menu_pause_draw(uint8_t *buffer) {
+    memset(buffer,0x00,512);
+    lcd_write_string("PAUSE MENU",buffer,1,1);
+    lcd_write_string("PRESS P TO UNPAUSE",buffer,1,2);
+    lcd_write_string("PPRESS E TO EXIT GAME",buffer,1,3);
+    lcd_push_buffer(buffer);
+}
+
+void menu_warning_draw(uint8_t *buffer) {
+    memset(buffer,0x00,512);
+    lcd_write_string("WARNING!",buffer,1,1);
+    lcd_write_string("REALLY WANT TO EXIT? ",buffer,1,2);
+    lcd_write_string("1. YES          2. NO",buffer,1,4);
+    lcd_push_buffer(buffer);
+}
+
+void menu_dead_draw(uint8_t *buffer) {
+    memset(buffer,0x00,512);
+    lcd_write_string("YOU DIED!",buffer,1,1);
+    lcd_write_string("PLEASE PRESS SPACE TO",buffer,1,2);
+    lcd_write_string("RETURN TO THE MENU",buffer,1,3);
+    lcd_push_buffer(buffer);
+}
+
+int menu(uint8_t *buffer, char input[], const uint8_t me[][58]) {
     int loadgame = 0;
 
-    draw_matrix(3,3,53,6,menu,1);
+    draw_matrix(3,3,53,6,me,1);
 
     while(1) {
         input[0] = uart_get_char();
@@ -76,7 +100,7 @@ int menu(uint8_t *buffer, char input[], char *menu) {
             while(1) {
                 input[0] = uart_get_char();
                 if (check_char(input,"1") == 0) {
-                    menu_stage_draw(buffer,"1: NEPTUNE");
+                    menu_stage_draw(buffer,"STAGE 1");
                     while(1) {
                         input[0] = uart_get_char();
                         if (check_char(input,"1") == 0) {
@@ -90,7 +114,7 @@ int menu(uint8_t *buffer, char input[], char *menu) {
                     }
                 }
                 else if (check_char(input,"2") == 0) {
-                    menu_stage_draw(buffer,"2: URANUS");
+                    menu_stage_draw(buffer,"STAGE 2");
                     while(1) {
                         input[0] = uart_get_char();
                         if (check_char(input,"1") == 0) {
@@ -104,95 +128,11 @@ int menu(uint8_t *buffer, char input[], char *menu) {
                     }
                 }
                 else if (check_char(input,"3") == 0) {
-                    menu_stage_draw(buffer,"3: JUPITER");
+                    menu_stage_draw(buffer,"STAGE 3");
                     while(1) {
                         input[0] = uart_get_char();
                         if (check_char(input,"1") == 0) {
                             loadgame = 3;
-                            break;
-                        }
-                        else if (check_char(input,"0") == 0) {
-                            menu_start_draw(buffer);
-                            break;
-                        }
-                    }
-                }
-                else if (check_char(input,"4") == 0) {
-                    menu_stage_draw(buffer,"4: VENUS");
-                    while(1) {
-                        input[0] = uart_get_char();
-                        if (check_char(input,"1") == 0) {
-                            loadgame = 4;
-                            break;
-                        }
-                        else if (check_char(input,"0") == 0) {
-                            menu_start_draw(buffer);
-                            break;
-                        }
-                    }
-                }
-                else if (check_char(input,"5") == 0) {
-                    menu_stage_draw(buffer,"5: SATURN");
-                    while(1) {
-                        input[0] = uart_get_char();
-                        if (check_char(input,"1") == 0) {
-                            loadgame = 5;
-                            break;
-                        }
-                        else if (check_char(input,"0") == 0) {
-                            menu_start_draw(buffer);
-                            break;
-                        }
-                    }
-                }
-                else if (check_char(input,"6") == 0) {
-                    menu_stage_draw(buffer,"6: MARS");
-                    while(1) {
-                        input[0] = uart_get_char();
-                        if (check_char(input,"1") == 0) {
-                            loadgame = 6;
-                            break;
-                        }
-                        else if (check_char(input,"0") == 0) {
-                            menu_start_draw(buffer);
-                            break;
-                        }
-                    }
-                }
-                else if (check_char(input,"7") == 0) {
-                    menu_stage_draw(buffer,"7: EARTH");
-                    while(1) {
-                        input[0] = uart_get_char();
-                        if (check_char(input,"1") == 0) {
-                            loadgame = 7;
-                            break;
-                        }
-                        else if (check_char(input,"0") == 0) {
-                            menu_start_draw(buffer);
-                            break;
-                        }
-                    }
-                }
-                else if (check_char(input,"8") == 0) {
-                    menu_stage_draw(buffer,"8: MERCURY");
-                    while(1) {
-                        input[0] = uart_get_char();
-                        if (check_char(input,"1") == 0) {
-                            loadgame = 8;
-                            break;
-                        }
-                        else if (check_char(input,"0") == 0) {
-                            menu_start_draw(buffer);
-                            break;
-                        }
-                    }
-                }
-                else if (check_char(input,"9") == 0) {
-                    menu_stage_draw(buffer,"9: THE SUN");
-                    while(1) {
-                        input[0] = uart_get_char();
-                        if (check_char(input,"1") == 0) {
-                            loadgame = 9;
                             break;
                         }
                         else if (check_char(input,"0") == 0) {

@@ -211,13 +211,14 @@
 
 1547217108 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\charset.h
 
-1548065837 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\lcd.c
+1548255414 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\lcd.c
 	"lcd.h"
 	<string.h>
 
-1547648469 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\lcd.h
+1548255326 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\lcd.h
 	"stm32f30x_conf.h"
 	"charset.h"
+	"struct.h"
 	<stdio.h>
 	<string.h>
 
@@ -232,12 +233,12 @@
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1548168626 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\startup_stm32f30x.s
+1548258164 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\startup_stm32f30x.s
 
 1547217108 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\system_stm32f30x.c
 	"stm32f30x.h"
 
-1548194657 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
+1548259045 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -286,7 +287,7 @@
 	<stdlib.h>
 	<stdio.h>
 
-1547801779 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\lut.c
+1548244016 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\lut.c
 	"LUT.h"
 	"LUT.h"
 
@@ -303,24 +304,24 @@
 	"struct.h"
 	<stdio.h>
 
-1548195590 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\ship.c
+1548259005 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\ship.c
 	"ship.h"
 	"mc_io.h"
 
-1547819875 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\struct.h
+1548235436 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\struct.h
 	"stm32f30x_conf.h"
 	<stdio.h>
 
 1547647661 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\struct.c
 
-1548171467 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\projectile.c
+1548237653 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\projectile.c
 	"projectile.h"
 	"ansi.h"
 	"equations.h"
 	<stdio.h>
 	<stdlib.h>
 
-1547818772 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\projectile.h
+1548234184 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\projectile.h
 	"stm32f30x_conf.h"
 	"struct.h"
 	<stdio.h>
@@ -337,7 +338,7 @@
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1548168656 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\objects.c
+1548237448 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\objects.c
 	"equations.h"
 	"struct.h"
 
@@ -349,13 +350,13 @@
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1547806548 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\monster.h
+1548236123 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\monster.h
 	<stdio.h>
 	"struct.h"
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1548062118 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\monster.c
+1548245705 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\monster.c
 	"monster.h"
 	"struct.h"
 	"equations.h"
@@ -366,7 +367,7 @@
 	"struct.h"
 	<stdio.h>
 
-1548166461 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\collision.c
+1548258574 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\collision.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -390,7 +391,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1548162705 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\menu.c
+1548258446 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\menu.c
 	"stm32f30x_conf.h"
 	<stdio.h>
 	"struct.h"
@@ -401,7 +402,7 @@
 	"input.h"
 	"30010_io.h"
 
-1548160408 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\menu.h
+1548258470 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\menu.h
 	<stdio.h>
 	"struct.h"
 	"stm32f30x_conf.h"
@@ -413,7 +414,7 @@
 	"objects.h"
 	"ship.h"
 
-1548172063 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\stage.c
+1548249433 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\stage.c
 	"stage.h"
 	"struct.h"
 	"ship.h"

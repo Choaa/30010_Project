@@ -159,3 +159,141 @@ void projectile_despawn(struct projectile *p, int n) {
     (p+n)->vx = 0;
     (p+n)->vy = 0;
 }
+
+void bomb_init(struct bomb *b) {
+    b->x = 2;
+    b->y = 2;
+    b->vx = 0;
+    b->vy = 0;
+    b->alive = 0;
+}
+
+void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v) {
+    b->x = s->x+10;
+    b->y = s->y;
+    b->vx = (v->x*8 >> 14)*2;
+    b->vy = (v->y*8 >> 14);
+    b->alive = 1;
+    bomb_draw(b);
+}
+
+void bomb_pos(struct bomb *b) {
+    b->x = b->x + b->vx;
+    b->y = b->y + b->vy;
+}
+
+void bomb_explode(struct bomb *b, struct monsterprojectile *p, struct monster *m) {
+    int n = 0;
+    for (n = 0; n < 10; n++) {
+        if ((m+n)->alive == 1) {
+            if (b->x >= (m+n)->x - 50 && b->x <= (m+n)->x + 50 && b->y >= (m+n)->y - 50 && b->y <= (m+n)->y + 50) {
+                monster_despawn(m,n);
+            }
+        }
+        if ((p+n)->alive == 1) {
+            if (b->x >= (p+n)->x - 50 && b->x <= (p+n)->x + 50 && b->y >= (p+n)->y - 50 && b->y <= (p+n)->y + 50) {
+                monsterprojectile_despawn(p,n);
+            }
+        }
+    }
+    bomb_despawn(b);
+}
+
+void bomb_despawn(struct bomb *b) {
+    b->vx = 0;
+    b->vy = 0;
+    bomb_clear(b);
+    b->alive = 0;
+    b->x = 2;
+    b->y = 2;
+}
+
+void bomb_draw(struct bomb *b) {
+        fgcolor(8);
+        printf("%c[%d;%dH",ESC,b->y-4,b->x-2);
+        printf("%c%c%c%c%c",219,219,219,219,219);
+        printf("%c[%d;%dH",ESC,b->y-3,b->x-3);
+        printf("%c",219);
+        fgcolor(11);
+        printf("%c%c",219,219);
+        fgcolor(8);
+        printf("%c",219);
+        fgcolor(11);
+        printf("%c%c",219,219);
+        fgcolor(8);
+        printf("%c",219);
+        printf("%c[%d;%dH",ESC,b->y-2,b->x-4);
+        printf("%c",219);
+        fgcolor(11);
+        printf("%c%c%c",219,219,219);
+        fgcolor(8);
+        printf("%c",219);
+        fgcolor(11);
+        printf("%c%c%c",219,219,219);
+        fgcolor(8);
+        printf("%c",219);
+        printf("%c[%d;%dH",ESC,b->y-1,b->x-4);
+        printf("%c",219);
+        fgcolor(11);
+        printf("%c%c",219,219);
+        fgcolor(8);
+        printf("%c%c%c",219,219,219);
+        fgcolor(11);
+        printf("%c%c",219,219);
+        fgcolor(8);
+        printf("%c",219);
+        printf("%c[%d;%dH",ESC,b->y,b->x-4);
+        printf("%c%c%c%c",219,219,219,219);
+        fgcolor(11);
+        printf("%c",219);
+        fgcolor(8);
+        printf("%c%c%c%c",219,219,219,219);
+        printf("%c[%d;%dH",ESC,b->y+1,b->x-4);
+        printf("%c%c%c%c%c%c%c%c%c",219,219,219,219,219,219,219,219,219);
+        printf("%c[%d;%dH",ESC,b->y+2,b->x-4);
+        printf("%c%c%c",219,219,219);
+        fgcolor(11);
+        printf("%c%c%c",219,219,219);
+        fgcolor(8);
+        printf("%c%c%c",219,219,219);
+        printf("%c[%d;%dH",ESC,b->y+3,b->x-3);
+        printf("%c",219);
+        fgcolor(11);
+        printf("%c%c%c%c%c",219,219,219,219,219);
+        fgcolor(8);
+        printf("%c",219);
+        printf("%c[%d;%dH",ESC,b->y+4,b->x-2);
+        printf("%c%c%c%c%c",219,219,219,219,219);
+        fgcolor(15);
+}
+
+
+
+
+void bomb_clear(struct bomb *b) {
+        printf("%c[%d;%dH",ESC,b->y+4,b->x-2);
+        printf("%c%c%c%c%c",32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y+3,b->x-3);
+        printf("%c%c%c%c%c%c%c",32,32,32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y+2,b->x-4);
+        printf("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y+1,b->x-4);
+        printf("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y,b->x-4);
+        printf("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y-1,b->x-4);
+        printf("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y-2,b->x-4);
+        printf("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y-3,b->x-3);
+        printf("%c%c%c%c%c%c%c",32,32,32,32,32,32,32);
+        printf("%c[%d;%dH",ESC,b->y-4,b->x-2);
+        printf("%c%c%c%c%c",32,32,32,32,32);
+}
+
+void bomb_create(struct bomb *b, int time) {
+    srand(time);
+    (b+1)->x = rand() % 300;
+    (b+1)->y = rand() % 100;
+
+}

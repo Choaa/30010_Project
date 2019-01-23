@@ -9,10 +9,10 @@
 #include "ship.h"
 #include <string.h>
 
-#define MONSTERLENGTH 10
-#define MONSTERHEIGHT 7
-#define PLAYERLENGTH 10
-#define PLAYERRHEIGHT 10
+#define MONSTERLENGTH 8
+#define MONSTERHEIGHT 6
+#define PLAYERLENGTH 8
+#define PLAYERRHEIGHT 8
 
 void bullet_monster_collision(struct projectile *p, struct monster *m) {
     int i = 0;
@@ -20,11 +20,10 @@ void bullet_monster_collision(struct projectile *p, struct monster *m) {
     for (i=0; i < 20 ;i++) {
         if ((p+i)->alive == 1) {
             for (n=0; n < 10 ;n++) {
-                if ((m+n)->alive == 1) {
-                    if ((p+i)->x >= (m+n)->x - MONSTERLENGTH/2 && (p+i)->x <= (m+n)->x + MONSTERLENGTH/2 && (p+i)->y >= (m+n)->y - MONSTERHEIGHT/2 && (p+i)->y <= (m+n)->y + MONSTERHEIGHT/2) {
-                        projectile_despawn(p,i);
-                        monster_despawn(m,n);
-                    }
+                if ((m+n)->alive == 1 && (p+i)->x >= (m+n)->x - MONSTERLENGTH/2 && (p+i)->x <= (m+n)->x + MONSTERLENGTH/2 && (p+i)->y >= (m+n)->y - MONSTERHEIGHT/2 && (p+i)->y <= (m+n)->y + MONSTERHEIGHT/2) {
+                    projectile_despawn(p,i);
+                    monster_despawn(m,n);
+                    monster_animation(m,n);
                 }
             }
         }
@@ -35,11 +34,9 @@ void bullet_monster_collision(struct projectile *p, struct monster *m) {
 void bullet_player_collision(struct monsterprojectile *p, struct spaceship *s) {
     int n = 0;
     for (n=0;n<10;n++) {
-        if ((p+n)->alive == 1) {
-            if ((p+n)->x >= s->x - PLAYERLENGTH/2 && (p+n)->x <= s->x + PLAYERLENGTH/2 && (p+n)->y >= s->y - PLAYERRHEIGHT/2 && (p+n)->y <= (s)->y + PLAYERRHEIGHT/2) {
-                monsterprojectile_despawn(p,n);
-                s->hp = s->hp - 1;
-            }
+        if ((p+n)->alive == 1 && (p+n)->x >= s->x - PLAYERLENGTH/2 && (p+n)->x <= s->x + PLAYERLENGTH/2 && (p+n)->y >= s->y - PLAYERRHEIGHT/2 && (p+n)->y <= (s)->y + PLAYERRHEIGHT/2) {
+            monsterprojectile_despawn(p,n);
+            s->hp = s->hp - 1;
         }
     }
 }
@@ -47,8 +44,9 @@ void bullet_player_collision(struct monsterprojectile *p, struct spaceship *s) {
 void player_monster_collision(struct monster *m, struct spaceship *s) {
     int n = 0;
     for (n=0;n<20;n++) {
-        if (s->x >= (m+n)->x - MONSTERLENGTH/2 && s->x <= (m+n)->x + MONSTERLENGTH/2 && s->y >= (m+n)->y - MONSTERHEIGHT/2 && s->y <= (m+n)->y + MONSTERHEIGHT/2) {
+        if ((m+n)->alive == 1 && s->x >= (m+n)->x - MONSTERLENGTH/2 && s->x <= (m+n)->x + MONSTERLENGTH/2 && s->y >= (m+n)->y - MONSTERHEIGHT/2 && s->y <= (m+n)->y + MONSTERHEIGHT/2) {
             monster_despawn(m,n);
+            monster_animation(m,n);
             s->hp = s->hp - 1;
         }
     }
@@ -60,7 +58,6 @@ void player_stage_collision(struct spaceship *s, int angle, int leftx, int topy,
         s->vx = 0;
         s->x = leftx + 31;
         ship_draw(s,angle);
-
     }
     if (s->y <= topy+12) {
         ship_clear(s,angle);
@@ -81,3 +78,4 @@ void player_stage_collision(struct spaceship *s, int angle, int leftx, int topy,
         ship_draw(s,angle);
     }
 }
+
