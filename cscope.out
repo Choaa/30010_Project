@@ -1,4 +1,4 @@
-cscope 15 $HOME\Documents\DTU\30010 Programmeringsprojekt\Project"               0000977826
+cscope 15 $HOME\Documents\DTU\30010 Programmeringsprojekt\Project"               0000999527
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\SPL\inc\ST048A~1.H
 
 30 #iâdeà
@@ -101197,6 +101197,96 @@ bufãr
 lcd_»£t
 ();
 
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\ALIENP~1.H
+
+1 
+	~"¡m32f30x_cÚf.h
+"
+
+2 
+	~"¡ruù.h
+"
+
+3 
+	~<¡dio.h
+>
+
+5 #iâdeà
+_ALIENPROJECTILE_H_
+
+
+6 
+	#_ALIENPROJECTILE_H_
+
+
+	)
+
+8 
+®›Årojeùe_š™
+(
+®›Årojeùe
+ *
+­
+);
+
+9 
+®›Årojeùe_¥awn
+(
+®›n
+ *
+a
+, 
+¥aûsh
+ *
+s
+, 
+®›Årojeùe
+ *
+­
+, 
+n
+);
+
+10 
+®›Årojeùe_pos
+(
+®›Årojeùe
+ *
+­
+, 
+n
+);
+
+11 
+®›Årojeùe_d¿w
+(
+®›Årojeùe
+ *
+­
+, 
+n
+);
+
+12 
+®›Årojeùe_ş—r
+(
+®›Årojeùe
+ *
+­
+, 
+n
+);
+
+13 
+®›Årojeùe_de¥awn
+(
+®›Årojeùe
+ *
+­
+, 
+n
+);
+
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\COLLIS~1.H
 
 1 
@@ -101222,23 +101312,23 @@ _COLLISION_H_
 	)
 
 8 
-buÎ‘_mÚ¡”_cŞlisiÚ
+buÎ‘_®›n_cŞlisiÚ
 (
 ´ojeùe
  *
 p
 , 
-mÚ¡”
+®›n
  *
-m
+a
 );
 
 9 
 buÎ‘_¶ay”_cŞlisiÚ
 (
-mÚ¡”´ojeùe
+®›Årojeùe
  *
-p
+­
 , 
 ¥aûsh
  *
@@ -101246,45 +101336,45 @@ s
 );
 
 10 
-¶ay”_mÚ¡”_cŞlisiÚ
+¶ay”_®›n_cŞlisiÚ
 (
-mÚ¡”
+®›n
  *
-m
+a
 , 
 ¥aûsh
  *
 s
 );
 
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\EQUATI~1.H
-
-1 #iâdeà
-_EQUATIONS_H_
-
-
-2 
-	#_EQUATIONS_H_
-
-
-	)
-
-4 
-	~"¡m32f30x_cÚf.h
-"
-
-5 
-	~<¡dio.h
->
-
-7 
-št32_t
- 
-ÃwtÚ_sq¹
-(št32_ˆ
-x
+11 
+¶ay”_¡age_cŞlisiÚ
+(
+¥aûsh
+ *
+s
 , 
-guess
+ªgË
+, 
+Ëáx
+, 
+tİy
+, 
+rightx
+, 
+bÙtomy
+);
+
+12 
+¶ay”_pickup_cŞlisiÚ
+(
+¥aûsh
+ *
+s
+, 
+bomb
+ *
+b
 );
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\LUT.h
@@ -101339,96 +101429,6 @@ x
 y
 , 
 ªgË
-);
-
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\MONSTE~1.H
-
-2 
-	~"¡m32f30x_cÚf.h
-"
-
-3 
-	~"¡ruù.h
-"
-
-4 
-	~<¡dio.h
->
-
-6 #iâdeà
-_MONSTERPROJECTILE_H_
-
-
-7 
-	#_MONSTERPROJECTILE_H_
-
-
-	)
-
-9 
-mÚ¡”´ojeùe_š™
-(
-mÚ¡”´ojeùe
- *
-p
-);
-
-10 
-mÚ¡”´ojeùe_¥awn
-(
-mÚ¡”
- *
-m
-, 
-¥aûsh
- *
-s
-, 
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-);
-
-11 
-mÚ¡”´ojeùe_pos
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-);
-
-12 
-mÚ¡”´ojeùe_d¿w
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-);
-
-13 
-mÚ¡”´ojeùe_ş—r
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-);
-
-14 
-mÚ¡”´ojeùe_de¥awn
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
 );
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\PROJEC~1.H
@@ -101529,6 +101529,88 @@ n
 p
 , 
 n
+);
+
+15 
+bomb_š™
+(
+bomb
+ *
+b
+);
+
+16 
+bomb_¥awn
+(
+bomb
+ *
+b
+, 
+¥aûsh
+ *
+s
+, 
+ªgË
+ *
+v
+);
+
+17 
+bomb_pos
+(
+bomb
+ *
+b
+);
+
+18 
+bomb_d¿w
+(
+bomb
+ *
+b
+);
+
+19 
+bomb_ex¶ode
+(
+bomb
+ *
+b
+, 
+®›Årojeùe
+ *
+­
+, 
+®›n
+ *
+a
+);
+
+20 
+bomb_ş—r
+(
+bomb
+ *
+b
+);
+
+21 
+bomb_de¥awn
+(
+bomb
+ *
+b
+);
+
+22 
+bomb_ü—‹
+(
+bomb
+ *
+b
+, 
+time
 );
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\STM32F~1.H
@@ -139829,6 +139911,104 @@ Sy¡emCÜeClockUpd©e
 __ılu¥lus
 
 
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\alien.h
+
+1 
+	~<¡dio.h
+>
+
+2 #iâdeà
+_ALIEN_H
+
+
+3 
+	#_ALIEN_H
+
+
+	)
+
+5 
+	~"¡ruù.h
+"
+
+6 
+	~"¡m32f30x_cÚf.h
+"
+
+7 
+	~<¡dio.h
+>
+
+9 
+®›n_š™
+(
+®›n
+ *
+a
+);
+
+10 
+®›n_¥awn
+(
+®›n
+ *
+a
+, 
+x
+, 
+y
+, 
+n
+);
+
+11 
+®›n_pos
+(
+®›n
+ *
+a
+, 
+´ojeùe
+ *
+p
+);
+
+12 
+®›n_de¥awn
+(
+®›n
+ *
+a
+, 
+n
+);
+
+13 
+®›n_ş—r
+(
+®›n
+ *
+a
+);
+
+14 
+®›n_d¿w
+(
+®›n
+ *
+a
+);
+
+15 
+®›n_ªim©iÚ
+(
+®›n
+ *
+a
+, 
+n
+);
+
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\ansi.h
 
 1 
@@ -139957,27 +140137,27 @@ ch¬aù”_d©a
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\draw.h
 
-1 #iâdeà
+1 
+	~"¡ruù.h
+"
+
+2 
+	~"¡m32f30x_cÚf.h
+"
+
+3 
+	~<¡dio.h
+>
+
+5 #iâdeà
 _DRAW_H_
 
 
-2 
+6 
 	#_DRAW_H_
 
 
 	)
-
-4 
-	~"¡ruù.h
-"
-
-5 
-	~"¡m32f30x_cÚf.h
-"
-
-6 
-	~<¡dio.h
->
 
 8 
 d¿w_m©rix
@@ -139999,113 +140179,63 @@ d¿wem±y
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\input.h
 
-1 #iâdeà
+1 
+	~"¡m32f30x_cÚf.h
+"
+
+2 
+	~<¡dio.h
+>
+
+3 
+	~<¡ršg.h
+>
+
+5 #iâdeà
 _INPUT_H_
 
 
-2 
+6 
 	#_INPUT_H_
 
 
 	)
 
-4 
-	~"¡m32f30x_cÚf.h
-"
-
-5 
-	~"ch¬£t.h
-"
-
-6 
-	~<¡dio.h
->
-
-7 
-	~<¡ršg.h
->
-
-9 
-check_w
+8 
+check_ch¬
 (*
 š
-);
-
-10 
-check_a
-(*
-š
-);
-
-11 
-check_s
-(*
-š
-);
-
-12 
-check_d
-(*
-š
-);
-
-13 
-check_r
-(*
-š
-);
-
-14 
-check_v
-(*
-š
-);
-
-15 
-check_p
-(*
-š
-);
-
-16 
-check_l
-(*
-š
-);
-
-17 
-check_¥aû
-(*
-š
-);
+, 
+v®
+[]);
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\lcd.h
 
-1 #iâdeà
+1 
+	~"¡m32f30x_cÚf.h
+"
+
+2 
+	~"ch¬£t.h
+"
+
+3 
+	~<¡dio.h
+>
+
+4 
+	~<¡ršg.h
+>
+
+6 #iâdeà
 _LCD_H_
 
 
-2 
+7 
 	#_LCD_H_
 
 
 	)
-
-4 
-	~"¡m32f30x_cÚf.h
-"
-
-5 
-	~"ch¬£t.h
-"
-
-6 
-	~<¡dio.h
->
-
-7 
-	~<¡ršg.h
->
 
 9 
 lcd_wr™e_¡ršg
@@ -140136,10 +140266,8 @@ row
 );
 
 11 
-lcd_d¿w_misses
-(
-amouÁ
-, 
+lcd_d¿w_nuke
+(
 ušt8_t
 * 
 bufãr
@@ -140162,6 +140290,56 @@ pos
 , 
 row
 );
+
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\maths.h
+
+1 
+	~"¡m32f30x_cÚf.h
+"
+
+2 
+	~"¡ruù.h
+"
+
+3 
+	~<¡dio.h
+>
+
+5 #iâdeà
+_MATHS_H_
+
+
+6 
+	#_MATHS_H_
+
+
+	)
+
+8 
+št32_t
+ 
+ÃwtÚ_sq¹
+(št32_ˆ
+x
+, 
+guess
+);
+
+10 
+veùÜ_š™
+(
+ªgË
+ *
+v
+);
+
+11 
+veùÜ_rÙ
+(
+ªgË
+ *
+v
+, angle);
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\mc_io.h
 
@@ -140209,142 +140387,142 @@ cŞÜ
 g‘_hs
 ();
 
-14 
-g‘_s
-();
-
-15 
-g‘_m
-();
-
-16 
-g‘_h
-();
-
-18 
+15 
 time_š™
 ();
 
-19 
+16 
 time_£t
 (
-h
-, 
-m
-, 
-s
-, 
 hs
 );
 
-20 
+17 
 time_upd©e
 ();
 
-22 
-g‘_æag
+19 
+g‘_æag2
 ();
 
-23 
-æag_upd©e
+20 
+æag2_upd©e
 ();
 
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\monster.h
-
-1 
-	~<¡dio.h
->
-
-2 #iâdeà
-_MONSTER_H
-
-
-3 
-	#_MONSTER_H
-
-
-	)
-
-5 
-	~"¡ruù.h
-"
-
-6 
-	~"¡m32f30x_cÚf.h
-"
-
-7 
-	~<¡dio.h
->
-
-9 
-mÚ¡”_š™
-(
-mÚ¡”
- *
-m
-);
-
-10 
-mÚ¡”_¥awn
-(
-mÚ¡”
- *
-m
-, 
-x
-, 
-y
-, 
-n
-);
-
-11 
-mÚ¡”_pos
-(
-mÚ¡”
- *
-m
-, 
-´ojeùe
- *
-p
-);
-
-12 
-mÚ¡”_de¥awn
-(
-mÚ¡”
- *
-m
-, 
-n
-);
-
-13 
-mÚ¡”_ş—r
-(
-mÚ¡”
- *
-m
-);
-
-14 
-mÚ¡”_d¿w
-(
-mÚ¡”
- *
-m
-);
-
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\motion.h
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\menu.h
 
 1 
 	~"¡m32f30x_cÚf.h
 "
 
 2 
+	~<¡dio.h
+>
+
+4 #iâdeà
+_MENU_H
+
+
+5 
+	#_MENU_H
+
+
+	)
+
+7 
+m’u_maš_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+8 
+m’u_¡¬t_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+9 
+m’u_h–p_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+10 
+m’u_h–p2_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+11 
+m’u_h–p3_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+12 
+m’u_·u£_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+13 
+m’u_¡age_d¿w
+(
+ušt8_t
+ *
+bufãr
+, *
+Çme
+);
+
+14 
+m’u_w¬nšg_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+15 
+m’u_d—d_d¿w
+(
+ušt8_t
+ *
+bufãr
+);
+
+16 
+m’u
+(
+ušt8_t
+ *
+bufãr
+, 
+šput
+[], cÚ¡ ušt8_ˆ
+me
+[][58]);
+
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\objects.h
+
+1 
 	~"¡ruù.h
+"
+
+2 
+	~"¡m32f30x_cÚf.h
 "
 
 3 
@@ -140352,62 +140530,14 @@ m
 >
 
 5 #iâdeà
-_MOTION_H_
-
-
-6 
-	#_MOTION_H_
-
-
-	)
-
-8 
-veùÜ_š™
-(
-ªgË
- *
-v
-);
-
-9 
-veùÜ_rÙ
-(
-ªgË
- *
-v
-, angle);
-
-12 
-bombd¿w
-(
-´ojeùe
- *
-p
-);
-
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\objects.h
-
-1 #iâdeà
 _OBJECTS_H_
 
 
-2 
+6 
 	#_OBJECTS_H_
 
 
 	)
-
-4 
-	~"¡ruù.h
-"
-
-5 
-	~"¡m32f30x_cÚf.h
-"
-
-6 
-	~<¡dio.h
->
 
 8 
 ¶ª‘_š™
@@ -140415,14 +140545,20 @@ _OBJECTS_H_
 ¶ª‘
  *
 p
+, 
+x
+, 
+y
+, 
+n
 );
 
 9 
 ¶ª‘_d¿w
-(
-x
-, 
-y
+(
+¶ª‘
+ *
+p
 );
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\ship.h
@@ -140467,11 +140603,23 @@ s
 ªgË
  *
 v
-, 
-Ú
 );
 
 10 
+sh_driá
+(
+¥aûsh
+ *
+s
+, 
+ªgx
+, 
+ªgy
+, 
+driá
+);
+
+11 
 sh_d¿w
 (
 ¥aûsh
@@ -140481,7 +140629,7 @@ s
 ªgË
 );
 
-11 
+12 
 sh_ş—r
 (
 ¥aûsh
@@ -140491,12 +140639,56 @@ s
 ªgË
 );
 
-12 
+13 
 sh_h—Éh
 (
 ¥aûsh
  *
 s
+);
+
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\stage.h
+
+1 
+	~"¡m32f30x_cÚf.h
+"
+
+2 
+	~"¡ruù.h
+"
+
+3 
+	~"objeùs.h
+"
+
+4 
+	~"sh.h
+"
+
+6 #iâdeà
+_STAGE_H_
+
+
+7 
+	#_STAGE_H_
+
+
+	)
+
+9 
+¡age_š™
+(
+¡age
+, 
+¥aûsh
+ *
+s
+, 
+ªgË
+, 
+¶ª‘
+ *
+p
 );
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\struct.h
@@ -140546,22 +140738,10 @@ _STRUCT_H_
 ;
 
 15 
-	smÚ¡”
- {
-
-16 
-	mx
-,
-	my
-,
-	m®ive
-;
-
-19 
 	s´ojeùe
  {
 
-20 
+16 
 	mx
 ,
 	my
@@ -140571,7 +140751,7 @@ _STRUCT_H_
 	m®ive
 ;
 
-21 
+17 
 št32_t
  
 	mvx
@@ -140583,11 +140763,41 @@ _STRUCT_H_
 	may
 ;
 
+20 
+	sbomb
+ {
+
+21 
+	mx
+,
+	my
+,
+	mvx
+,
+	mvy
+,
+	m®ive
+;
+
 24 
-	smÚ¡”´ojeùe
+	s®›n
  {
 
 25 
+	mx
+,
+	my
+,
+	m®ive
+,
+	mªim©iÚ
+;
+
+28 
+	s®›Årojeùe
+ {
+
+29 
 	mx
 ,
 	my
@@ -140599,11 +140809,11 @@ _STRUCT_H_
 	m®ive
 ;
 
-28 
+32 
 	s¶ª‘
  {
 
-29 
+33 
 	mx
 ,
 	my
@@ -145094,7 +145304,7 @@ h
 .
 h
  inc/
-equ©iÚs
+m©hs
 .h
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\obj\Debug\src\STARTU~1.D
@@ -145527,8 +145737,8 @@ h
 c
  
 šc
-/
-lcd
+/30010
+_io
 .
 h
  inc/
@@ -145685,8 +145895,6 @@ SPL
 h
  SPL\šc/
 ¡m32f30x_misc
-.h inc/
-ch¬£t
 .h
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\obj\Debug\src\lcd.d
@@ -146094,7 +146302,7 @@ lcd
 15 
 šc
 /
-mÙiÚ
+m©hs
 .
 h
  inc/.h inc/
@@ -146114,17 +146322,31 @@ objeùs
 .h inc/
 d¿w
 .h inc/
-mÚ¡”
+®›n
 .h \
 
 17 
 šc
 /
-mÚ¡”´ojeùe
+®›Årojeùe
 .
 h
  inc/
 cŞlisiÚ
+.h inc/
+m’u
+.h inc/
+¡age
+.h \
+
+18 
+šc
+/
+objeùs
+.
+h
+ inc/
+sh
 .h
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\obj\Debug\src\mc_io.d
@@ -147933,6 +148155,476 @@ CR1
 	}
 }
 
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\ALIENP~1.C
+
+1 
+	~"®›Årojeùe.h
+"
+
+2 
+	~"ªsi.h
+"
+
+3 
+	~"m©hs.h
+"
+
+4 
+	~<¡dio.h
+>
+
+5 
+	~<¡dlib.h
+>
+
+7 
+	#SHIFT_AMOUNT
+ 8
+
+	)
+
+9 
+	#ESC
+ 0x1B
+
+	)
+
+12 
+	$®›Årojeùe_š™
+(
+®›Årojeùe
+ *
+­
+) {
+
+13 
+i
+ = 0;
+
+14 
+i
+ = 0; i < 20; i++) {
+
+15 (
+­
++
+i
+)->
+x
+ = 2;
+
+16 (
+­
++
+i
+)->
+y
+ = 2;
+
+17 (
+­
++
+i
+)->
+®ive
+ = 0;
+
+19 
+	}
+}
+
+21 
+	$®›Årojeùe_¥awn
+(
+®›n
+ *
+a
+, 
+¥aûsh
+ *
+s
+, 
+®›Årojeùe
+ *
+­
+, 
+n
+) {
+
+22 (
+­
++
+n
+)->
+x
+ = (
+a
+->x - 10è<< 
+SHIFT_AMOUNT
+;
+
+23 (
+­
++
+n
+)->
+y
+ = (
+a
+->yè<< 
+SHIFT_AMOUNT
+;
+
+24 
+di¡
+ = 
+	`ÃwtÚ_sq¹
+((
+s
+->
+x
+-((
+­
++
+n
+)->x >> 
+SHIFT_AMOUNT
+))*(s->x-(×p+n)->x >> SHIFT_AMOUNT))*2+(s->
+y
+-((ap+n)->y >> SHIFT_AMOUNT))*(s->y-((ap+n)->y >> SHIFT_AMOUNT)),500);
+
+25 (
+­
++
+n
+)->
+x
+ = (­+n)->x >> 
+SHIFT_AMOUNT
+;
+
+26 (
+­
++
+n
+)->
+y
+ = (­+n)->y >> 
+SHIFT_AMOUNT
+;
+
+27 
+di¡
+ = dist/10;
+
+28 (
+­
++
+n
+)->
+rx
+ = (((
+s
+->
+x
+)-×p+n)->x))/
+di¡
+;
+
+29 (
+­
++
+n
+)->
+ry
+ = (((
+s
+->
+y
+)-×p+n)->y))/
+di¡
+;
+
+30 (
+­
++
+n
+)->
+®ive
+ = 1;
+
+31 
+	}
+}
+
+33 
+	$®›Årojeùe_pos
+(
+®›Årojeùe
+ *
+­
+, 
+n
+) {
+
+34 ià((
+­
++
+n
+)->
+®ive
+ == 1) {
+
+35 (
+­
++
+n
+)->
+x
+ = (­+n)->x + (­+n)->
+rx
+;
+
+36 (
+­
++
+n
+)->
+y
+ = (­+n)->y + (­+n)->
+ry
+;
+
+38 
+	}
+}
+
+40 
+	$®›Årojeùe_d¿w
+(
+®›Årojeùe
+ *
+­
+, 
+n
+) {
+
+41 ià((
+­
++
+n
+)->
+®ive
+ == 1) {
+
+42 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+­
++
+n
+)->
+y
+-1,×p+n)->
+x
+);
+
+43 
+	`fgcŞÜ
+(1);
+
+44 
+	`´štf
+("%c",223);
+
+45 
+	`fgcŞÜ
+(15);
+
+46 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+­
++
+n
+)->
+y
+,×p+n)->
+x
+-1);
+
+47 
+	`fgcŞÜ
+(1);
+
+48 
+	`´štf
+("%c%c%c",223,223,223);
+
+49 
+	`fgcŞÜ
+(15);
+
+50 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+­
++
+n
+)->
+y
++1,×p+n)->
+x
+);
+
+51 
+	`fgcŞÜ
+(1);
+
+52 
+	`´štf
+("%c",223);
+
+53 
+	`fgcŞÜ
+(15);
+
+54 
+	`´štf
+("%c[H",
+ESC
+);
+
+56 
+	}
+}
+
+58 
+	$®›Årojeùe_ş—r
+(
+®›Årojeùe
+ *
+­
+, 
+n
+) {
+
+59 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+­
++
+n
+)->
+y
+-1,×p+n)->
+x
+);
+
+60 
+	`´štf
+("%c",32);
+
+61 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+­
++
+n
+)->
+y
+,×p+n)->
+x
+-1);
+
+62 
+	`´štf
+("%c%c%c",32,32,32);
+
+63 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+­
++
+n
+)->
+y
++1,×p+n)->
+x
+);
+
+64 
+	`´štf
+("%c",32);
+
+65 
+	`´štf
+("%c[H",
+ESC
+);
+
+66 
+	}
+}
+
+68 
+	$®›Årojeùe_de¥awn
+(
+®›Årojeùe
+ *
+­
+, 
+n
+) {
+
+69 
+	`®›Årojeùe_ş—r
+(
+­
+,
+n
+);
+
+70 (
+­
++
+n
+)->
+®ive
+ = 0;
+
+71 (
+­
++
+n
+)->
+x
+ = 2;
+
+72 (
+­
++
+n
+)->
+y
+ = 2;
+
+73 
+	}
+}
+
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\COLLIS~1.C
 
 1 
@@ -147940,23 +148632,23 @@ CR1
 "
 
 2 
-	~"30010_io.h
-"
-
-3 
-	~"ªsi.h
-"
-
-4 
 	~"cŞlisiÚ.h
 "
 
+3 
+	~"®›n.h
+"
+
+4 
+	~"®›Årojeùe.h
+"
+
 5 
-	~"¡ruù.h
+	~"´ojeùe.h
 "
 
 6 
-	~"mÚ¡”.h
+	~"sh.h
 "
 
 7 
@@ -147964,232 +148656,458 @@ CR1
 >
 
 9 
-	#MONSTERLENGTH
+	#ALIENLENGTH
  8
 
 	)
 
 10 
-	#MONSTERHEIGHT
- 5
+	#ALIENHEIGHT
+ 6
 
 	)
 
 11 
 	#PLAYERLENGTH
- 10
+ 8
 
 	)
 
 12 
 	#PLAYERRHEIGHT
- 10
+ 8
 
 	)
 
-14 
-	$buÎ‘_mÚ¡”_cŞlisiÚ
+13 
+	#NUKEDIAMETER
+ 8
+
+	)
+
+15 
+	$buÎ‘_®›n_cŞlisiÚ
 (
 ´ojeùe
  *
 p
 , 
-mÚ¡”
+®›n
  *
-m
+a
 ) {
 
-15 
-i
- = 0;
-
 16 
-n
+i
  = 0;
 
-17 
-i
-=0;i<20;i++) {
+17 
+j
+ = 0;
 
 18 
-n
-=0;n<10;n++) {
+i
+ = 0; i < 20; i++) {
 
 19 ià((
-m
+p
 +
-n
+i
 )->
 ®ive
  == 1) {
 
-20 ià((
+20 
+j
+ = 0; j < 10 ; j++) {
+
+21 ià((
+a
++
+j
+)->
+®ive
+ =ğ1 && (
 p
 +
 i
 )->
 x
- >ğ(
-m
-+
-n
-)->x - 
-MONSTERLENGTH
-/2 && (p+i)->x <ğ(m+n)->x + MONSTERLENGTH/2 && (p+i)->
+ >ğ×+j)->x - 
+ALIENLENGTH
+/2 && (p+i)->x <ğ×+j)->x + ALIENLENGTH/2 && (p+i)->
 y
- >ğ(m+n)->y - 
-MONSTERHEIGHT
-/2 && (p+i)->y <= (m+n)->y + MONSTERHEIGHT/2) {
+ >ğ×+j)->y - 
+ALIENHEIGHT
+/2 && (p+i)->y <= (a+j)->y + ALIENHEIGHT/2) {
 
-21 
-	`mÚ¡”_de¥awn
+22 
+	`´ojeùe_de¥awn
 (
-m
+p
 ,
-n
+i
 );
 
-26 
+23 
+	`®›n_de¥awn
+(
+a
+,
+j
+);
+
+24 
+	`®›n_ªim©iÚ
+(
+a
+,
+j
+);
+
+29 
 	}
 }
 
-28 
+31 
 	$buÎ‘_¶ay”_cŞlisiÚ
 (
-mÚ¡”´ojeùe
+®›Årojeùe
  *
-p
+­
 , 
 ¥aûsh
  *
 s
 ) {
 
-29 
-n
+32 
+i
  = 0;
 
-30 
-n
-=0;n<20;n++) {
+33 
+i
+ = 0; i < 10; i++) {
 
-31 ià((
-p
+34 ià((
+­
 +
-n
+i
 )->
+®ive
+ =ğ1 && (­+i)->
 x
  >ğ
 s
 ->x - 
 PLAYERLENGTH
-/2 && (p+n)->x <ğs->x + PLAYERLENGTH/2 && (p+n)->
+/2 && (­+i)->x <ğs->x + PLAYERLENGTH/2 && (­+i)->
 y
  >ğs->y - 
 PLAYERRHEIGHT
-/2 && (p+n)->y <= (s)->y + PLAYERRHEIGHT/2)
+/2 && (ap+i)->y <= (s)->y + PLAYERRHEIGHT/2) {
 
-33 
+35 
+	`®›Årojeùe_de¥awn
+(
+­
+,
+i
+);
+
+36 
 s
 ->
 hp
  = s->hp - 1;
 
-36 
+39 
 	}
 }
 
-38 
-	$¶ay”_mÚ¡”_cŞlisiÚ
+41 
+	$¶ay”_®›n_cŞlisiÚ
 (
-mÚ¡”
+®›n
  *
-m
+a
 , 
 ¥aûsh
  *
 s
 ) {
 
-39 
-n
+42 
+i
  = 0;
 
-40 
-n
-=0;n<20;n++) {
+43 
+i
+ = 0; i < 20; i++) {
 
-41 ià(
+44 ià((
+a
++
+i
+)->
+®ive
+ =ğ1 && 
 s
 ->
 x
- >ğ(
-m
-+
-n
-)->x - 
-MONSTERLENGTH
-/2 && s->x <ğ(m+n)->x + MONSTERLENGTH/2 && s->
+ >ğ×+i)->x - 
+ALIENLENGTH
+/2 && s->x <ğ×+i)->x + ALIENLENGTH/2 && s->
 y
- >ğ(m+n)->y - 
-MONSTERHEIGHT
-/2 && s->y <= (m+n)->y + MONSTERHEIGHT/2)
+ >ğ×+i)->y - 
+ALIENHEIGHT
+/2 && s->y <= (a+i)->y + ALIENHEIGHT/2) {
 
-43 
-	`mÚ¡”_de¥awn
+45 
+	`®›n_de¥awn
 (
-m
+a
 ,
-n
+i
 );
 
-44 
+46 
+	`®›n_ªim©iÚ
+(
+a
+,
+i
+);
+
+47 
 s
 ->
 hp
  = s->hp - 1;
 
-47 
+50 
 	}
 }
 
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\EQUATI~1.C
-
-1 
-	~"equ©iÚs.h
-"
-
-3 
-št32_t
- 
-	$ÃwtÚ_sq¹
-(
-št32_t
- 
-x
+52 
+	$¶ay”_¡age_cŞlisiÚ
+(
+¥aûsh
+ *
+s
 , 
-guess
+ªgË
+, 
+Ëáx
+, 
+tİy
+, 
+rightx
+, 
+bÙtomy
 ) {
 
-4 
-i
- = 1;
-
-5 
-i
- = 1;i<10;i++) {
-
-6 
-guess
- = guess-(guess*guess-
+53 ià(
+s
+->
 x
-)/(2*guess);
+ <ğ
+Ëáx
++30) {
 
-8  
-guess
-;
+54 
+	`sh_ş—r
+(
+s
+,
+ªgË
+);
 
-9 
+55 
+s
+->
+vx
+ = 0;
+
+56 
+s
+->
+x
+ = 
+Ëáx
+ + 31;
+
+57 
+	`sh_d¿w
+(
+s
+,
+ªgË
+);
+
+59 ià(
+s
+->
+y
+ <ğ
+tİy
++12) {
+
+60 
+	`sh_ş—r
+(
+s
+,
+ªgË
+);
+
+61 
+s
+->
+vy
+ = 0;
+
+62 
+s
+->
+y
+ = 
+tİy
+ + 13;
+
+63 
+	`sh_d¿w
+(
+s
+,
+ªgË
+);
+
+65 ià(
+s
+->
+x
+ >ğ
+rightx
+-12) {
+
+66 
+	`sh_ş—r
+(
+s
+,
+ªgË
+);
+
+67 
+s
+->
+vx
+ = 0;
+
+68 
+s
+->
+x
+ = 
+rightx
+ - 20;
+
+69 
+	`sh_d¿w
+(
+s
+,
+ªgË
+);
+
+71 ià(
+s
+->
+y
+ >ğ
+bÙtomy
+-12) {
+
+72 
+	`sh_ş—r
+(
+s
+,
+ªgË
+);
+
+73 
+s
+->
+vy
+ = 0;
+
+74 
+s
+->
+y
+ = 
+bÙtomy
+ - 13;
+
+75 
+	`sh_d¿w
+(
+s
+,
+ªgË
+);
+
+77 
+	}
+}
+
+79 
+	$¶ay”_pickup_cŞlisiÚ
+(
+¥aûsh
+ *
+s
+, 
+bomb
+ *
+b
+) {
+
+80 ià((
+b
++1)->
+®ive
+ =ğ1 && 
+s
+->
+x
+ >ğ(b+1)->x - 
+NUKEDIAMETER
+/2 && s->x <ğ(b+1)->x + NUKEDIAMETER/2 && s->
+y
+ >= (b+1)->y - NUKEDIAMETER/2 && s->y <= (b+1)->y + NUKEDIAMETER/2) {
+
+81 
+	`bomb_ş—r
+(
+b
++1);
+
+82 (
+b
++1)->
+x
+ = 2;
+
+83 (
+b
++1)->
+y
+ = 2;
+
+89 
 	}
 }
 
@@ -148253,424 +149171,6 @@ SIN
 	}
 }
 
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\MONSTE~1.C
-
-1 
-	~"mÚ¡”´ojeùe.h
-"
-
-2 
-	~"ªsi.h
-"
-
-3 
-	~"equ©iÚs.h
-"
-
-4 
-	~<¡dio.h
->
-
-5 
-	~<¡dlib.h
->
-
-7 
-	#SHIFT_AMOUNT
- 8
-
-	)
-
-8 
-	#FIX_MULT
-(
-a
-, 
-b
-èĞ×)*(bè>> 
-SHIFT_AMOUNT
- )
-
-	)
-
-9 
-	#FIX_DIV
-(
-a
-, 
-b
-èĞ(×è<< 
-SHIFT_AMOUNT
-è/ b )
-
-	)
-
-11 
-	#MAX_A
- 1
-
-	)
-
-12 
-	#MAX_V
- 16
-
-	)
-
-14 
-	#ESC
- 0x1B
-
-	)
-
-17 
-	$mÚ¡”´ojeùe_š™
-(
-mÚ¡”´ojeùe
- *
-p
-) {
-
-18 
-i
- = 0;
-
-19 
-i
- = 0; i < 20; i++) {
-
-20 (
-p
-+
-i
-)->
-x
- = 2;
-
-21 (
-p
-+
-i
-)->
-y
- = 2;
-
-22 (
-p
-+
-i
-)->
-®ive
- = 0;
-
-24 
-	}
-}
-
-26 
-	$mÚ¡”´ojeùe_¥awn
-(
-mÚ¡”
- *
-m
-, 
-¥aûsh
- *
-s
-, 
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-) {
-
-27 (
-p
-+
-n
-)->
-x
- = (
-m
-->x - 10è<< 
-SHIFT_AMOUNT
-;
-
-28 (
-p
-+
-n
-)->
-y
- = (
-m
-->yè<< 
-SHIFT_AMOUNT
-;
-
-29 
-di¡
- = 
-	`ÃwtÚ_sq¹
-((
-s
-->
-x
--((
-p
-+
-n
-)->x >> 
-SHIFT_AMOUNT
-))*(s->x-(Õ+n)->x >> SHIFT_AMOUNT))*2+(s->
-y
--((p+n)->y >> SHIFT_AMOUNT))*(s->y-((p+n)->y >> SHIFT_AMOUNT)),500);
-
-30 (
-p
-+
-n
-)->
-x
- = (p+n)->x >> 
-SHIFT_AMOUNT
-;
-
-31 (
-p
-+
-n
-)->
-y
- = (p+n)->y >> 
-SHIFT_AMOUNT
-;
-
-32 
-di¡
- = dist/10;
-
-33 (
-p
-+
-n
-)->
-rx
- = (((
-s
-->
-x
-)-Õ+n)->x))/
-di¡
-;
-
-34 (
-p
-+
-n
-)->
-ry
- = (((
-s
-->
-y
-)-Õ+n)->y))/
-di¡
-;
-
-35 (
-p
-+
-n
-)->
-®ive
- = 1;
-
-36 
-	}
-}
-
-38 
-	$mÚ¡”´ojeùe_pos
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-) {
-
-39 ià((
-p
-+
-n
-)->
-®ive
- == 1) {
-
-40 (
-p
-+
-n
-)->
-x
- = (p+n)->x + (p+n)->
-rx
-;
-
-41 (
-p
-+
-n
-)->
-y
- = (p+n)->y + (p+n)->
-ry
-;
-
-43 
-	}
-}
-
-45 
-	$mÚ¡”´ojeùe_d¿w
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-) {
-
-46 ià((
-p
-+
-n
-)->
-®ive
- == 1) {
-
-47 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-p
-+
-n
-)->
-y
-,Õ+n)->
-x
-);
-
-48 
-	`fgcŞÜ
-(1);
-
-49 
-	`´štf
-("%c%c",223,223);
-
-50 
-	`fgcŞÜ
-(15);
-
-51 
-	`´štf
-("%c[H",
-ESC
-);
-
-53 
-	}
-}
-
-55 
-	$mÚ¡”´ojeùe_ş—r
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-) {
-
-56 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-p
-+
-n
-)->
-y
-,Õ+n)->
-x
-);
-
-57 
-	`´štf
-("%c%c",32,32);
-
-58 
-	`´štf
-("%c[H",
-ESC
-);
-
-59 
-	}
-}
-
-61 
-	$mÚ¡”´ojeùe_de¥awn
-(
-mÚ¡”´ojeùe
- *
-p
-, 
-n
-) {
-
-62 
-	`mÚ¡”´ojeùe_ş—r
-(
-p
-,
-n
-);
-
-63 (
-p
-+
-n
-)->
-®ive
- = 0;
-
-64 (
-p
-+
-n
-)->
-x
- = 2;
-
-65 (
-p
-+
-n
-)->
-y
- = 2;
-
-66 
-	}
-}
-
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\PROJEC~1.C
 
 1 
@@ -148682,7 +149182,7 @@ y
 "
 
 3 
-	~"equ©iÚs.h
+	~"m©hs.h
 "
 
 4 
@@ -149097,11 +149597,7 @@ gm
 i
  = 0;
 
-71 
-aùive
- = 0;
-
-73 (
+72 (
 p
 +
 n
@@ -149111,7 +149607,7 @@ x
 SHIFT_AMOUNT
 ;
 
-74 (
+73 (
 p
 +
 n
@@ -149121,7 +149617,7 @@ y
 SHIFT_AMOUNT
 ;
 
-75 (
+74 (
 p
 +
 n
@@ -149131,7 +149627,7 @@ vx
 SHIFT_AMOUNT
 ;
 
-76 (
+75 (
 p
 +
 n
@@ -149141,7 +149637,7 @@ vy
 SHIFT_AMOUNT
 ;
 
-77 (
+76 (
 p
 +
 n
@@ -149151,7 +149647,7 @@ ax
 SHIFT_AMOUNT
 ;
 
-78 (
+77 (
 p
 +
 n
@@ -149161,25 +149657,19 @@ ay
 SHIFT_AMOUNT
 ;
 
-80 
+79 
 i
- = 0; i < 20;i++) {
+ = 0; i < 10; i++) {
 
-81 
-aùive
- =‡ùiv+ (
+80 ià((
 c
 +
 i
-)->active;
-
-83 
-i
- = 0; i < 
+)->
 aùive
-;i++) {
+ == 1) {
 
-84 
+81 
 št32_t
  
 di¡
@@ -149197,27 +149687,27 @@ p
 n
 )->x >> 
 SHIFT_AMOUNT
-))*((c+i)->x-(Õ+n)->x >> SHIFT_AMOUNT))*2+((c+i)->
+))*((c+i)->x-(Õ+n)->x >> SHIFT_AMOUNT))+((c+i)->
 y
 -((p+n)->y >> SHIFT_AMOUNT))*((c+i)->y-((p+n)->y >> SHIFT_AMOUNT)),500);
 
-85 
+82 
 št32_t
  
 ax
  = 0;
 
-86 
+83 
 št32_t
  
 ay
  = 0;
 
-87 ià(
+84 ià(
 di¡
- <= 50) {
+ <= 100) {
 
-88 
+85 
 ax
  = (
 p
@@ -149237,7 +149727,7 @@ gm
 di¡
 *dist*dist);
 
-89 
+86 
 ay
  = (
 p
@@ -149257,27 +149747,19 @@ gm
 di¡
 *dist*dist);
 
-91 ià(
+88 ià(
 di¡
- > 50) {
+ > 100) {
 
-92 
+89 
 ax
- = (
-p
-+
-n
-)->ax;
+ = 0;
 
-93 
+90 
 ay
- = (
-p
-+
-n
-)->ay;
+ = 0;
 
-95 ià(
+92 ià(
 	`abs
 (
 ax
@@ -149287,7 +149769,7 @@ SHIFT_AMOUNT
 MAX_A
 ) {
 
-96 
+93 
 ax
  = 
 MAX_A
@@ -149295,13 +149777,13 @@ MAX_A
 	`abs
 (ax);
 
-97 
+94 
 ax
  =‡x << 
 SHIFT_AMOUNT
 ;
 
-99 ià(
+96 ià(
 	`abs
 (
 ay
@@ -149311,7 +149793,7 @@ SHIFT_AMOUNT
 MAX_A
 ) {
 
-100 
+97 
 ay
  = 
 MAX_A
@@ -149319,13 +149801,13 @@ MAX_A
 	`abs
 (ay);
 
-101 
+98 
 ay
  =‡y << 
 SHIFT_AMOUNT
 ;
 
-103 (
+100 (
 p
 +
 n
@@ -149333,7 +149815,7 @@ n
 ax
  =‡x;
 
-104 (
+101 (
 p
 +
 n
@@ -149341,7 +149823,7 @@ n
 ay
  =‡y;
 
-106 
+104 
 št32_t
  
 vx
@@ -149353,7 +149835,7 @@ n
 ax
 ;
 
-107 
+105 
 št32_t
  
 vy
@@ -149365,7 +149847,7 @@ n
 ay
 ;
 
-108 
+106 
 x
  = (
 p
@@ -149377,7 +149859,7 @@ vx
 ax
 /2;
 
-109 
+107 
 y
  = (
 p
@@ -149389,7 +149871,7 @@ vy
 ay
 /2;
 
-111 ià(
+109 ià(
 	`abs
 (
 vx
@@ -149399,7 +149881,7 @@ SHIFT_AMOUNT
 MAX_V
 ) {
 
-112 
+110 
 vx
  = 
 MAX_V
@@ -149407,13 +149889,13 @@ MAX_V
 	`abs
 (vx);
 
-113 
+111 
 vx
  = vx << 
 SHIFT_AMOUNT
 ;
 
-115 ià(
+113 ià(
 	`abs
 (
 vy
@@ -149423,7 +149905,7 @@ SHIFT_AMOUNT
 MAX_V
 ) {
 
-116 
+114 
 vy
  = 
 MAX_V
@@ -149431,13 +149913,13 @@ MAX_V
 	`abs
 (vy);
 
-117 
+115 
 vy
  = vy << 
 SHIFT_AMOUNT
 ;
 
-119 (
+117 (
 p
 +
 n
@@ -149447,7 +149929,7 @@ vx
 SHIFT_AMOUNT
 ;
 
-120 (
+118 (
 p
 +
 n
@@ -149457,7 +149939,7 @@ vy
 SHIFT_AMOUNT
 ;
 
-121 (
+119 (
 p
 +
 n
@@ -149467,7 +149949,7 @@ x
 SHIFT_AMOUNT
 ;
 
-122 (
+120 (
 p
 +
 n
@@ -149477,11 +149959,11 @@ y
 SHIFT_AMOUNT
 ;
 
-124 
+122 
 	}
 }
 
-126 
+124 
 	$´ojeùe_d¿w
 (
 ´ojeùe
@@ -149491,7 +149973,7 @@ p
 n
 ) {
 
-127 ià((
+125 ià((
 p
 +
 n
@@ -149499,7 +149981,33 @@ n
 ®ive
  == 1) {
 
+126 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+p
++
+n
+)->
+y
+-1,Õ+n)->
+x
+);
+
+127 
+	`fgcŞÜ
+(2);
+
 128 
+	`´štf
+("%c",223);
+
+129 
+	`fgcŞÜ
+(15);
+
+130 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -149511,31 +150019,57 @@ n
 y
 ,Õ+n)->
 x
-);
-
-129 
-	`fgcŞÜ
-(2);
-
-130 
-	`´štf
-("%c%c",223,223);
+-1);
 
 131 
 	`fgcŞÜ
-(15);
+(2);
 
 132 
+	`´štf
+("%c%c%c",223,223,223);
+
+133 
+	`fgcŞÜ
+(15);
+
+134 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+p
++
+n
+)->
+y
++1,Õ+n)->
+x
+);
+
+135 
+	`fgcŞÜ
+(2);
+
+136 
+	`´štf
+("%c",223);
+
+137 
+	`fgcŞÜ
+(15);
+
+138 
 	`´štf
 ("%c[H",
 ESC
 );
 
-134 
+140 
 	}
 }
 
-136 
+142 
 	$´ojeùe_ş—r
 (
 ´ojeùe
@@ -149545,7 +150079,7 @@ p
 n
 ) {
 
-137 ià((
+143 ià((
 p
 +
 n
@@ -149553,7 +150087,25 @@ n
 ®ive
  == 1) {
 
-138 
+144 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+p
++
+n
+)->
+y
+-1,Õ+n)->
+x
+);
+
+145 
+	`´štf
+("%c",32);
+
+146 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -149565,23 +150117,41 @@ n
 y
 ,Õ+n)->
 x
+-1);
+
+147 
+	`´štf
+("%c%c%c",32,32,32);
+
+148 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+p
++
+n
+)->
+y
++1,Õ+n)->
+x
 );
 
-139 
+149 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-140 
+150 
 	`´štf
 ("%c[H",
 ESC
 );
 
-142 
+152 
 	}
 }
 
-144 
+154 
 	$´ojeùe_de¥awn
 (
 ´ojeùe
@@ -149591,7 +150161,7 @@ p
 n
 ) {
 
-145 
+155 
 	`´ojeùe_ş—r
 (
 p
@@ -149599,7 +150169,7 @@ p
 n
 );
 
-146 (
+156 (
 p
 +
 n
@@ -149607,7 +150177,7 @@ n
 ®ive
  = 0;
 
-147 (
+157 (
 p
 +
 n
@@ -149615,7 +150185,7 @@ n
 x
  = 2;
 
-148 (
+158 (
 p
 +
 n
@@ -149623,7 +150193,7 @@ n
 y
  = 2;
 
-149 (
+159 (
 p
 +
 n
@@ -149631,7 +150201,7 @@ n
 vx
  = 0;
 
-150 (
+160 (
 p
 +
 n
@@ -149639,7 +150209,783 @@ n
 vy
  = 0;
 
-151 
+161 
+	}
+}
+
+163 
+	$bomb_š™
+(
+bomb
+ *
+b
+) {
+
+164 
+b
+->
+x
+ = 2;
+
+165 
+b
+->
+y
+ = 2;
+
+166 
+b
+->
+vx
+ = 0;
+
+167 
+b
+->
+vy
+ = 0;
+
+168 
+b
+->
+®ive
+ = 0;
+
+169 
+	}
+}
+
+171 
+	$bomb_¥awn
+(
+bomb
+ *
+b
+, 
+¥aûsh
+ *
+s
+, 
+ªgË
+ *
+v
+) {
+
+172 
+b
+->
+x
+ = 
+s
+->x+10;
+
+173 
+b
+->
+y
+ = 
+s
+->y;
+
+174 
+b
+->
+vx
+ = (
+v
+->
+x
+*8 >> 14)*2;
+
+175 
+b
+->
+vy
+ = (
+v
+->
+y
+*8 >> 14);
+
+176 
+b
+->
+®ive
+ = 1;
+
+177 
+	`bomb_d¿w
+(
+b
+);
+
+178 
+	}
+}
+
+180 
+	$bomb_pos
+(
+bomb
+ *
+b
+) {
+
+181 
+b
+->
+x
+ = b->x + b->
+vx
+;
+
+182 
+b
+->
+y
+ = b->y + b->
+vy
+;
+
+183 
+	}
+}
+
+185 
+	$bomb_ex¶ode
+(
+bomb
+ *
+b
+, 
+®›Årojeùe
+ *
+­
+, 
+®›n
+ *
+a
+) {
+
+186 
+i
+ = 0;
+
+187 
+i
+ = 0; i < 10; i++) {
+
+188 ià((
+a
++
+i
+)->
+®ive
+ == 1) {
+
+189 ià(
+b
+->
+x
+ >ğ(
+a
++
+i
+)->x - 50 && b->x <ğ×+i)->x + 50 && b->
+y
+ >= (a+i)->y - 50 && b->y <= (a+i)->y + 50) {
+
+190 
+	`®›n_de¥awn
+(
+a
+,
+i
+);
+
+193 ià((
+­
++
+i
+)->
+®ive
+ == 1) {
+
+194 ià(
+b
+->
+x
+ >ğ(
+­
++
+i
+)->x - 50 && b->x <ğ×p+i)->x + 50 && b->
+y
+ >= (ap+i)->y - 50 && b->y <= (ap+i)->y + 50) {
+
+195 
+	`®›Årojeùe_de¥awn
+(
+­
+,
+i
+);
+
+199 
+	`bomb_de¥awn
+(
+b
+);
+
+200 
+	}
+}
+
+202 
+	$bomb_de¥awn
+(
+bomb
+ *
+b
+) {
+
+203 
+b
+->
+vx
+ = 0;
+
+204 
+b
+->
+vy
+ = 0;
+
+205 
+	`bomb_ş—r
+(
+b
+);
+
+206 
+b
+->
+®ive
+ = 0;
+
+207 
+b
+->
+x
+ = 2;
+
+208 
+b
+->
+y
+ = 2;
+
+209 
+	}
+}
+
+211 
+	$bomb_d¿w
+(
+bomb
+ *
+b
+) {
+
+212 
+	`fgcŞÜ
+(8);
+
+213 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-4,b->
+x
+-2);
+
+214 
+	`´štf
+("%c%c%c%c%c",219,219,219,219,219);
+
+215 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-3,b->
+x
+-3);
+
+216 
+	`´štf
+("%c",219);
+
+217 
+	`fgcŞÜ
+(11);
+
+218 
+	`´štf
+("%c%c",219,219);
+
+219 
+	`fgcŞÜ
+(8);
+
+220 
+	`´štf
+("%c",219);
+
+221 
+	`fgcŞÜ
+(11);
+
+222 
+	`´štf
+("%c%c",219,219);
+
+223 
+	`fgcŞÜ
+(8);
+
+224 
+	`´štf
+("%c",219);
+
+225 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-2,b->
+x
+-4);
+
+226 
+	`´štf
+("%c",219);
+
+227 
+	`fgcŞÜ
+(11);
+
+228 
+	`´štf
+("%c%c%c",219,219,219);
+
+229 
+	`fgcŞÜ
+(8);
+
+230 
+	`´štf
+("%c",219);
+
+231 
+	`fgcŞÜ
+(11);
+
+232 
+	`´štf
+("%c%c%c",219,219,219);
+
+233 
+	`fgcŞÜ
+(8);
+
+234 
+	`´štf
+("%c",219);
+
+235 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-1,b->
+x
+-4);
+
+236 
+	`´štf
+("%c",219);
+
+237 
+	`fgcŞÜ
+(11);
+
+238 
+	`´štf
+("%c%c",219,219);
+
+239 
+	`fgcŞÜ
+(8);
+
+240 
+	`´štf
+("%c%c%c",219,219,219);
+
+241 
+	`fgcŞÜ
+(11);
+
+242 
+	`´štf
+("%c%c",219,219);
+
+243 
+	`fgcŞÜ
+(8);
+
+244 
+	`´štf
+("%c",219);
+
+245 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+,b->
+x
+-4);
+
+246 
+	`´štf
+("%c%c%c%c",219,219,219,219);
+
+247 
+	`fgcŞÜ
+(11);
+
+248 
+	`´štf
+("%c",219);
+
+249 
+	`fgcŞÜ
+(8);
+
+250 
+	`´štf
+("%c%c%c%c",219,219,219,219);
+
+251 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++1,b->
+x
+-4);
+
+252 
+	`´štf
+("%c%c%c%c%c%c%c%c%c",219,219,219,219,219,219,219,219,219);
+
+253 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++2,b->
+x
+-4);
+
+254 
+	`´štf
+("%c%c%c",219,219,219);
+
+255 
+	`fgcŞÜ
+(11);
+
+256 
+	`´štf
+("%c%c%c",219,219,219);
+
+257 
+	`fgcŞÜ
+(8);
+
+258 
+	`´štf
+("%c%c%c",219,219,219);
+
+259 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++3,b->
+x
+-3);
+
+260 
+	`´štf
+("%c",219);
+
+261 
+	`fgcŞÜ
+(11);
+
+262 
+	`´štf
+("%c%c%c%c%c",219,219,219,219,219);
+
+263 
+	`fgcŞÜ
+(8);
+
+264 
+	`´štf
+("%c",219);
+
+265 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++4,b->
+x
+-2);
+
+266 
+	`´štf
+("%c%c%c%c%c",219,219,219,219,219);
+
+267 
+	`fgcŞÜ
+(15);
+
+268 
+	}
+}
+
+273 
+	$bomb_ş—r
+(
+bomb
+ *
+b
+) {
+
+274 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++4,b->
+x
+-2);
+
+275 
+	`´štf
+("%c%c%c%c%c",32,32,32,32,32);
+
+276 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++3,b->
+x
+-3);
+
+277 
+	`´štf
+("%c%c%c%c%c%c%c",32,32,32,32,32,32,32);
+
+278 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++2,b->
+x
+-4);
+
+279 
+	`´štf
+("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+
+280 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
++1,b->
+x
+-4);
+
+281 
+	`´štf
+("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+
+282 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+,b->
+x
+-4);
+
+283 
+	`´štf
+("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+
+284 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-1,b->
+x
+-4);
+
+285 
+	`´štf
+("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+
+286 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-2,b->
+x
+-4);
+
+287 
+	`´štf
+("%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32);
+
+288 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-3,b->
+x
+-3);
+
+289 
+	`´štf
+("%c%c%c%c%c%c%c",32,32,32,32,32,32,32);
+
+290 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+b
+->
+y
+-4,b->
+x
+-2);
+
+291 
+	`´štf
+("%c%c%c%c%c",32,32,32,32,32);
+
+292 
+	}
+}
+
+294 
+	$bomb_ü—‹
+(
+bomb
+ *
+b
+, 
+time
+) {
+
+295 
+	`¤ªd
+(
+time
+);
+
+296 (
+b
++1)->
+x
+ = 
+	`¿nd
+() % 300;
+
+297 (
+b
++1)->
+y
+ = 
+	`¿nd
+() % 100;
+
+299 
 	}
 }
 
@@ -150173,7 +151519,7 @@ funùiÚ
 	gRe£t_HªdËr
 :
 
-159 
+160 
 ldr
  
 r1
@@ -150181,7 +151527,7 @@ r1
 __‘ext
 
 
-160 
+161 
 ldr
  
 r2
@@ -150189,7 +151535,7 @@ r2
 __d©a_¡¬t__
 
 
-161 
+162 
 ldr
  
 r3
@@ -150197,11 +151543,11 @@ r3
 __d©a_’d__
 
 
-167 .
+168 .
 æash_to_¿m_loİ
 :
 
-168 
+169 
 cmp
  
 r2
@@ -150209,13 +151555,13 @@ r2
 r3
 
 
-169 
+170 
 ™‰
  
 É
 
 
-170 
+171 
 ld¾t
  
 	gr0
@@ -150223,7 +151569,7 @@ ld¾t
 r1
 ], #4
 
-171 
+172 
 ¡¾t
  
 	gr0
@@ -150231,13 +151577,13 @@ r1
 r2
 ], #4
 
-172 
+173 
 	gbÉ
  .
 	gæash_to_¿m_loİ
 
 
-174 
+175 
 subs
  
 	gr3
@@ -150245,23 +151591,23 @@ subs
 r2
 
 
-175 
+176 
 	gbË
  .
 	gæash_to_¿m_loİ_’d
 
 
-176 .
+177 .
 	gæash_to_¿m_loİ
 :
 
-177 
+178 
 subs
  
 r3
 , #4
 
-178 
+179 
 ldr
  
 	gr0
@@ -150271,7 +151617,7 @@ r1
 r3
 ]
 
-179 
+180 
 ¡r
  
 	gr0
@@ -150281,21 +151627,21 @@ r2
 r3
 ]
 
-180 
+181 
 	gbgt
  .
 	gæash_to_¿m_loİ
 
 
-181 .
+182 .
 	gæash_to_¿m_loİ_’d
 :
 
-184 #iâdeà
+185 #iâdeà
 __NO_SYSTEM_INIT
 
 
-185 
+186 
 ldr
  
 r0
@@ -150303,13 +151649,13 @@ r0
 Sy¡emIn™
 
 
-186 
+187 
 blx
  
 r0
 
 
-189 
+190 
 ldr
  
 r0
@@ -150317,17 +151663,17 @@ r0
 _¡¬t
 
 
-190 
+191 
 bx
  
 r0
 
 
-191 .
+192 .
 poŞ
 
 
-192 .
+193 .
 size
  
 Re£t_HªdËr
@@ -150335,21 +151681,21 @@ Re£t_HªdËr
 	gRe£t_HªdËr
 
 
-197 .
+198 .
 	g®ign
  1
 
-198 .
+199 .
 	gthumb_func
 
 
-199 .
+200 .
 w—k
  
 	g_¡¬t
 
 
-200 .
+201 .
 ty³
  
 	g_¡¬t
@@ -150357,11 +151703,11 @@ ty³
 funùiÚ
 
 
-201 
+202 
 	g_¡¬t
 :
 
-204 
+205 
 ldr
  
 r1
@@ -150369,7 +151715,7 @@ r1
 __bss_¡¬t__
 
 
-205 
+206 
 ldr
  
 r2
@@ -150377,23 +151723,23 @@ r2
 __bss_’d__
 
 
-206 
+207 
 movs
  
 r3
 , #0
 
-207 
+208 
 	gb
  .
 	gfl_z”o_bss
 
 
-208 .
+209 .
 	gloİ_z”o_bss
 :
 
-209 
+210 
 ¡r
  
 r3
@@ -150401,11 +151747,11 @@ r3
 r1
 ], #4
 
-211 .
+212 .
 	gfl_z”o_bss
 :
 
-212 
+213 
 cmp
  
 r1
@@ -150413,29 +151759,29 @@ r1
 r2
 
 
-213 
+214 
 	gbcc
  .
 loİ_z”o_bss
 
 
-216 
+217 
 bl
  
 maš
 
 
-217 
+218 
 	gb
  .
 
-218 .
+219 .
 size
  
 	g_¡¬t
 , . - _start
 
-223 .
+224 .
 maüo
  
 def_œq_hªdËr
@@ -150443,21 +151789,21 @@ def_œq_hªdËr
 	ghªdËr_Çme
 
 
-224 .
+225 .
 	g®ign
  1
 
-225 .
+226 .
 	gthumb_func
 
 
-226 .
+227 .
 	gw—k
  \
 	ghªdËr_Çme
 
 
-227 .
+228 .
 	gty³
  \
 	ghªdËr_Çme
@@ -150465,15 +151811,15 @@ def_œq_hªdËr
 	gfunùiÚ
 
 
-228 \
+229 \
 	ghªdËr_Çme
  :
 
-229 
+230 
 b
  .
 
-230 .
+231 .
 size
  \
 hªdËr_Çme
@@ -150481,461 +151827,461 @@ hªdËr_Çme
 	ghªdËr_Çme
 
 
-231 .
+232 .
 ’dm
-
-
-233 
-def_œq_hªdËr
- 
-NMI_HªdËr
 
 
 234 
 def_œq_hªdËr
  
-H¬dFauÉ_HªdËr
+NMI_HªdËr
 
 
 235 
 def_œq_hªdËr
  
-MemMªage_HªdËr
+H¬dFauÉ_HªdËr
 
 
 236 
 def_œq_hªdËr
  
-BusFauÉ_HªdËr
+MemMªage_HªdËr
 
 
 237 
 def_œq_hªdËr
  
-U§geFauÉ_HªdËr
+BusFauÉ_HªdËr
 
 
 238 
 def_œq_hªdËr
  
-SVC_HªdËr
+U§geFauÉ_HªdËr
 
 
 239 
 def_œq_hªdËr
  
-DebugMÚ_HªdËr
+SVC_HªdËr
 
 
 240 
 def_œq_hªdËr
  
-P’dSV_HªdËr
+DebugMÚ_HªdËr
 
 
 241 
 def_œq_hªdËr
  
-SysTick_HªdËr
+P’dSV_HªdËr
 
 
-243 
+242 
 def_œq_hªdËr
  
-WWDG_IRQHªdËr
+SysTick_HªdËr
 
 
 244 
 def_œq_hªdËr
  
-PVD_IRQHªdËr
+WWDG_IRQHªdËr
 
 
 245 
 def_œq_hªdËr
  
-TAMPER_STAMP_IRQHªdËr
+PVD_IRQHªdËr
 
 
 246 
 def_œq_hªdËr
  
-RTC_WKUP_IRQHªdËr
+TAMPER_STAMP_IRQHªdËr
 
 
 247 
 def_œq_hªdËr
  
-FLASH_IRQHªdËr
+RTC_WKUP_IRQHªdËr
 
 
 248 
 def_œq_hªdËr
  
-RCC_IRQHªdËr
+FLASH_IRQHªdËr
 
 
 249 
 def_œq_hªdËr
  
-EXTI0_IRQHªdËr
+RCC_IRQHªdËr
 
 
 250 
 def_œq_hªdËr
  
-EXTI1_IRQHªdËr
+EXTI0_IRQHªdËr
 
 
 251 
 def_œq_hªdËr
  
-EXTI2_TS_IRQHªdËr
+EXTI1_IRQHªdËr
 
 
 252 
 def_œq_hªdËr
  
-EXTI3_IRQHªdËr
+EXTI2_TS_IRQHªdËr
 
 
 253 
 def_œq_hªdËr
  
-EXTI4_IRQHªdËr
+EXTI3_IRQHªdËr
 
 
 254 
 def_œq_hªdËr
  
-DMA1_ChªÃl1_IRQHªdËr
+EXTI4_IRQHªdËr
 
 
 255 
 def_œq_hªdËr
  
-DMA1_ChªÃl2_IRQHªdËr
+DMA1_ChªÃl1_IRQHªdËr
 
 
 256 
 def_œq_hªdËr
  
-DMA1_ChªÃl3_IRQHªdËr
+DMA1_ChªÃl2_IRQHªdËr
 
 
 257 
 def_œq_hªdËr
  
-DMA1_ChªÃl4_IRQHªdËr
+DMA1_ChªÃl3_IRQHªdËr
 
 
 258 
 def_œq_hªdËr
  
-DMA1_ChªÃl5_IRQHªdËr
+DMA1_ChªÃl4_IRQHªdËr
 
 
 259 
 def_œq_hªdËr
  
-DMA1_ChªÃl6_IRQHªdËr
+DMA1_ChªÃl5_IRQHªdËr
 
 
 260 
 def_œq_hªdËr
  
-DMA1_ChªÃl7_IRQHªdËr
+DMA1_ChªÃl6_IRQHªdËr
 
 
 261 
 def_œq_hªdËr
  
-ADC1_2_IRQHªdËr
+DMA1_ChªÃl7_IRQHªdËr
 
 
 262 
 def_œq_hªdËr
  
-USB_HP_CAN1_TX_IRQHªdËr
+ADC1_2_IRQHªdËr
 
 
 263 
 def_œq_hªdËr
  
-USB_LP_CAN1_RX0_IRQHªdËr
+USB_HP_CAN1_TX_IRQHªdËr
 
 
 264 
 def_œq_hªdËr
  
-CAN1_RX1_IRQHªdËr
+USB_LP_CAN1_RX0_IRQHªdËr
 
 
 265 
 def_œq_hªdËr
  
-CAN1_SCE_IRQHªdËr
+CAN1_RX1_IRQHªdËr
 
 
 266 
 def_œq_hªdËr
  
-EXTI9_5_IRQHªdËr
+CAN1_SCE_IRQHªdËr
 
 
 267 
 def_œq_hªdËr
  
-TIM1_BRK_TIM15_IRQHªdËr
+EXTI9_5_IRQHªdËr
 
 
 268 
 def_œq_hªdËr
  
-TIM1_UP_TIM16_IRQHªdËr
+TIM1_BRK_TIM15_IRQHªdËr
 
 
 269 
 def_œq_hªdËr
  
-TIM1_TRG_COM_TIM17_IRQHªdËr
+TIM1_UP_TIM16_IRQHªdËr
 
 
 270 
 def_œq_hªdËr
  
-TIM1_CC_IRQHªdËr
+TIM1_TRG_COM_TIM17_IRQHªdËr
 
 
 271 
 def_œq_hªdËr
  
-TIM2_IRQHªdËr
+TIM1_CC_IRQHªdËr
 
 
 272 
 def_œq_hªdËr
  
-TIM3_IRQHªdËr
+TIM2_IRQHªdËr
 
 
 273 
 def_œq_hªdËr
  
-TIM4_IRQHªdËr
+TIM3_IRQHªdËr
 
 
 274 
 def_œq_hªdËr
  
-I2C1_EV_IRQHªdËr
+TIM4_IRQHªdËr
 
 
 275 
 def_œq_hªdËr
  
-I2C1_ER_IRQHªdËr
+I2C1_EV_IRQHªdËr
 
 
 276 
 def_œq_hªdËr
  
-I2C2_EV_IRQHªdËr
+I2C1_ER_IRQHªdËr
 
 
 277 
 def_œq_hªdËr
  
-I2C2_ER_IRQHªdËr
+I2C2_EV_IRQHªdËr
 
 
 278 
 def_œq_hªdËr
  
-SPI1_IRQHªdËr
+I2C2_ER_IRQHªdËr
 
 
 279 
 def_œq_hªdËr
  
-SPI2_IRQHªdËr
+SPI1_IRQHªdËr
 
 
 280 
 def_œq_hªdËr
  
-USART1_IRQHªdËr
+SPI2_IRQHªdËr
 
 
 281 
 def_œq_hªdËr
  
-USART2_IRQHªdËr
+USART1_IRQHªdËr
 
 
 282 
 def_œq_hªdËr
  
-USART3_IRQHªdËr
+USART2_IRQHªdËr
 
 
 283 
 def_œq_hªdËr
  
-EXTI15_10_IRQHªdËr
+USART3_IRQHªdËr
 
 
 284 
 def_œq_hªdËr
  
-RTC_AÏrm_IRQHªdËr
+EXTI15_10_IRQHªdËr
 
 
 285 
 def_œq_hªdËr
  
-USBWakeUp_IRQHªdËr
+RTC_AÏrm_IRQHªdËr
 
 
 286 
 def_œq_hªdËr
  
-TIM8_BRK_IRQHªdËr
+USBWakeUp_IRQHªdËr
 
 
 287 
 def_œq_hªdËr
  
-TIM8_UP_IRQHªdËr
+TIM8_BRK_IRQHªdËr
 
 
 288 
 def_œq_hªdËr
  
-TIM8_TRG_COM_IRQHªdËr
+TIM8_UP_IRQHªdËr
 
 
 289 
 def_œq_hªdËr
  
-TIM8_CC_IRQHªdËr
+TIM8_TRG_COM_IRQHªdËr
 
 
 290 
 def_œq_hªdËr
  
-ADC3_IRQHªdËr
+TIM8_CC_IRQHªdËr
 
 
 291 
 def_œq_hªdËr
  
-SPI3_IRQHªdËr
+ADC3_IRQHªdËr
 
 
 292 
 def_œq_hªdËr
  
-UART4_IRQHªdËr
+SPI3_IRQHªdËr
 
 
 293 
 def_œq_hªdËr
  
-UART5_IRQHªdËr
+UART4_IRQHªdËr
 
 
 294 
 def_œq_hªdËr
  
-TIM6_DAC_IRQHªdËr
+UART5_IRQHªdËr
 
 
 295 
 def_œq_hªdËr
  
-TIM7_IRQHªdËr
+TIM6_DAC_IRQHªdËr
 
 
 296 
 def_œq_hªdËr
  
-DMA2_ChªÃl1_IRQHªdËr
+TIM7_IRQHªdËr
 
 
 297 
 def_œq_hªdËr
  
-DMA2_ChªÃl2_IRQHªdËr
+DMA2_ChªÃl1_IRQHªdËr
 
 
 298 
 def_œq_hªdËr
  
-DMA2_ChªÃl3_IRQHªdËr
+DMA2_ChªÃl2_IRQHªdËr
 
 
 299 
 def_œq_hªdËr
  
-DMA2_ChªÃl4_IRQHªdËr
+DMA2_ChªÃl3_IRQHªdËr
 
 
 300 
 def_œq_hªdËr
  
-DMA2_ChªÃl5_IRQHªdËr
+DMA2_ChªÃl4_IRQHªdËr
 
 
 301 
 def_œq_hªdËr
  
-ADC4_IRQHªdËr
+DMA2_ChªÃl5_IRQHªdËr
 
 
 302 
 def_œq_hªdËr
  
-COMP1_2_3_IRQHªdËr
+ADC4_IRQHªdËr
 
 
 303 
 def_œq_hªdËr
  
-COMP4_5_6_IRQHªdËr
+COMP1_2_3_IRQHªdËr
 
 
 304 
 def_œq_hªdËr
  
-COMP7_IRQHªdËr
+COMP4_5_6_IRQHªdËr
 
 
 305 
 def_œq_hªdËr
  
-USB_HP_IRQHªdËr
+COMP7_IRQHªdËr
 
 
 306 
 def_œq_hªdËr
  
-USB_LP_IRQHªdËr
+USB_HP_IRQHªdËr
 
 
 307 
 def_œq_hªdËr
  
-USBWakeUp_RMP_IRQHªdËr
+USB_LP_IRQHªdËr
 
 
 308 
 def_œq_hªdËr
  
+USBWakeUp_RMP_IRQHªdËr
+
+
+309 
+def_œq_hªdËr
+ 
 	gFPU_IRQHªdËr
 
 
-310 .
+311 .
 	g’d
 
 
@@ -151326,6 +152672,674 @@ RCC_CFGR_SWS_PLL
 )
 
 342 
+	}
+}
+
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\alien.c
+
+1 
+	~"®›n.h
+"
+
+3 
+	#ESC
+ 0x1B
+
+	)
+
+5 
+	$®›n_š™
+(
+®›n
+ *
+a
+) {
+
+6 
+i
+ = 0;
+
+7 
+i
+ = 0; i < 10; i++) {
+
+8 (
+a
++
+i
+)->
+x
+ = 380;
+
+9 (
+a
++
+i
+)->
+y
+ = 200;
+
+10 (
+a
++
+i
+)->
+®ive
+ = 0;
+
+11 (
+a
++
+i
+)->
+ªim©iÚ
+ = 0;
+
+13 
+	}
+}
+
+15 
+	$®›n_¥awn
+(
+®›n
+ *
+a
+, 
+x
+, 
+y
+, 
+n
+) {
+
+16 (
+a
++
+n
+)->
+x
+ = x;
+
+17 (
+a
++
+n
+)->
+y
+ = y;
+
+18 (
+a
++
+n
+)->
+®ive
+ = 1;
+
+19 
+	}
+}
+
+21 
+	$®›n_pos
+(
+®›n
+ *
+a
+, 
+´ojeùe
+ *
+p
+) {
+
+22 
+i
+ = 0;
+
+23 
+i
+ = 0; i < 10; i++)
+
+24 ià((
+a
++
+i
+)->
+®ive
+ == 1)
+
+25 (
+a
++
+i
+)->
+x
+ = (a+i)->x - 1;
+
+26 
+	}
+}
+
+28 
+	$®›n_de¥awn
+(
+®›n
+ *
+a
+, 
+n
+) {
+
+29 
+	`®›n_ş—r
+(
+a
+);
+
+30 (
+a
++
+n
+)->
+ªim©iÚ
+ = 1;
+
+31 (
+a
++
+n
+)->
+®ive
+ = 0;
+
+32 
+	}
+}
+
+34 
+	$®›n_ªim©iÚ
+(
+®›n
+ *
+a
+, 
+n
+) {
+
+35 ià((
+a
++
+n
+)->
+ªim©iÚ
+ == 1) {
+
+36 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
+-2,×+n)->
+x
++1);
+
+37 
+	`´štf
+("%c%c%c",219,219,219);
+
+38 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
+-1,×+n)->
+x
+-1);
+
+39 
+	`´štf
+("%c%c %c",219,219,219);
+
+40 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
+,×+n)->
+x
+-3);
+
+41 
+	`´štf
+("%c%c %c",219,219,219);
+
+42 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
++1,×+n)->
+x
+-1);
+
+43 
+	`´štf
+("%c%c %c",219,219,219);
+
+44 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
++2,×+n)->
+x
++1);
+
+45 
+	`´štf
+("%c%c%c",219,219,219);
+
+47 ià((
+a
++
+n
+)->
+ªim©iÚ
+ > 0 && (a+n)->animation < 11) {
+
+48 (
+a
++
+n
+)->
+ªim©iÚ
+++;
+
+50 ià((
+a
++
+n
+)->
+ªim©iÚ
+ > 10) {
+
+51 (
+a
++
+n
+)->
+ªim©iÚ
+ = 0;
+
+52 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
+-2,×+n)->
+x
++1);
+
+53 
+	`´štf
+("%c%c%c",32,32,32);
+
+54 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
+-1,×+n)->
+x
+-1);
+
+55 
+	`´štf
+("%c%c %c",32,32,32);
+
+56 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
+,×+n)->
+x
+-3);
+
+57 
+	`´štf
+("%c%c %c",32,32,32);
+
+58 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
++1,×+n)->
+x
+-1);
+
+59 
+	`´štf
+("%c%c %c",32,32,32);
+
+60 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+n
+)->
+y
++2,×+n)->
+x
++1);
+
+61 
+	`´štf
+("%c%c%c",32,32,32);
+
+62 (
+a
++
+n
+)->
+x
+ = 380;
+
+63 (
+a
++
+n
+)->
+y
+ = 200;
+
+65 
+	}
+}
+
+67 
+	$®›n_ş—r
+(
+®›n
+ *
+a
+) {
+
+68 
+i
+ = 0;
+
+69 
+i
+ = 0; i < 10; i++) {
+
+70 ià((
+a
++
+i
+)->
+®ive
+ == 1) {
+
+71 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
+-2,×+i)->
+x
++1);
+
+72 
+	`´štf
+("%c%c%c%c",32,32,32,32);
+
+73 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
+-1,×+i)->
+x
+-1);
+
+74 
+	`´štf
+("%c%c%c%c",32,32,32,32);
+
+75 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
+,×+i)->
+x
+-3);
+
+76 
+	`´štf
+("%c%c%c%c%c",32,32,32,32,32);
+
+77 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
++1,×+i)->
+x
+-1);
+
+78 
+	`´štf
+("%c%c%c%c",32,32,32,32);
+
+79 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
++2,×+i)->
+x
++1);
+
+80 
+	`´štf
+("%c%c%c%c",32,32,32,32);
+
+83 
+	}
+}
+
+85 
+	$®›n_d¿w
+(
+®›n
+ *
+a
+) {
+
+86 
+i
+ = 0;
+
+87 
+i
+ = 0; i < 10; i++) {
+
+88 ià((
+a
++
+i
+)->
+®ive
+ == 1) {
+
+89 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
+-2,×+i)->
+x
++1);
+
+90 
+	`´štf
+("%c%c%c%c",219,219,219,219);
+
+91 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
+-1,×+i)->
+x
+-1);
+
+92 
+	`´štf
+("%c%c%c%c",219,219,219,219);
+
+93 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
+,×+i)->
+x
+-3);
+
+94 
+	`´štf
+("%c%c%c%c%c",219,219,219,219,219);
+
+95 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
++1,×+i)->
+x
+-1);
+
+96 
+	`´štf
+("%c%c%c%c",219,219,219,219);
+
+97 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
+a
++
+i
+)->
+y
++2,×+i)->
+x
++1);
+
+98 
+	`´štf
+("%c%c%c%c",219,219,219,219);
+
+101 
 	}
 }
 
@@ -152250,262 +154264,40 @@ cÜÃrx
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\input.c
 
 1 
-	~"lcd.h
+	~"30010_io.h
 "
 
 2 
 	~<¡ršg.h
 >
 
+4 
+	$check_ch¬
+(*
+š
+, 
+v®
+[]) {
+
 5 
-	$check_w
-(*
-š
-) {
-
-6 
-w
-[1] = "w";
-
-7 
 cmp
  = 
 	`¡ºcmp
 (
 š
 ,
-w
+v®
 ,1);
 
-8  
+6  
 cmp
 ;
 
-9 
-	}
-}
+7 
+	`u¬t_ş—r
+();
 
-12 
-	$check_a
-(*
-š
-) {
-
-13 
-a
-[1] = "a";
-
-14 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-a
-,1);
-
-15  
-cmp
-;
-
-16 
-	}
-}
-
-19 
-	$check_s
-(*
-š
-) {
-
-20 
-s
-[1] = "s";
-
-21 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-s
-,1);
-
-22  
-cmp
-;
-
-23 
-	}
-}
-
-26 
-	$check_d
-(*
-š
-) {
-
-27 
-d
-[1] = "d";
-
-28 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-d
-,1);
-
-29  
-cmp
-;
-
-30 
-	}
-}
-
-33 
-	$check_r
-(*
-š
-) {
-
-34 
-r
-[1] = "r";
-
-35 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-r
-,1);
-
-36  
-cmp
-;
-
-37 
-	}
-}
-
-39 
-	$check_v
-(*
-š
-) {
-
-40 
-v
-[1] = "v";
-
-41 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-v
-,1);
-
-42  
-cmp
-;
-
-43 
-	}
-}
-
-45 
-	$check_p
-(*
-š
-) {
-
-46 
-p
-[1] = "p";
-
-47 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-p
-,1);
-
-48  
-cmp
-;
-
-49 
-	}
-}
-
-51 
-	$check_l
-(*
-š
-) {
-
-52 
-l
-[1] = "l";
-
-53 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-l
-,1);
-
-54  
-cmp
-;
-
-55 
-	}
-}
-
-58 
-	$check_¥aû
-(*
-š
-) {
-
-59 
-¥aû
-[1] = " ";
-
-60 
-cmp
- = 
-	`¡ºcmp
-(
-š
-,
-¥aû
-,1);
-
-61  
-cmp
-;
-
-62 
+8 
 	}
 }
 
@@ -152607,15 +154399,15 @@ row
 i
  = 0;
 
-20 
+20 
+off£t
+;
+
+21 
 i
  = 0; i < 
 amouÁ
 ; i++) {
-
-21 
-off£t
-;
 
 22 
 off£t
@@ -152693,11 +154485,7 @@ i
 amouÁ
 ; i--) {
 
-35 
-off£t
-;
-
-36 
+35 
 off£t
  = 
 pos
@@ -152707,7 +154495,7 @@ i
 row
 -1)*128;
 
-38 
+37 
 	`mem£t
 (
 bufãr
@@ -152715,7 +154503,7 @@ bufãr
 off£t
 ,0b00001100,1);
 
-39 
+38 
 	`mem£t
 (
 bufãr
@@ -152723,7 +154511,7 @@ bufãr
 off£t
 +1,0b00010010,1);
 
-40 
+39 
 	`mem£t
 (
 bufãr
@@ -152731,7 +154519,7 @@ bufãr
 off£t
 +2,0b00100010,1);
 
-41 
+40 
 	`mem£t
 (
 bufãr
@@ -152739,7 +154527,7 @@ bufãr
 off£t
 +3,0b01000100,1);
 
-42 
+41 
 	`mem£t
 (
 bufãr
@@ -152747,7 +154535,7 @@ bufãr
 off£t
 +4,0b00100010,1);
 
-43 
+42 
 	`mem£t
 (
 bufãr
@@ -152755,7 +154543,7 @@ bufãr
 off£t
 +5,0b00010010,1);
 
-44 
+43 
 	`mem£t
 (
 bufãr
@@ -152763,15 +154551,13 @@ bufãr
 off£t
 +6,0b00001100,1);
 
-46 
+45 
 	}
 }
 
-48 
-	$lcd_d¿w_misses
-(
-amouÁ
-, 
+47 
+	$lcd_d¿w_nuke
+(
 ušt8_t
 * 
 bufãr
@@ -152781,29 +154567,49 @@ pos
 row
 ) {
 
-50 
-i
- = 0;
-
-51 
-i
- = 0; i < 
-amouÁ
-; i++) {
-
-52 
+48 
 off£t
 ;
 
-53 
+49 
 off£t
  = 
 pos
-+
-i
-*8+(
++(
 row
 -1)*128;
+
+51 
+	`mem£t
+(
+bufãr
++
+off£t
+,0b00001000,1);
+
+52 
+	`mem£t
+(
+bufãr
++
+off£t
++1,0b10001100,1);
+
+53 
+	`mem£t
+(
+bufãr
++
+off£t
++2,0b11001110,1);
+
+54 
+	`mem£t
+(
+bufãr
++
+off£t
++3,0b11100000,1);
 
 55 
 	`mem£t
@@ -152811,7 +154617,7 @@ row
 bufãr
 +
 off£t
-,0b00000000,1);
++4,0b11001110,1);
 
 56 
 	`mem£t
@@ -152819,7 +154625,7 @@ off£t
 bufãr
 +
 off£t
-+1,0b11100000,1);
++5,0b10001100,1);
 
 57 
 	`mem£t
@@ -152827,31 +154633,17 @@ off£t
 bufãr
 +
 off£t
-+2,0b01111100,1);
-
-58 
-	`mem£t
-(
-bufãr
-+
-off£t
-+3,0b00111111,1);
++6,0b00001000,1);
 
 59 
-	`mem£t
-(
+	`lcd_wr™e_¡ršg
+("NUKE READY",
 bufãr
-+
-off£t
-+4,0b01111100,1);
-
-60 
-	`mem£t
-(
-bufãr
-+
-off£t
-+5,0b11100000,1);
+,
+pos
++10,
+row
+);
 
 61 
 	`mem£t
@@ -152859,93 +154651,61 @@ off£t
 bufãr
 +
 off£t
-+6,0b00000000,1);
++71,0b00001000,1);
+
+62 
+	`mem£t
+(
+bufãr
++
+off£t
++72,0b10001100,1);
 
 63 
-i
- = 3;
-
-64 
-i
- = 3; i > 
-amouÁ
-; i--) {
-
-65 
+	`mem£t
+(
+bufãr
++
 off£t
-;
++73,0b11001110,1);
+
+64 
+	`mem£t
+(
+bufãr
++
+off£t
++74,0b11100000,1);
+
+65 
+	`mem£t
+(
+bufãr
++
+off£t
++75,0b11001110,1);
 
 66 
+	`mem£t
+(
+bufãr
++
 off£t
- = 
-pos
-+(
-i
--1)*8+(
-row
--1)*128;
++76,0b10001100,1);
+
+67 
+	`mem£t
+(
+bufãr
++
+off£t
++77,0b00001000,1);
 
 68 
-	`mem£t
-(
-bufãr
-+
-off£t
-,0b00000000,1);
-
-69 
-	`mem£t
-(
-bufãr
-+
-off£t
-+1,0b11100000,1);
-
-70 
-	`mem£t
-(
-bufãr
-+
-off£t
-+2,0b01011100,1);
-
-71 
-	`mem£t
-(
-bufãr
-+
-off£t
-+3,0b00100011,1);
-
-72 
-	`mem£t
-(
-bufãr
-+
-off£t
-+4,0b01011100,1);
-
-73 
-	`mem£t
-(
-bufãr
-+
-off£t
-+5,0b11100000,1);
-
-74 
-	`mem£t
-(
-bufãr
-+
-off£t
-+6,0b00000000,1);
-
-76 
 	}
 }
 
-78 
+70 
 	$lcd_d¿w_buÎ‘s
 (
 amouÁ
@@ -152959,21 +154719,21 @@ pos
 row
 ) {
 
-80 
+71 
+off£t
+;
+
+72 
 i
  = 0;
 
-81 
+73 
 i
  = 0; i < 
 amouÁ
 ; i++) {
 
-82 
-off£t
-;
-
-83 
+74 
 off£t
  = 
 pos
@@ -152983,7 +154743,7 @@ i
 row
 -1)*128;
 
-85 
+76 
 	`mem£t
 (
 bufãr
@@ -152991,7 +154751,7 @@ bufãr
 off£t
 ,0b01111100,1);
 
-86 
+77 
 	`mem£t
 (
 bufãr
@@ -152999,7 +154759,7 @@ bufãr
 off£t
 +1,0b01111110,1);
 
-87 
+78 
 	`mem£t
 (
 bufãr
@@ -153007,21 +154767,17 @@ bufãr
 off£t
 +2,0b01111100,1);
 
-89 
+80 
 i
  = 20;
 
-90 
+81 
 i
  = 20; i > 
 amouÁ
 ; i--) {
 
-91 
-off£t
-;
-
-92 
+82 
 off£t
  = 
 pos
@@ -153031,7 +154787,7 @@ i
 row
 -1)*128;
 
-94 
+84 
 	`mem£t
 (
 bufãr
@@ -153039,7 +154795,7 @@ bufãr
 off£t
 ,0b01111100,1);
 
-95 
+85 
 	`mem£t
 (
 bufãr
@@ -153047,7 +154803,7 @@ bufãr
 off£t
 +1,0b01000010,1);
 
-96 
+86 
 	`mem£t
 (
 bufãr
@@ -153055,85 +154811,101 @@ bufãr
 off£t
 +2,0b01111100,1);
 
-98 
+88 
 	}
 }
 
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\main.c
 
-14 
+13 
 	~"¡m32f30x_cÚf.h
 "
 
-15 
+14 
 	~"30010_io.h
 "
 
-16 
+15 
 	~"ªsi.h
 "
 
-17 
+16 
 	~"mc_io.h
 "
 
-18 
+17 
 	~"ch¬£t.h
 "
 
-19 
+18 
 	~"lcd.h
 "
 
-20 
+19 
 	~"šput.h
 "
 
-21 
-	~"mÙiÚ.h
+20 
+	~"m©hs.h
 "
 
-22 
+21 
 	~"LUT.h
 "
 
-23 
+22 
 	~"sh.h
 "
 
-24 
+23 
 	~"¡ruù.h
 "
 
-25 
+24 
 	~"´ojeùe.h
 "
 
-26 
+25 
 	~"objeùs.h
 "
 
-27 
+26 
 	~"d¿w.h
 "
 
+27 
+	~"®›n.h
+"
+
 28 
-	~"mÚ¡”.h
+	~"®›Årojeùe.h
 "
 
 29 
-	~"mÚ¡”´ojeùe.h
-"
-
-30 
 	~"cŞlisiÚ.h
 "
 
+30 
+	~"m’u.h
+"
+
 31 
+	~"¡age.h
+"
+
+32 
 	~<¡ršg.h
 >
 
-33 
+33 
+	~<¡dlib.h
+>
+
+34 
+	~<¡dio.h
+>
+
+36 
 	#ESC
  0x1B
 
@@ -153151,427 +154923,821 @@ off£t
 	`u¬t_ş—r
 ();
 
-43 
+44 
 	`lcd_š™
 ();
 
-44 
+45 
 	`time_š™
 ();
 
 46 
+	`RGB_š™
+();
+
+47 
+	`RGB_£t
+(0);
+
+50 
 ušt8_t
  
 bufãr
 [512];
 
-47 
+51 
 	`mem£t
 (
 bufãr
 ,0x00,512);
 
-49 
-misses
- = 3;
+54 
+	`´štf
+("%c[2J",
+ESC
+);
 
-50 
+57 
+šput
+[2];
+
+58 
+šput
+[0] = 0x00;
+
+59 
+šput
+[1] = 0x00;
+
+62 cÚ¡ 
+ušt8_t
+ 
+exûËxe
+[6][58] = {
+
+71 cÚ¡ 
+ušt8_t
+ 
+m’uÚlcd
+[6][58] = {
+
+82 
 buÎ‘s
  = 20;
 
-51 
+83 
 scÜe
  = 0;
 
-52 
-n
- = 0;
-
-53 
-mn
-= 0;
-
-54 
+84 
 ªgË
  = 360;
 
-56 
+85 
+»lßdtime
+ = 0;
+
+86 
+»lßdšg
+ = 0;
+
+87 
+toggËdriá
+ = 0;
+
+88 
+driá
+ = 0;
+
+89 
+§v—ngËx
+ = 0;
+
+90 
+§v—ngËy
+ = 0;
+
+91 
+nuke
+ = 1;
+
+92 
+d—d
+ = 0;
+
+93 
+ex™game
+ = 0;
+
+96 
+²um
+ = 0;
+
+97 
+­num
+= 0;
+
+100 
+	`m’u_maš_d¿w
+(
+bufãr
+);
+
+103 
+¡age
+ = 
+	`m’u
+(
+bufãr
+,
+šput
+,
+m’uÚlcd
+);
+
+106 
+scÜes
+[100] = "";
+
+109 
 ªgË
  
 shªgË
- = {{ 1,0 }};
+ = { 1,0 };
 
-57 
+110 
 ¥aûsh
  
 ¶ay”sh
 ;
 
-58 
+111 
 ´ojeùe
  
 ¶ay”´ojeùe
 [20];
 
-59 
+112 
 ¶ª‘
-…lanet[20] = {{0,0,0,0}};
+…lanet[20] = {{ 0,0,0,0 }};
 
-60 
-mÚ¡”
- monster[10];
+113 
+®›n
+‡lien[10];
 
-61 
-mÚ¡”´ojeùe
- monsterprojectile[20];
+114 
+®›Årojeùe
+‡lienprojectile[20];
 
-63 
-	`mÚ¡”_š™
+115 
+bomb
+ bomb[2];
+
+117 
+	`®›n_š™
 (
-mÚ¡”
+®›n
 );
 
-64 
-	`mÚ¡”´ojeùe_š™
+118 
+	`®›Årojeùe_š™
 (
-mÚ¡”´ojeùe
+®›Årojeùe
 );
 
-65 
+119 
 	`´ojeùe_š™
 (
 ¶ay”´ojeùe
 );
 
-66 
-	`¶ª‘_š™
+120 
+	`bomb_š™
 (
-¶ª‘
+bomb
 );
 
-67 
-	`sh_š™
-(&
-¶ay”sh
-);
-
-68 
+121 
 	`veùÜ_š™
 (&
 shªgË
 );
 
-69 
-	`RGB_š™
-();
-
-71 
-	`RGB_£t
-(2);
-
-73 
-	`sh_d¿w
+122 
+	`sh_š™
 (&
 ¶ay”sh
-,
-ªgË
 );
 
-74 
-	`¶ª‘_d¿w
+125 
+	`¡age_š™
 (
+¡age
+, &
+¶ay”sh
+, 
+ªgË
+, 
 ¶ª‘
-->
-x
-,¶ª‘->
-y
 );
 
-75 
-	`¶ª‘_d¿w
-((
-¶ª‘
+127 (
+bomb
++1)->
+®ive
+ = 1;
+
+128 (
+bomb
 +1)->
 x
-,ÕÏÃt+1)->
+ = 50;
+
+129 (
+bomb
++1)->
 y
+ = 50;
+
+130 
+	`bomb_d¿w
+(
+bomb
++1);
+
+132 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+133 
+	`lcd_push_bufãr
+(
+bufãr
 );
 
-77 
-	`mÚ¡”_¥awn
+137 ià(
+	`check_ch¬
 (
-mÚ¡”
-,350,200,0);
+šput
+, "b") == 0 || check_char(input, "B") == 0) {
 
-78 
-	`mÚ¡”_¥awn
+138 
+	`NVIC_Di§bËIRQ
 (
-mÚ¡”
-,350,100,1);
+TIM2_IRQn
+);
 
-79 
-	`mÚ¡”_¥awn
-(
-mÚ¡”
-,350,50,2);
+139 
+	`´štf
+("%c[2J",
+ESC
+);
 
-81 
-	`wšdowbasic
-(1,1,400,225,1);
+140 
+	`d¿w_m©rix
+(3,3,41,6,
+exûËxe
+,1);
 
-83 
-šput
-[2];
+141 
+	`RGB_£t
+(0);
 
-84 
-šput
-[0] = 0x00;
-
-85 
-šput
-[1] = 0x00;
-
-89 
-æag
- = 
-	`g‘_æag
-();
-
-91 ià(
-æag
- == 1) {
-
-94 
+143 
 šput
 [0] = 
 	`u¬t_g‘_ch¬
 ();
 
-97 
-cmpw
- = 
-	`check_w
+144 ià(
+	`check_ch¬
 (
 šput
+,"b") == 0 || check_char(input, "B") == 0) {
+
+145 
+	`´štf
+("%c[2J",
+ESC
 );
 
-98 ià(
-cmpw
- == 0) {
-
-99 
-	`sh_ş—r
-(&
-¶ay”sh
-,
-ªgË
+146 
+	`NVIC_EÇbËIRQ
+(
+TIM2_IRQn
 );
 
-100 
-	`sh_pos
-(&
-¶ay”sh
+150 
+	`¡age_š™
+(
+¡age
 ,&
-shªgË
-,0);
-
-101 
-	`sh_d¿w
-(&
 ¶ay”sh
 ,
 ªgË
+,
+¶ª‘
 );
 
-104 
-cm·
- = 
-	`check_a
+153 ià(
+	`check_ch¬
 (
 šput
+, "p") == 0 || check_char(input, "P") == 0) {
+
+154 
+	`NVIC_Di§bËIRQ
+(
+TIM2_IRQn
 );
 
-105 ià(
-cm·
- == 0) {
-
-106 
-	`sh_ş—r
-(&
-¶ay”sh
-,
-ªgË
+155 
+	`´štf
+("%c[2J",
+ESC
 );
 
-107 
-ªgË
- -= 15;
+156 
+	`d¿w_m©rix
+(3,3,53,6,
+m’uÚlcd
+,1);
 
-108 ià(
-ªgË
- == 0)‡ngle = 360;
-
-109 ià(
-ªgË
- == 375)‡ngle = 15;
-
-110 
-	`veùÜ_rÙ
-(&
-shªgË
-,
-ªgË
+157 
+	`m’u_·u£_d¿w
+(
+bufãr
 );
 
-111 
-	`sh_d¿w
-(&
-¶ay”sh
-,
-ªgË
-);
+159 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
 
-114 
-cmpd
- = 
-	`check_d
+160 ià(
+	`check_ch¬
 (
 šput
+,"p") == 0 || check_char(input, "P") == 0) {
+
+161 
+	`´štf
+("%c[2J",
+ESC
 );
 
-115 ià(
-cmpd
- == 0) {
+162 
+	`mem£t
+(
+bufãr
+,0x00,512);
 
-116 
-	`sh_ş—r
-(&
+163 
+	`NVIC_EÇbËIRQ
+(
+TIM2_IRQn
+);
+
+164 
+	`¡age_š™
+(
+¡age
+,&
 ¶ay”sh
 ,
 ªgË
-);
-
-117 
-ªgË
- += 15;
-
-118 ià(
-ªgË
- == 0)‡ngle = 360;
-
-119 ià(
-ªgË
- == 375)‡ngle = 15;
-
-120 
-	`veùÜ_rÙ
-(&
-shªgË
 ,
-ªgË
+¶ª‘
 );
 
-121 
-	`sh_d¿w
-(&
-¶ay”sh
-,
-ªgË
-);
-
-124 
-cmµ
- = 
-	`check_p
+167 ià(
+	`check_ch¬
 (
 šput
+,"e") == 0 || check_char(input,"E") == 0) {
+
+168 
+	`m’u_w¬nšg_d¿w
+(
+bufãr
 );
 
-125 ià(
-cmµ
- == 0) {
+170 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
 
-126 
-¶ay”sh
-.
-hp
---;
-
-129 
-cm¶
- = 
-	`check_l
+171 ià(
+	`check_ch¬
 (
 šput
+,"1") == 0) {
+
+172 
+ex™game
+ = 1;
+
+173 
+	`´štf
+("%c[2J",
+ESC
 );
 
-130 ià(
-cm¶
- == 0) {
+174 
+	`mem£t
+(
+bufãr
+,0x00,512);
 
-131 
-misses
---;
+175 
+	`NVIC_EÇbËIRQ
+(
+TIM2_IRQn
+);
 
-134 
-cm´
- = 
-	`check_r
+178 ià(
+	`check_ch¬
 (
 šput
+,"2") == 0) {
+
+179 
+	`m’u_·u£_d¿w
+(
+bufãr
 );
 
-135 ià(
-cm´
- == 0) {
+184 ià(
+ex™game
+ == 1) {
 
-136 
-¶ay”sh
-.
-hp
- = 3;
+189 ià(
+ex™game
+ == 1) {
 
-137 
-misses
- = 3;
+193 
+æag
+ = 
+	`g‘_æag2
+();
 
-138 
-buÎ‘s
- = 20;
+195 ià(
+æag
+ == 1) {
 
-142 
+198 
 hs
  = 
 	`g‘_hs
 ();
 
-143 
-s
- = 
-	`g‘_s
+200 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
 ();
 
-146 
+204 ià(
+	`check_ch¬
+(
+šput
+,"w") == 0 || check_char(input,"W") == 0) {
+
+205 
+	`sh_ş—r
+(&
+¶ay”sh
+,
+ªgË
+);
+
+206 
+	`sh_pos
+(&
+¶ay”sh
+,&
+shªgË
+);
+
+207 
+	`sh_d¿w
+(&
+¶ay”sh
+,
+ªgË
+);
+
+208 
+toggËdriá
+ = 1;
+
+209 
+driá
+ = 0;
+
+210 
+§v—ngËx
+ = 
+shªgË
+.
+x
+;
+
+211 
+§v—ngËy
+ = 
+shªgË
+.
+y
+;
+
+214 ià(
+toggËdriá
+ =ğ1 && 
+hs
+ % 5 =ğ0 && 
+	`check_ch¬
+(
+šput
+,"w") != 0 && check_char(input,"W") != 0) {
+
+215 
+driá
+++;
+
+216 
+	`sh_ş—r
+(&
+¶ay”sh
+,
+ªgË
+);
+
+217 
+	`sh_driá
+(&
+¶ay”sh
+,
+§v—ngËx
+,
+§v—ngËy
+,
+driá
+);
+
+218 
+	`sh_d¿w
+(&
+¶ay”sh
+,
+ªgË
+);
+
+219 ià(
+driá
+ >= 35) {
+
+220 
+toggËdriá
+ = 0;
+
+221 
+driá
+ = 0;
+
+226 ià(
+	`check_ch¬
+(
+šput
+,"a") == 0 || check_char(input,"A") == 0) {
+
+227 
+	`sh_ş—r
+(&
+¶ay”sh
+,
+ªgË
+);
+
+228 
+ªgË
+ -= 15;
+
+229 ià(
+ªgË
+ == 0)‡ngle = 360;
+
+230 ià(
+ªgË
+ == 375)‡ngle = 15;
+
+231 
+	`veùÜ_rÙ
+(&
+shªgË
+,
+ªgË
+);
+
+232 
+	`sh_d¿w
+(&
+¶ay”sh
+,
+ªgË
+);
+
+236 ià(
+	`check_ch¬
+(
+šput
+,"d") == 0 || check_char(input,"D") == 0) {
+
+237 
+	`sh_ş—r
+(&
+¶ay”sh
+,
+ªgË
+);
+
+238 
+ªgË
+ += 15;
+
+239 ià(
+ªgË
+ == 0)‡ngle = 360;
+
+240 ià(
+ªgË
+ == 375)‡ngle = 15;
+
+241 
+	`veùÜ_rÙ
+(&
+shªgË
+,
+ªgË
+);
+
+242 
+	`sh_d¿w
+(&
+¶ay”sh
+,
+ªgË
+);
+
+246 ià(
+	`check_ch¬
+(
+šput
+," ") == 0) {
+
+247 ià(
+nuke
+ > 0 && 
+bomb
+->
+®ive
+ == 0) {
+
+248 
+	`bomb_¥awn
+(
+bomb
+,&
+¶ay”sh
+,&
+shªgË
+);
+
+249 
+nuke
+--;
+
+251 ià(
+bomb
+->
+®ive
+ == 1) {
+
+252 
+	`bomb_ex¶ode
+(
+bomb
+,
+®›Årojeùe
+,
+®›n
+);
+
+256 ià(
+	`check_ch¬
+(
+šput
+,"o") == 0) {
+
+257 
+¶ay”sh
+.
+hp
+--;
+
+261 ià(
+	`check_ch¬
+(
+šput
+,"r") == 0 || check_char(input,"R") == 0) {
+
+262 ià(
+»lßdšg
+ =ğ0 && 
+buÎ‘s
+ < 20) {
+
+263 
+»lßdtime
+ = 
+	`g‘_hs
+();
+
+264 
+buÎ‘s
+ = 0;
+
+265 
+»lßdšg
+ = 1;
+
+269 ià(
+hs
+ % 30 =ğ0 && 
+bomb
+->
+®ive
+ == 1) {
+
+270 
+	`bomb_ş—r
+(
+bomb
+);
+
+271 
+	`bomb_pos
+(
+bomb
+);
+
+272 
+	`bomb_d¿w
+(
+bomb
+);
+
+276 ià(
+»lßdšg
+ =ğ1 && 
+	`g‘_hs
+(è> 
+»lßdtime
+ + 50) {
+
+277 
+buÎ‘s
+ = 20;
+
+278 
+»lßdšg
+ = 0;
+
+282 
 joyv®
  = 
 	`»adIO
 ();
 
-148 ià(
+284 ià(
 hs
  % 5 == 0) {
 
-149 ià((
+285 ià((
 joyv®
  > 0è& (
 buÎ‘s
  > 0)) {
 
-151 ià(
+287 ià(
 joyv®
  == 32) {
 
-152 
+288 
 	`´ojeùe_¥awn
 (&
 ¶ay”sh
@@ -153580,14 +155746,14 @@ joyv®
 ,&
 shªgË
 ,
-n
+²um
 ,0);
 
-155 ià(
+291 ià(
 joyv®
  == 1) {
 
-156 
+292 
 	`´ojeùe_¥awn
 (&
 ¶ay”sh
@@ -153596,14 +155762,14 @@ joyv®
 ,&
 shªgË
 ,
-n
+²um
 ,2);
 
-159 ià(
+295 ià(
 joyv®
  == 2) {
 
-160 
+296 
 	`´ojeùe_¥awn
 (&
 ¶ay”sh
@@ -153612,14 +155778,14 @@ joyv®
 ,&
 shªgË
 ,
-n
+²um
 ,3);
 
-163 ià(
+299 ià(
 joyv®
  == 3) {
 
-164 
+300 
 	`´ojeùe_¥awn
 (&
 ¶ay”sh
@@ -153628,14 +155794,14 @@ joyv®
 ,&
 shªgË
 ,
-n
+²um
 ,1);
 
-167 ià(
+303 ià(
 joyv®
  == 16) {
 
-168 
+304 
 	`´ojeùe_¥awn
 (&
 ¶ay”sh
@@ -153644,184 +155810,268 @@ joyv®
 ,&
 shªgË
 ,
-n
+²um
 ,4);
 
-170 
+306 
 buÎ‘s
 --;
 
-171 
-n
+307 
+²um
 ++;
 
-172 ià(
-n
+308 ià(
+²um
  == 20)
 
-173 
-n
+309 
+²um
  = 0;
 
-176 
-	`buÎ‘_mÚ¡”_cŞlisiÚ
+312 
+	`buÎ‘_®›n_cŞlisiÚ
 (
 ¶ay”´ojeùe
 ,
-mÚ¡”
+®›n
 );
 
-177 ià(
-mÚ¡”
-->
+313 
+	`buÎ‘_¶ay”_cŞlisiÚ
+(
+®›Årojeùe
+,&
+¶ay”sh
+);
+
+318 ià(
+hs
+ % 20 == 0) {
+
+319 
+i
+ = 0;
+
+320 
+i
+ = 0; i < 4; i++) {
+
+321 ià((
+®›n
++
+i
+)->
 x
  <= 20) {
 
-178 
-	`mÚ¡”_de¥awn
+322 
+	`®›n_de¥awn
 (
-mÚ¡”
-, 0);
+®›n
+,
+i
+);
 
-180 ià((
-mÚ¡”
-+1)->
-x
- <= 20) {
+323 (
+®›n
++
+i
+)->
+®ive
+ = 0;
 
-181 
-	`mÚ¡”_de¥awn
+324 (
+®›n
++
+i
+)->
+ªim©iÚ
+ = 15;
+
+325 
+	`®›n_ş—r
 (
-mÚ¡”
-, 1);
+®›n
+);
 
-186 
-	`¶ay”_mÚ¡”_cŞlisiÚ
+330 ià(
+hs
+ % 5 == 0) {
+
+331 
+i
+ = 0;
+
+332 
+i
+ = 0; i < 4; i++) {
+
+333 ià((
+®›n
++
+i
+)->
+ªim©iÚ
+ > 0) {
+
+334 
+	`®›n_ªim©iÚ
 (
-mÚ¡”
+®›n
+,
+i
+);
+
+338 ià(
+hs
+ % 5 == 0) {
+
+340 
+	`¶ay”_®›n_cŞlisiÚ
+(
+®›n
 , &
 ¶ay”sh
 );
 
-188 
-	`mÚ¡”_ş—r
-(
-mÚ¡”
+341 
+	`¶ay”_¡age_cŞlisiÚ
+(&
+¶ay”sh
+, 
+ªgË
+, 1, 1, 400, 225);
+
+342 
+nuke
+ +ğ
+	`¶ay”_pickup_cŞlisiÚ
+(&
+¶ay”sh
+, 
+bomb
 );
 
-189 
-	`mÚ¡”_ş—r
-(
-mÚ¡”
-+1);
+346 ià(
+hs
+ < 2000) {
 
-190 
-	`mÚ¡”_ş—r
-(
-mÚ¡”
-+2);
+347 ià(
+hs
+ % 10 == 0) {
 
-191 
-	`mÚ¡”_pos
+348 
+	`®›n_ş—r
 (
-mÚ¡”
+®›n
+);
+
+349 
+	`®›n_pos
+(
+®›n
 ,
 ¶ay”´ojeùe
 );
 
-192 
-	`mÚ¡”_pos
+350 
+	`®›n_d¿w
 (
-mÚ¡”
-+1,
-¶ay”´ojeùe
+®›n
 );
 
-193 
-	`mÚ¡”_pos
-(
-mÚ¡”
-+2,
-¶ay”´ojeùe
-);
-
-194 
-	`mÚ¡”_d¿w
-(
-mÚ¡”
-);
-
-195 
-	`mÚ¡”_d¿w
-(
-mÚ¡”
-+1);
-
-196 
-	`mÚ¡”_d¿w
-(
-mÚ¡”
-+2);
-
-198 ià(
+353 ià(
 hs
- % 99 == 0) {
+ >= 2000) {
 
-199 
+354 ià(
+hs
+ % 5 == 0) {
+
+355 
+	`®›n_ş—r
+(
+®›n
+);
+
+356 
+	`®›n_pos
+(
+®›n
+,
+¶ay”´ojeùe
+);
+
+357 
+	`®›n_d¿w
+(
+®›n
+);
+
+361 ià(
+hs
+ % 200 == 0) {
+
+362 
 i
  = 0;
 
-200 
+363 
 i
  = 0; i < 10; i++) {
 
-201 ià((
-mÚ¡”
+364 ià((
+®›n
 +
 i
 )->
 ®ive
  == 1) {
 
-202 
-	`mÚ¡”´ojeùe_¥awn
+365 
+	`®›Årojeùe_¥awn
 (
-mÚ¡”
+®›n
 +
 i
 ,&
 ¶ay”sh
 , 
-mÚ¡”´ojeùe
+®›Årojeùe
 ,
-mn
+­num
 );
 
-203 
-mn
+366 
+­num
 ++;
 
-204 ià(
-mn
+367 ià(
+­num
  == 20)
 
-205 
-mn
+368 
+­num
  = 0;
 
-210 ià(
+371 
+scÜe
+ = score + 5;
+
+375 ià(
 hs
  % 5 == 0) {
 
-211 
+376 
 i
  = 0;
 
-212 
+377 
 i
- = 0; i<20; i++) {
+ = 0; i < 20; i++) {
 
-213 ià(((
+378 ià(((
 ¶ay”´ojeùe
 +
 i
@@ -153831,7 +156081,7 @@ x
 y
  >= 224) || ((playerprojectile+i)->y <=10))
 
-214 
+379 
 	`´ojeùe_de¥awn
 (
 ¶ay”´ojeùe
@@ -153839,7 +156089,7 @@ y
 i
 );
 
-215 
+380 
 	`´ojeùe_ş—r
 (
 ¶ay”´ojeùe
@@ -153847,7 +156097,7 @@ i
 i
 );
 
-216 
+381 
 	`´ojeùe_pos
 (
 ¶ay”´ojeùe
@@ -153859,7 +156109,7 @@ shªgË
 i
 );
 
-217 
+382 
 	`´ojeùe_d¿w
 (
 ¶ay”´ojeùe
@@ -153867,75 +156117,147 @@ i
 i
 );
 
-218 ià(((
-mÚ¡”´ojeùe
+384 
+i
+ = 0;
+
+385 
+i
+ = 0; i < 10; i++) {
+
+386 ià(((
+®›Årojeùe
 +
 i
 )->
 x
- >ğ399è|| ((mÚ¡”´ojeùe+i)->x <ğ10è|| ((mÚ¡”´ojeùe+i)->
+ >ğ399è|| (×l›Årojeùe+i)->x <ğ10è|| (×l›Årojeùe+i)->
 y
- >= 224) || ((monsterprojectile+i)->y <=10))
+ >= 224) || ((alienprojectile+i)->y <=10))
 
-219 
-	`mÚ¡”´ojeùe_de¥awn
+387 
+	`®›Årojeùe_de¥awn
 (
-mÚ¡”´ojeùe
+®›Årojeùe
 ,
 i
 );
 
-220 
-	`mÚ¡”´ojeùe_ş—r
+388 
+	`®›Årojeùe_ş—r
 (
-mÚ¡”´ojeùe
+®›Årojeùe
 ,
 i
 );
 
-221 
-	`mÚ¡”´ojeùe_pos
+389 
+	`®›Årojeùe_pos
 (
-mÚ¡”´ojeùe
+®›Årojeùe
 ,
 i
 );
 
-222 
-	`mÚ¡”´ojeùe_d¿w
+390 
+	`®›Årojeùe_d¿w
 (
-mÚ¡”´ojeùe
+®›Årojeùe
 ,
 i
 );
 
-226 
-scÜes
-[100];
+394 ià(
+¶ay”sh
+.
+hp
+ < 0) {
 
-227 
+395 
+¶ay”sh
+.
+hp
+ = 0;
+
+398 ià(
+¶ay”sh
+.
+hp
+ == 0) {
+
+399 
+d—d
+ = 1;
+
+402 ià(
+nuke
+ == 1) {
+
+403 
+	`lcd_d¿w_nuke
+(
+bufãr
+,1,4);
+
+405 ià(
+nuke
+ == 0) {
+
+406 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+409 
+¡g
+[1];
+
+411 
 	`¥rštf
 (
 scÜes
-,"%06d", 
+,"%04d", 
 scÜe
 );
 
-229 
+412 
+	`¥rštf
+(
+¡g
+," %d",
+¡age
+);
+
+414 
 	`lcd_wr™e_¡ršg
-("PÏy” 1",
+("STAGE ",
 bufãr
 ,1,1);
 
-230 
+415 
+	`lcd_wr™e_¡ršg
+(
+¡g
+,
+bufãr
+,31,1);
+
+416 
+	`lcd_wr™e_¡ršg
+("SCORE: ",
+bufãr
+,69,1);
+
+417 
 	`lcd_wr™e_¡ršg
 (
 scÜes
 ,
 bufãr
-,92,1);
+,104,1);
 
-231 
+418 
 	`lcd_d¿w_h—¹s
 (
 ¶ay”sh
@@ -153945,59 +156267,269 @@ hp
 bufãr
 ,1,2);
 
-232 
-	`lcd_d¿w_misses
-(
-misses
-,
-bufãr
-,1,3);
-
-233 
+419 
 	`lcd_d¿w_buÎ‘s
 (
 buÎ‘s
 ,
 bufãr
-,1,4);
+,1,3);
 
-234 ià(
+421 ià(
 buÎ‘s
  == 0) {
 
-235 
+422 
 	`lcd_wr™e_¡ršg
 ("RELOAD",
 bufãr
-,85,4);
+,85,3);
 
-237 ià(
+424 ià(
 buÎ‘s
  > 0) {
 
-238 
+425 
 	`lcd_wr™e_¡ršg
 (" ",
 bufãr
-,85,4);
+,85,3);
 
-240 
-scÜe
-++;
-
-241 
+428 
 	`sh_h—Éh
 (&
 ¶ay”sh
 );
 
-244 
+431 
 	`lcd_push_bufãr
 (
 bufãr
 );
 
-247 
+433 
+	`sh_h—Éh
+(&
+¶ay”sh
+);
+
+437 
+	`æag2_upd©e
+();
+
+439 ià(
+d—d
+ == 1) {
+
+440 
+	`NVIC_Di§bËIRQ
+(
+TIM2_IRQn
+);
+
+441 
+	`´štf
+("%c[2J",
+ESC
+);
+
+442 
+	`d¿w_m©rix
+(3,3,53,6,
+m’uÚlcd
+,1);
+
+443 
+	`m’u_d—d_d¿w
+(
+bufãr
+);
+
+445 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+446 ià(
+	`check_ch¬
+(
+šput
+," ") == 0) {
+
+447 
+	`NVIC_EÇbËIRQ
+(
+TIM2_IRQn
+);
+
+448 
+ex™game
+ = 1;
+
+453 ià(
+ex™game
+ == 1) {
+
+458 
+	}
+}
+
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\maths.c
+
+1 
+	~"¡m32f30x_cÚf.h
+"
+
+2 
+	~"m©hs.h
+"
+
+3 
+	~"LUT.h
+"
+
+4 
+	~<¡dlib.h
+>
+
+5 
+	~<¡dio.h
+>
+
+7 
+	#FIX14_SHIFT
+ 14
+
+	)
+
+8 
+	#FIX14_MULT
+(
+a
+, 
+b
+èĞ×)*(bè>> 
+FIX14_SHIFT
+ )
+
+	)
+
+9 
+	#FIX14_DIV
+(
+a
+, 
+b
+èĞ(×è<< 
+FIX14_SHIFT
+è/ b )
+
+	)
+
+12 
+št32_t
+ 
+	$ÃwtÚ_sq¹
+(
+št32_t
+ 
+x
+, 
+guess
+) {
+
+13 
+i
+ = 1;
+
+14 
+i
+ = 1;i<10;i++) {
+
+15 
+guess
+ = guess-(guess*guess-
+x
+)/(2*guess);
+
+17  
+guess
+;
+
+18 
+	}
+}
+
+21 
+	$veùÜ_š™
+(
+ªgË
+ *
+v
+) {
+
+22 
+v
+->
+x
+ = v->x << 14;
+
+23 
+v
+->
+y
+ = v->y << 14;
+
+24 
+	}
+}
+
+26 
+	$veùÜ_rÙ
+(
+ªgË
+ *
+v
+, angle) {
+
+27 
+x
+ = 
+	`FIX14_MULT
+(1 << 14,
+	`ÿlccos
+(
+ªgË
+)è- FIX14_MULT(0 << 14,
+	`ÿlcsš
+(angle));
+
+28 
+y
+ = 
+	`FIX14_MULT
+(1 << 14,
+	`ÿlcsš
+(
+ªgË
+)è+ FIX14_MULT(0 << 14,
+	`ÿlccos
+(angle));
+
+29 
+v
+->
+x
+ = x;
+
+30 
+v
+->
+y
+ = y;
+
+31 
 	}
 }
 
@@ -154642,12 +157174,6 @@ CR1
  {
 
 170 
-	mh
-,
-	mm
-,
-	ms
-,
 	mhs
 ;
 
@@ -154660,712 +157186,144 @@ time
 175 
 	$time_£t
 (
-h
-, 
-m
-, 
-s
-, 
 hs
 ) {
 
 176 
 tim”
 .
-h
- = h;
-
-177 
-tim”
-.
-m
- = m;
-
-178 
-tim”
-.
-s
- = s;
-
-179 
-tim”
-.
 hs
  = hs;
 
-180 
+177 
 	}
 }
 
-182 
+179 
 	$time_upd©e
 () {
 
-183 
+180 
 hs
  = 
 tim”
 .hs + 1;
 
-184 
+181 
 tim”
 .
 hs
  = hs;
 
-185 ià(
-hs
- % 100 == 0) {
-
-186 
-tim”
-.
-hs
- = 0;
-
-187 
-s
- = 
-tim”
-.s + 1;
-
-188 
-tim”
-.
-s
- = s;
-
-189 ià(
-s
- % 60 == 0) {
-
-190 
-tim”
-.
-s
- = 0;
-
-191 
-m
- = 
-tim”
-.m + 1;
-
-192 
-tim”
-.
-m
- = m;
-
-193 ià(
-m
- % 60 == 0) {
-
-194 
-tim”
-.
-m
- = 0;
-
-195 
-h
- = 
-tim”
-.h + 1;
-
-196 
-tim”
-.
-h
- = h;
-
-200 
+182 
 	}
 }
 
-202 
-	gæag
+184 
+	gæag2
  = 0;
 
-204 
-	$æag_upd©e
+186 
+	$æag2_upd©e
 () {
 
-205 ià(
-æag
+187 ià(
+æag2
  == 0) {
 
-206 
-æag
+188 
+æag2
  = 1;
 
-208 ià(
-æag
+190 ià(
+æag2
  == 1) {
 
-209 
-æag
+191 
+æag2
  = 0;
 
-211 
+193 
 	}
 }
 
-213 
-	$g‘_æag
+195 
+	$g‘_æag2
 () {
 
-214  
-æag
+196  
+æag2
 ;
 
-215 
+197 
 	}
 }
 
-217 
+199 
 	$g‘_hs
 () {
 
-218  
+200  
 tim”
 .
 hs
 ;
 
-219 
+201 
 	}
 }
 
-221 
-	$g‘_s
-() {
-
-222  
-tim”
-.
-s
-;
-
-223 
-	}
-}
-
-225 
-	$g‘_m
-() {
-
-226  
-tim”
-.
-m
-;
-
-227 
-	}
-}
-
-229 
-	$g‘_h
-() {
-
-230  
-tim”
-.
-h
-;
-
-231 
-	}
-}
-
-233 
+203 
 	$TIM2_IRQHªdËr
 () {
 
-234 
+204 
 	`time_upd©e
 ();
 
-235 
-	`æag_upd©e
+205 
+	`æag2_upd©e
 ();
 
-236 
+206 
 TIM2
 ->
 SR
  &= ~0x0001;
 
-237 
+207 
 	}
 }
 
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\monster.c
-
-1 
-	~"mÚ¡”.h
-"
-
-2 
-	~"¡ruù.h
-"
-
-3 
-	~"equ©iÚs.h
-"
-
-4 
-	~"d¿w.h
-"
-
-6 
-	#SHIFT_AMOUNT
- 2
-
-	)
-
-8 
-	#ESC
- 0x1B
-
-	)
-
-57 
-	$mÚ¡”_š™
-(
-mÚ¡”
- *
-m
-) {
-
-58 
-i
- = 0;
-
-59 
-i
- = 0; i < 10; i++) {
-
-60 (
-m
-+
-i
-)->
-x
- = 380;
-
-61 (
-m
-+
-i
-)->
-y
- = 200;
-
-62 (
-m
-+
-i
-)->
-®ive
- = 0;
-
-64 
-	}
-}
-
-66 
-	$mÚ¡”_¥awn
-(
-mÚ¡”
- *
-m
-, 
-x
-, 
-y
-, 
-n
-) {
-
-67 (
-m
-+
-n
-)->
-x
- = x;
-
-68 (
-m
-+
-n
-)->
-y
- = y;
-
-69 (
-m
-+
-n
-)->
-®ive
- = 1;
-
-70 
-	}
-}
-
-72 
-	$mÚ¡”_pos
-(
-mÚ¡”
- *
-m
-, 
-´ojeùe
- *
-p
-) {
-
-73 
-i
- = 0;
-
-74 
-i
- = 0; i < 10; i++)
-
-75 ià((
-m
-+
-i
-)->
-®ive
- == 1)
-
-76 (
-m
-+
-i
-)->
-x
- = (m+i)->x - 1;
-
-77 
-	}
-}
-
-79 
-	$mÚ¡”_de¥awn
-(
-mÚ¡”
- *
-m
-, 
-n
-) {
-
-80 
-	`mÚ¡”_ş—r
-(
-m
-);
-
-81 (
-m
-+
-n
-)->
-®ive
- = 0;
-
-85 (
-m
-+
-n
-)->
-x
- = 380;
-
-86 (
-m
-+
-n
-)->
-y
- = 200;
-
-87 
-	}
-}
-
-89 
-	$mÚ¡”_ş—r
-(
-mÚ¡”
- *
-m
-) {
-
-90 
-i
- = 0;
-
-91 
-i
- = 0; i < 10; i++) {
-
-92 ià((
-m
-+
-i
-)->
-®ive
- == 1) {
-
-96 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
--2,(m+i)->
-x
-+1);
-
-97 
-	`´štf
-("%c%c%c%c",32,32,32,32);
-
-98 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
--1,(m+i)->
-x
--1);
-
-99 
-	`´štf
-("%c%c%c%c",32,32,32,32);
-
-100 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
-,(m+i)->
-x
--3);
-
-101 
-	`´štf
-("%c%c%c%c%c",32,32,32,32,32);
-
-102 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
-+1,(m+i)->
-x
--1);
-
-103 
-	`´štf
-("%c%c%c%c",32,32,32,32);
-
-104 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
-+2,(m+i)->
-x
-+1);
-
-105 
-	`´štf
-("%c%c%c%c",32,32,32,32);
-
-108 
-	}
-}
-
-109 
-	$mÚ¡”_d¿w
-(
-mÚ¡”
- *
-m
-) {
-
-110 
-i
- = 0;
-
-111 
-i
- = 0; i < 10; i++) {
-
-112 ià((
-m
-+
-i
-)->
-®ive
- == 1) {
-
-116 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
--2,(m+i)->
-x
-+1);
-
-117 
-	`´štf
-("%c%c%c%c",219,219,219,219);
-
-118 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
--1,(m+i)->
-x
--1);
-
-119 
-	`´štf
-("%c%c%c%c",219,219,219,219);
-
-120 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
-,(m+i)->
-x
--3);
-
-121 
-	`´štf
-("%c%c%c%c%c",219,219,219,219,219);
-
-122 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
-+1,(m+i)->
-x
--1);
-
-123 
-	`´štf
-("%c%c%c%c",219,219,219,219);
-
-124 
-	`´štf
-("%c[%d;%dH",
-ESC
-,(
-m
-+
-i
-)->
-y
-+2,(m+i)->
-x
-+1);
-
-125 
-	`´štf
-("%c%c%c%c",219,219,219,219);
-
-128 
-	}
-}
-
-	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\motion.c
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\menu.c
 
 1 
 	~"¡m32f30x_cÚf.h
 "
 
 2 
-	~"30010_io.h
-"
-
-3 
-	~"mc_io.h
-"
-
-4 
-	~"mÙiÚ.h
-"
-
-5 
-	~"LUT.h
-"
-
-6 
 	~"ªsi.h
 "
 
+3 
+	~"d¿w.h
+"
+
+4 
+	~"m’u.h
+"
+
+5 
+	~"lcd.h
+"
+
+6 
+	~"šput.h
+"
+
 7 
-	~<¡dlib.h
->
+	~"30010_io.h
+"
 
 8 
 	~<¡dio.h
@@ -155377,249 +157335,851 @@ x
 
 	)
 
-12 
-	#FIX14_SHIFT
- 14
-
-	)
-
-13 
-	#FIX14_MULT
+12 
+	$m’u_maš_d¿w
 (
-a
-, 
-b
-èĞ×)*(bè>> 
-FIX14_SHIFT
- )
-
-	)
-
-14 
-	#FIX14_DIV
-(
-a
-, 
-b
-èĞ(×è<< 
-FIX14_SHIFT
-è/ b )
-
-	)
-
-18 
-	$veùÜ_š™
-(
-ªgË
+ušt8_t
  *
-v
+bufãr
 ) {
 
-19 
-v
-->
-x
- = v->x << 14;
-
-20 
-v
-->
-y
- = v->y << 14;
-
-21 
-	}
-}
-
-23 
-	$veùÜ_rÙ
-(
-ªgË
- *
-v
-, angle) {
-
-24 
-x
- = 
-	`FIX14_MULT
-(1 << 14,
-	`ÿlccos
+13 
+	`mem£t
 (
-ªgË
-)è- FIX14_MULT(0 << 14,
-	`ÿlcsš
-(angle));
+bufãr
+,0x00,512);
 
-25 
-y
- = 
-	`FIX14_MULT
-(1 << 14,
-	`ÿlcsš
+14 
+	`lcd_wr™e_¡ršg
+("MAIN MENU ",
+bufãr
+,1,1);
+
+15 
+	`lcd_wr™e_¡ršg
+("1. STAGE SELECT ",
+bufãr
+,1,3);
+
+16 
+	`lcd_wr™e_¡ršg
+("2. HELP ",
+bufãr
+,1,4);
+
+17 
+	`lcd_push_bufãr
 (
-ªgË
-)è+ FIX14_MULT(0 << 14,
-	`ÿlccos
-(angle));
-
-26 
-v
-->
-x
- = x;
-
-27 
-v
-->
-y
- = y;
-
-28 
-	}
-}
-
-32 
-	$bombd¿w
-(
-´ojeùe
- *
-p
-) {
-
-33 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-p
-->
-y
-,p->
-x
+bufãr
 );
 
+18 
+	}
+}
+
+20 
+	$m’u_¡¬t_d¿w
+(
+ušt8_t
+ *
+bufãr
+) {
+
+21 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+22 
+	`lcd_wr™e_¡ršg
+("STAGE SELECT ",
+bufãr
+,1,1);
+
+23 
+	`lcd_wr™e_¡ršg
+(" 1. STAGE 1",
+bufãr
+,1,2);
+
+24 
+	`lcd_wr™e_¡ršg
+(" 2. STAGE 2",
+bufãr
+,1,3);
+
+25 
+	`lcd_wr™e_¡ršg
+("0. BACK 3. STAGE 3",
+bufãr
+,1,4);
+
+26 
+	`lcd_push_bufãr
+(
+bufãr
+);
+
+27 
+	}
+}
+
+29 
+	$m’u_h–p1_d¿w
+(
+ušt8_t
+ *
+bufãr
+) {
+
+30 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+31 
+	`lcd_wr™e_¡ršg
+("HELP PAGE 1",
+bufãr
+,1,1);
+
+32 
+	`lcd_wr™e_¡ršg
+("FORWARD: W, TURN: A/D",
+bufãr
+,1,2);
+
+33 
+	`lcd_wr™e_¡ršg
+("BOSSKEY: B, PAUSE: P",
+bufãr
+,1,3);
+
 34 
-	`´štf
-("%c",62);
+	`lcd_wr™e_¡ršg
+("0. BACK 1. NEXT",
+bufãr
+,1,4);
 
 35 
-	`´štf
-("%c[H",
-ESC
+	`lcd_push_bufãr
+(
+bufãr
 );
 
 36 
 	}
 }
 
+38 
+	$m’u_h–p2_d¿w
+(
+ušt8_t
+ *
+bufãr
+) {
+
+39 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+40 
+	`lcd_wr™e_¡ršg
+("HELP PAGE 2",
+bufãr
+,1,1);
+
+41 
+	`lcd_wr™e_¡ršg
+("FIXED FIRE: JOYCENTER",
+bufãr
+,1,2);
+
+42 
+	`lcd_wr™e_¡ršg
+("DIR FIRE: JOYDIR",
+bufãr
+,1,3);
+
+43 
+	`lcd_wr™e_¡ršg
+("0. BACK 1. NEXT",
+bufãr
+,1,4);
+
+44 
+	`lcd_push_bufãr
+(
+bufãr
+);
+
+45 
+	}
+}
+
+47 
+	$m’u_h–p3_d¿w
+(
+ušt8_t
+ *
+bufãr
+) {
+
+48 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+49 
+	`lcd_wr™e_¡ršg
+("HELP PAGE 3",
+bufãr
+,1,1);
+
+50 
+	`lcd_wr™e_¡ršg
+("RELOAD: R",
+bufãr
+,1,2);
+
+51 
+	`lcd_wr™e_¡ršg
+("NUKE: SPACE",
+bufãr
+,1,3);
+
+52 
+	`lcd_wr™e_¡ršg
+("0. BACK ",
+bufãr
+,1,4);
+
+53 
+	`lcd_push_bufãr
+(
+bufãr
+);
+
+54 
+	}
+}
+
+56 
+	$m’u_¡age_d¿w
+(
+ušt8_t
+ *
+bufãr
+, *
+Çme
+) {
+
+57 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+58 
+	`lcd_wr™e_¡ršg
+(
+Çme
+,
+bufãr
+,1,1);
+
+59 
+	`lcd_wr™e_¡ršg
+("PLAY THIS STAGE? ",
+bufãr
+,1,2);
+
+60 
+	`lcd_wr™e_¡ršg
+("1. YES! ",
+bufãr
+,1,3);
+
+61 
+	`lcd_wr™e_¡ršg
+("0. BACK ",
+bufãr
+,1,4);
+
+62 
+	`lcd_push_bufãr
+(
+bufãr
+);
+
+63 
+	}
+}
+
+65 
+	$m’u_·u£_d¿w
+(
+ušt8_t
+ *
+bufãr
+) {
+
+66 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+67 
+	`lcd_wr™e_¡ršg
+("PAUSE MENU",
+bufãr
+,1,1);
+
+68 
+	`lcd_wr™e_¡ršg
+("PRESS P TO UNPAUSE",
+bufãr
+,1,2);
+
+69 
+	`lcd_wr™e_¡ršg
+("PPRESS E TO EXIT GAME",
+bufãr
+,1,3);
+
+70 
+	`lcd_push_bufãr
+(
+bufãr
+);
+
+71 
+	}
+}
+
+73 
+	$m’u_w¬nšg_d¿w
+(
+ušt8_t
+ *
+bufãr
+) {
+
+74 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+75 
+	`lcd_wr™e_¡ršg
+("WARNING!",
+bufãr
+,1,1);
+
+76 
+	`lcd_wr™e_¡ršg
+("REALLY WANT TO EXIT? ",
+bufãr
+,1,2);
+
+77 
+	`lcd_wr™e_¡ršg
+("1. YES 2. NO",
+bufãr
+,1,4);
+
+78 
+	`lcd_push_bufãr
+(
+bufãr
+);
+
+79 
+	}
+}
+
+81 
+	$m’u_d—d_d¿w
+(
+ušt8_t
+ *
+bufãr
+) {
+
+82 
+	`mem£t
+(
+bufãr
+,0x00,512);
+
+83 
+	`lcd_wr™e_¡ršg
+("YOU DIED!",
+bufãr
+,1,1);
+
+84 
+	`lcd_wr™e_¡ršg
+("PLEASE PRESS SPACE TO",
+bufãr
+,1,2);
+
+85 
+	`lcd_wr™e_¡ršg
+("RETURN TO THE MENU",
+bufãr
+,1,3);
+
+86 
+	`lcd_push_bufãr
+(
+bufãr
+);
+
+87 
+	}
+}
+
+89 
+	$m’u
+(
+ušt8_t
+ *
+bufãr
+, 
+šput
+[], cÚ¡ ušt8_ˆ
+me
+[][58]) {
+
+90 
+lßdgame
+ = 0;
+
+92 
+	`d¿w_m©rix
+(3,3,53,6,
+me
+,1);
+
+95 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+96 ià(
+	`check_ch¬
+(
+šput
+,"1") == 0) {
+
+97 
+	`m’u_¡¬t_d¿w
+(
+bufãr
+);
+
+99 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+100 ià(
+	`check_ch¬
+(
+šput
+,"1") == 0) {
+
+101 
+	`m’u_¡age_d¿w
+(
+bufãr
+,"STAGE 1");
+
+103 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+104 ià(
+	`check_ch¬
+(
+šput
+,"1") == 0) {
+
+105 
+lßdgame
+ = 1;
+
+108 ià(
+	`check_ch¬
+(
+šput
+,"0") == 0) {
+
+109 
+	`m’u_¡¬t_d¿w
+(
+bufãr
+);
+
+114 ià(
+	`check_ch¬
+(
+šput
+,"2") == 0) {
+
+115 
+	`m’u_¡age_d¿w
+(
+bufãr
+,"STAGE 2");
+
+117 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+118 ià(
+	`check_ch¬
+(
+šput
+,"1") == 0) {
+
+119 
+lßdgame
+ = 2;
+
+122 ià(
+	`check_ch¬
+(
+šput
+,"0") == 0) {
+
+123 
+	`m’u_¡¬t_d¿w
+(
+bufãr
+);
+
+128 ià(
+	`check_ch¬
+(
+šput
+,"3") == 0) {
+
+129 
+	`m’u_¡age_d¿w
+(
+bufãr
+,"STAGE 3");
+
+131 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+132 ià(
+	`check_ch¬
+(
+šput
+,"1") == 0) {
+
+133 
+lßdgame
+ = 3;
+
+136 ià(
+	`check_ch¬
+(
+šput
+,"0") == 0) {
+
+137 
+	`m’u_¡¬t_d¿w
+(
+bufãr
+);
+
+142 ià(
+	`check_ch¬
+(
+šput
+,"0") == 0) {
+
+143 
+	`m’u_maš_d¿w
+(
+bufãr
+);
+
+146 ià(
+lßdgame
+ > 0) {
+
+151 ià(
+	`check_ch¬
+(
+šput
+,"2") == 0) {
+
+152 
+	`m’u_h–p1_d¿w
+(
+bufãr
+);
+
+154 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+155 ià(
+	`check_ch¬
+(
+šput
+,"0") == 0) {
+
+156 
+	`m’u_maš_d¿w
+(
+bufãr
+);
+
+159 ià(
+	`check_ch¬
+(
+šput
+,"1") == 0) {
+
+160 
+	`m’u_h–p2_d¿w
+(
+bufãr
+);
+
+162 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+163 ià(
+	`check_ch¬
+(
+šput
+,"0") == 0) {
+
+164 
+	`m’u_h–p1_d¿w
+(
+bufãr
+);
+
+167 ià(
+	`check_ch¬
+(
+šput
+,"1") == 0) {
+
+168 
+	`m’u_h–p3_d¿w
+(
+bufãr
+);
+
+170 
+šput
+[0] = 
+	`u¬t_g‘_ch¬
+();
+
+171 ià(
+	`check_ch¬
+(
+šput
+,"0") == 0) {
+
+172 
+	`m’u_h–p2_d¿w
+(
+bufãr
+);
+
+181 ià(
+lßdgame
+ > 0) {
+
+182 
+	`´štf
+("%c[2J",
+ESC
+);
+
+186  
+lßdgame
+;
+
+187 
+	}
+}
+
 	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\objects.c
 
 1 
-	~"equ©iÚs.h
-"
-
-2 
 	~"¡ruù.h
 "
 
-4 
+3 
 	#ESC
  0x1B
 
 	)
 
-7 
+5 
 	$¶ª‘_š™
+(
+¶ª‘
+ *
+p
+, 
+x
+, 
+y
+, 
+n
+) {
+
+6 (
+p
++
+n
+)->
+x
+ = x;
+
+7 (
+p
++
+n
+)->
+y
+ = y;
+
+8 (
+p
++
+n
+)->
+aùive
+ = 1;
+
+9 
+	}
+}
+
+12 
+	$¶ª‘_d¿w
 (
 ¶ª‘
  *
 p
 ) {
 
-8 
-p
-->
-x
- = 200;
+13 
+i
+ = 0;
 
-9 
-p
-->
-y
- = 50;
+14 
+i
+ = 0; i < 10; i++) {
 
-10 
+15 ià((
 p
-->
++
+i
+)->
 aùive
- = 1;
+ == 1) {
 
-11 (
+16 
+	`´štf
+("%c[%d;%dH",
+ESC
+,(
 p
-+1)->
-x
- = 300;
-
-12 (
-p
-+1)->
++
+i
+)->
 y
- = 70;
-
-13 (
-p
-+1)->
-aùive
- = 1;
-
-14 
-	}
-}
-
-17 
-	$¶ª‘_d¿w
-(
++4,Õ+i)->
 x
-, 
-y
-) {
+-2);
+
+17 
+	`´štf
+("%c%c%c%c%c",219,219,219,219,219);
 
 18 
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
-+4,
++3,Õ+i)->
 x
--2);
+-3);
 
 19 
 	`´štf
-("%c%c%c%c%c",219,219,219,219,219);
+("%c%c%c%c%c%c%c",219,219,219,219,219,219,219);
 
 20 
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
-+3,
++2,Õ+i)->
 x
--3);
+-4);
 
 21 
 	`´štf
-("%c%c%c%c%c%c%c",219,219,219,219,219,219,219);
+("%c%c%c%c%c%c%c%c%c",219,219,219,219,219,219,219,219,219);
 
 22 
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
-+2,
++1,Õ+i)->
 x
 -4);
 
@@ -155631,9 +158191,13 @@ x
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
-+1,
+,Õ+i)->
 x
 -4);
 
@@ -155645,9 +158209,13 @@ x
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
-,
+-1,Õ+i)->
 x
 -4);
 
@@ -155659,9 +158227,13 @@ x
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
--1,
+-2,Õ+i)->
 x
 -4);
 
@@ -155673,41 +158245,35 @@ x
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
--2,
+-3,Õ+i)->
 x
--4);
+-3);
 
 31 
 	`´štf
-("%c%c%c%c%c%c%c%c%c",219,219,219,219,219,219,219,219,219);
+("%c%c%c%c%c%c%c",219,219,219,219,219,219,219);
 
 32 
 	`´štf
 ("%c[%d;%dH",
 ESC
-,
+,(
+p
++
+i
+)->
 y
--3,
-x
--3);
-
-33 
-	`´štf
-("%c%c%c%c%c%c%c",219,219,219,219,219,219,219);
-
-34 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-y
--4,
+-4,Õ+i)->
 x
 -2);
 
-35 
+33 
 	`´štf
 ("%c%c%c%c%c",219,219,219,219,219);
 
@@ -155749,7 +158315,7 @@ x
 s
 ->
 y
- = 20;
+ = 100;
 
 10 
 s
@@ -155783,23 +158349,17 @@ s
 ªgË
  *
 v
-, 
-Ú
 ) {
 
-17 ià(
-Ú
- == 0) {
-
-18 
+17 
 s
 ->
 x
  = s->x + (
 v
-->x*8 >> 14)*2;
+->x*8 >> 14);
 
-19 
+18 
 s
 ->
 y
@@ -155807,25 +158367,51 @@ y
 v
 ->y*8 >> 14);
 
-21 ià(
-Ú
- == 1) {
+19 
+	}
+}
+
+21 
+	$sh_driá
+(
+¥aûsh
+ *
+s
+, 
+ªgx
+, 
+ªgy
+, 
+driá
+) {
 
 22 
+ªgx
+ = (angx*8 >> 14);
+
+23 
+ªgy
+ = (angy*8 >> 14);
+
+24 
 s
 ->
 x
- = s->x - (
-v
-->x*8 >> 14)*2;
+ = s->x + 
+ªgx
+ / (
+driá
+ / 2);
 
-23 
+25 
 s
 ->
 y
- = s->y - (
-v
-->y*8 >> 14);
+ = s->y + 
+ªgy
+ / (
+driá
+ / 2);
 
 26 
 	}
@@ -155859,17 +158445,29 @@ ESC
 s
 ->
 y
+-1,s->
+x
+-2);
+
+33 
+	`´štf
+("%c%c",219,219);
+
+34 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
 ,s->
 x
 );
 
-33 
+35 
 	`´štf
-("%c%c%c%c%c%c%c%c%c%c",219,219,219,219,219,219,219,219,219,219);
-
-35 ià(
-num
- == 1) {
+("%c%c%c%c",219,219,219,219);
 
 36 
 	`´štf
@@ -155879,15 +158477,19 @@ ESC
 s
 ->
 y
-,s->
++1,s->
 x
-);
+-2);
 
 37 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c%c",219,219);
 
-38 
+39 ià(
+num
+ == 1) {
+
+40 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -155895,17 +158497,13 @@ ESC
 s
 ->
 y
-+1,s->
+-2,s->
 x
-+4);
+-1);
 
-39 
+41 
 	`´štf
-("%c%c%c%c%c%c",219,219,219,219,219,219);
-
-41 ià(
-num
- == 2) {
+("%c",219);
 
 42 
 	`´štf
@@ -155915,13 +158513,13 @@ ESC
 s
 ->
 y
-,s->
+-1,s->
 x
 );
 
 43 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 44 
 	`´štf
@@ -155931,13 +158529,13 @@ ESC
 s
 ->
 y
-+1,s->
+,s->
 x
-+2);
+-2);
 
 45 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c %c%c",219,219,219);
 
 46 
 	`´štf
@@ -155947,17 +158545,17 @@ ESC
 s
 ->
 y
-+2,s->
++1,s->
 x
-+6);
+-1);
 
 47 
 	`´štf
-("%c%c",219,219);
+("%c %c%c",219,219,219);
 
 49 ià(
 num
- == 3) {
+ == 2) {
 
 50 
 	`´štf
@@ -155967,13 +158565,13 @@ ESC
 s
 ->
 y
-,s->
+-2,s->
 x
 );
 
 51 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 52 
 	`´štf
@@ -155983,13 +158581,13 @@ ESC
 s
 ->
 y
-+1,s->
+-1,s->
 x
-+2);
++1);
 
 53 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 54 
 	`´štf
@@ -155999,13 +158597,13 @@ ESC
 s
 ->
 y
-+2,s->
+,s->
 x
-+4);
+-2);
 
 55 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
 56 
 	`´štf
@@ -156015,19 +158613,15 @@ ESC
 s
 ->
 y
-+3,s->
++1,s->
 x
-+6);
+-1);
 
 57 
 	`´štf
-("%c%c",219,219);
+("%c %c%c",219,219,219);
 
-59 ià(
-num
- == 4) {
-
-60 
+58 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156035,13 +158629,17 @@ ESC
 s
 ->
 y
-,s->
++2,s->
 x
-);
++3);
 
-61 
+59 
 	`´štf
-("%c%c",219,219);
+("%c",219);
+
+61 ià(
+num
+ == 3) {
 
 62 
 	`´štf
@@ -156051,13 +158649,13 @@ ESC
 s
 ->
 y
-+1,s->
+-2,s->
 x
-+2);
+);
 
 63 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 64 
 	`´štf
@@ -156067,13 +158665,13 @@ ESC
 s
 ->
 y
-+2,s->
+-1,s->
 x
-+2);
++1);
 
 65 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 66 
 	`´štf
@@ -156083,17 +158681,29 @@ ESC
 s
 ->
 y
-+3,s->
+,s->
 x
-+4);
+-2);
 
 67 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
-69 ià(
-num
- == 5) {
+68 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+69 
+	`´štf
+("%c %c",219,219);
 
 70 
 	`´štf
@@ -156103,13 +158713,13 @@ ESC
 s
 ->
 y
-,s->
++2,s->
 x
-);
++2);
 
 71 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 72 
 	`´štf
@@ -156119,29 +158729,17 @@ ESC
 s
 ->
 y
-+1,s->
++3,s->
 x
-);
++3);
 
 73 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-74 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
-+2);
-
-75 
-	`´štf
-("%c%c",219,219);
+75 ià(
+num
+ == 4) {
 
 76 
 	`´štf
@@ -156151,13 +158749,13 @@ ESC
 s
 ->
 y
-+3,s->
+-2,s->
 x
-+2);
+);
 
 77 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 78 
 	`´štf
@@ -156167,19 +158765,15 @@ ESC
 s
 ->
 y
-+4,s->
+-1,s->
 x
-+2);
++1);
 
 79 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-81 ià(
-num
- == 6) {
-
-82 
+80 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156189,13 +158783,13 @@ s
 y
 ,s->
 x
-);
+-2);
 
-83 
+81 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
-84 
+82 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156205,13 +158799,13 @@ s
 y
 +1,s->
 x
-);
+-1);
 
-85 
+83 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
-86 
+84 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156221,13 +158815,13 @@ s
 y
 +2,s->
 x
-);
++1);
 
-87 
+85 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-88 
+86 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156237,11 +158831,15 @@ s
 y
 +3,s->
 x
-);
++2);
 
-89 
+87 
 	`´štf
-("%c%c",219,219);
+("%c",219);
+
+89 ià(
+num
+ == 5) {
 
 90 
 	`´štf
@@ -156251,17 +158849,29 @@ ESC
 s
 ->
 y
-+4,s->
+-2,s->
 x
 );
 
 91 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-93 ià(
-num
- == 7) {
+92 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-2);
+
+93 
+	`´štf
+("%c %c",219,219);
 
 94 
 	`´štf
@@ -156273,7 +158883,7 @@ s
 y
 ,s->
 x
-);
+-1);
 
 95 
 	`´štf
@@ -156293,7 +158903,7 @@ x
 
 97 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 98 
 	`´štf
@@ -156305,11 +158915,11 @@ s
 y
 +2,s->
 x
--2);
++1);
 
 99 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 100 
 	`´štf
@@ -156321,13 +158931,17 @@ s
 y
 +3,s->
 x
--2);
++1);
 
 101 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-102 
+103 ià(
+num
+ == 6) {
+
+104 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156335,17 +158949,13 @@ ESC
 s
 ->
 y
-+4,s->
+-2,s->
 x
--2);
+-1);
 
-103 
+105 
 	`´štf
-("%c%c",219,219);
-
-105 ià(
-num
- == 8) {
+("%c %c",219,219);
 
 106 
 	`´štf
@@ -156355,13 +158965,13 @@ ESC
 s
 ->
 y
-,s->
+-1,s->
 x
-);
+-1);
 
 107 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
 108 
 	`´štf
@@ -156371,13 +158981,13 @@ ESC
 s
 ->
 y
-+1,s->
+,s->
 x
--2);
+);
 
 109 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 110 
 	`´štf
@@ -156387,13 +158997,13 @@ ESC
 s
 ->
 y
-+2,s->
++1,s->
 x
--2);
+);
 
 111 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 112 
 	`´štf
@@ -156403,19 +159013,15 @@ ESC
 s
 ->
 y
-+3,s->
++2,s->
 x
--4);
+);
 
 113 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-115 ià(
-num
- == 9) {
-
-116 
+114 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156423,13 +159029,17 @@ ESC
 s
 ->
 y
-,s->
++3,s->
 x
 );
 
-117 
+115 
 	`´štf
-("%c%c",219,219);
+("%c",219);
+
+117 ià(
+num
+ == 7) {
 
 118 
 	`´štf
@@ -156439,13 +159049,13 @@ ESC
 s
 ->
 y
-+1,s->
+-2,s->
 x
--2);
+);
 
 119 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 120 
 	`´štf
@@ -156455,35 +159065,15 @@ ESC
 s
 ->
 y
-+2,s->
+-1,s->
 x
--4);
+-1);
 
 121 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
 122 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+3,s->
-x
--6);
-
-123 
-	`´štf
-("%c%c",219,219);
-
-125 ià(
-num
- == 10) {
-
-126 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156495,11 +159085,11 @@ y
 x
 );
 
-127 
+123 
 	`´štf
 ("%c%c",219,219);
 
-128 
+124 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156509,13 +159099,13 @@ s
 y
 +1,s->
 x
--4);
+);
 
-129 
+125 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c",219);
 
-130 
+126 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156525,15 +159115,47 @@ s
 y
 +2,s->
 x
--6);
+-1);
 
-131 
+127 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-133 ià(
+128 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++3,s->
+x
+-1);
+
+129 
+	`´štf
+("%c",219);
+
+131 ià(
 num
- == 11) {
+ == 8) {
+
+132 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+);
+
+133 
+	`´štf
+("%c",219);
 
 134 
 	`´štf
@@ -156543,13 +159165,13 @@ ESC
 s
 ->
 y
-,s->
+-1,s->
 x
--2);
+-1);
 
 135 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c",219);
 
 136 
 	`´štf
@@ -156559,17 +159181,29 @@ ESC
 s
 ->
 y
-+1,s->
+,s->
 x
--8);
+);
 
 137 
 	`´štf
-("%c%c%c%c%c%c",219,219,219,219,219,219);
+("%c %c",219,219);
 
-139 ià(
-num
- == 12) {
+138 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+139 
+	`´štf
+("%c %c",219,219);
 
 140 
 	`´štf
@@ -156579,19 +159213,15 @@ ESC
 s
 ->
 y
-,s->
++2,s->
 x
--8);
+-1);
 
 141 
 	`´štf
-("%c%c%c%c%c%c%c%c%c%c",219,219,219,219,219,219,219,219,219,219);
+("%c",219);
 
-143 ià(
-num
- == 13) {
-
-144 
+142 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156599,13 +159229,17 @@ ESC
 s
 ->
 y
-,s->
++3,s->
 x
 -2);
 
-145 
+143 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c",219);
+
+145 ià(
+num
+ == 9) {
 
 146 
 	`´štf
@@ -156615,17 +159249,29 @@ ESC
 s
 ->
 y
--1,s->
+-2,s->
 x
--8);
+);
 
 147 
 	`´štf
-("%c%c%c%c%c%c",219,219,219,219,219,219);
+("%c",219);
 
-149 ià(
-num
- == 14) {
+148 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+149 
+	`´štf
+("%c",219);
 
 150 
 	`´štf
@@ -156641,7 +159287,7 @@ x
 
 151 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
 152 
 	`´štf
@@ -156651,13 +159297,13 @@ ESC
 s
 ->
 y
--1,s->
++1,s->
 x
--4);
+-1);
 
 153 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c %c",219,219);
 
 154 
 	`´štf
@@ -156667,19 +159313,15 @@ ESC
 s
 ->
 y
--2,s->
++2,s->
 x
--6);
+-2);
 
 155 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-157 ià(
-num
- == 15) {
-
-158 
+156 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156687,13 +159329,17 @@ ESC
 s
 ->
 y
-,s->
++3,s->
 x
-);
+-3);
 
-159 
+157 
 	`´štf
-("%c%c",219,219);
+("%c",219);
+
+159 ià(
+num
+ == 10) {
 
 160 
 	`´štf
@@ -156703,13 +159349,13 @@ ESC
 s
 ->
 y
--1,s->
+-2,s->
 x
--2);
+);
 
 161 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 162 
 	`´štf
@@ -156719,35 +159365,15 @@ ESC
 s
 ->
 y
--2,s->
+-1,s->
 x
--4);
+-1);
 
 163 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 164 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--3,s->
-x
--6);
-
-165 
-	`´štf
-("%c%c",219,219);
-
-167 ià(
-num
- == 16) {
-
-168 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156759,11 +159385,11 @@ y
 x
 );
 
-169 
+165 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
-170 
+166 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156771,13 +159397,33 @@ ESC
 s
 ->
 y
--1,s->
++1,s->
 x
 -2);
 
-171 
+167 
 	`´štf
-("%c%c",219,219);
+("%c%c %c",219,219,219);
+
+168 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+-3);
+
+169 
+	`´štf
+("%c",219);
+
+171 ià(
+num
+ == 11) {
 
 172 
 	`´štf
@@ -156789,49 +159435,13 @@ s
 y
 -2,s->
 x
--2);
++1);
 
 173 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 174 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--3,s->
-x
--4);
-
-175 
-	`´štf
-("%c%c",219,219);
-
-177 ià(
-num
- == 17) {
-
-178 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-179 
-	`´štf
-("%c%c",219,219);
-
-180 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156843,9 +159453,45 @@ y
 x
 );
 
-181 
+175 
 	`´štf
-("%c%c",219,219);
+("%c",219);
+
+176 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-1);
+
+177 
+	`´štf
+("%c%c %c",219,219,219);
+
+178 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-3);
+
+179 
+	`´štf
+("%c%c %c",219,219,219);
+
+181 ià(
+num
+ == 12) {
 
 182 
 	`´štf
@@ -156855,9 +159501,9 @@ ESC
 s
 ->
 y
--2,s->
+-1,s->
 x
--2);
++1);
 
 183 
 	`´štf
@@ -156871,13 +159517,13 @@ ESC
 s
 ->
 y
--3,s->
+,s->
 x
--2);
+-3);
 
 185 
 	`´štf
-("%c%c",219,219);
+("%c%c%c%c",219,219,219,219);
 
 186 
 	`´štf
@@ -156887,9 +159533,9 @@ ESC
 s
 ->
 y
--4,s->
++1,s->
 x
--2);
++1);
 
 187 
 	`´štf
@@ -156897,7 +159543,7 @@ x
 
 189 ià(
 num
- == 18) {
+ == 13) {
 
 190 
 	`´štf
@@ -156907,13 +159553,13 @@ ESC
 s
 ->
 y
-,s->
++2,s->
 x
-);
++1);
 
 191 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 192 
 	`´štf
@@ -156923,13 +159569,13 @@ ESC
 s
 ->
 y
--1,s->
++1,s->
 x
 );
 
 193 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 194 
 	`´štf
@@ -156939,13 +159585,13 @@ ESC
 s
 ->
 y
--2,s->
+,s->
 x
-);
+-1);
 
 195 
 	`´štf
-("%c%c",219,219);
+("%c%c %c",219,219,219);
 
 196 
 	`´štf
@@ -156955,15 +159601,19 @@ ESC
 s
 ->
 y
--3,s->
+-1,s->
 x
-);
+-3);
 
 197 
 	`´štf
-("%c%c",219,219);
+("%c%c %c",219,219,219);
 
-198 
+199 ià(
+num
+ == 14) {
+
+200 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -156971,17 +159621,13 @@ ESC
 s
 ->
 y
--4,s->
++2,s->
 x
 );
 
-199 
+201 
 	`´štf
-("%c%c",219,219);
-
-201 ià(
-num
- == 19) {
+("%c",219);
 
 202 
 	`´štf
@@ -156991,13 +159637,13 @@ ESC
 s
 ->
 y
-,s->
++1,s->
 x
-);
+-1);
 
 203 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 204 
 	`´štf
@@ -157007,13 +159653,13 @@ ESC
 s
 ->
 y
--1,s->
+,s->
 x
 );
 
 205 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
 206 
 	`´štf
@@ -157023,13 +159669,13 @@ ESC
 s
 ->
 y
--2,s->
+-1,s->
 x
-+2);
+-2);
 
 207 
 	`´štf
-("%c%c",219,219);
+("%c%c %c",219,219,219);
 
 208 
 	`´štf
@@ -157039,15 +159685,19 @@ ESC
 s
 ->
 y
--3,s->
+-2,s->
 x
-+2);
+-3);
 
 209 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-210 
+211 ià(
+num
+ == 15) {
+
+212 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -157055,17 +159705,13 @@ ESC
 s
 ->
 y
--4,s->
++2,s->
 x
-+2);
+);
 
-211 
+213 
 	`´štf
-("%c%c",219,219);
-
-213 ià(
-num
- == 20) {
+("%c",219);
 
 214 
 	`´štf
@@ -157075,13 +159721,13 @@ ESC
 s
 ->
 y
-,s->
++1,s->
 x
-);
+-1);
 
 215 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 216 
 	`´štf
@@ -157091,13 +159737,13 @@ ESC
 s
 ->
 y
--1,s->
+,s->
 x
-+2);
+);
 
 217 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
 218 
 	`´štf
@@ -157107,13 +159753,13 @@ ESC
 s
 ->
 y
--2,s->
+-1,s->
 x
-+2);
+-1);
 
 219 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
 220 
 	`´štf
@@ -157123,19 +159769,15 @@ ESC
 s
 ->
 y
--3,s->
+-2,s->
 x
-+4);
+-2);
 
 221 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
-223 ià(
-num
- == 21) {
-
-224 
+222 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -157143,13 +159785,17 @@ ESC
 s
 ->
 y
-,s->
+-3,s->
 x
-);
+-3);
 
-225 
+223 
 	`´štf
-("%c%c",219,219);
+("%c",219);
+
+225 ià(
+num
+ == 16) {
 
 226 
 	`´štf
@@ -157159,13 +159805,13 @@ ESC
 s
 ->
 y
--1,s->
++2,s->
 x
-+2);
+);
 
 227 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 228 
 	`´štf
@@ -157175,13 +159821,13 @@ ESC
 s
 ->
 y
--2,s->
++1,s->
 x
-+4);
+-1);
 
 229 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 230 
 	`´štf
@@ -157191,17 +159837,29 @@ ESC
 s
 ->
 y
--3,s->
+,s->
 x
-+6);
+);
 
 231 
 	`´štf
-("%c%c",219,219);
+("%c %c",219,219);
 
-233 ià(
-num
- == 22) {
+232 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+233 
+	`´štf
+("%c %c",219,219);
 
 234 
 	`´štf
@@ -157211,13 +159869,13 @@ ESC
 s
 ->
 y
-,s->
+-2,s->
 x
-);
+-1);
 
 235 
 	`´štf
-("%c%c",219,219);
+("%c",219);
 
 236 
 	`´štf
@@ -157227,15 +159885,19 @@ ESC
 s
 ->
 y
--1,s->
+-3,s->
 x
-+2);
+-2);
 
 237 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c",219);
 
-238 
+239 ià(
+num
+ == 17) {
+
+240 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -157243,17 +159905,13 @@ ESC
 s
 ->
 y
--2,s->
++2,s->
 x
-+6);
+);
 
-239 
+241 
 	`´štf
-("%c%c",219,219);
-
-241 ià(
-num
- == 23) {
+("%c",219);
 
 242 
 	`´štf
@@ -157263,13 +159921,13 @@ ESC
 s
 ->
 y
-,s->
++1,s->
 x
-);
+-1);
 
 243 
 	`´štf
-("%c%c%c%c",219,219,219,219);
+("%c %c",219,219);
 
 244 
 	`´štf
@@ -157279,19 +159937,619 @@ ESC
 s
 ->
 y
--1,s->
+,s->
 x
-+4);
+);
 
 245 
 	`´štf
-("%c%c%c%c%c%c",219,219,219,219,219,219);
+("%c%c",219,219);
+
+246 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+);
 
 247 
+	`´štf
+("%c",219);
+
+248 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+-1);
+
+249 
+	`´štf
+("%c",219);
+
+250 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
+-1);
+
+251 
+	`´štf
+("%c",219);
+
+253 ià(
+num
+ == 18) {
+
+254 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+-1);
+
+255 
+	`´štf
+("%c %c",219,219);
+
+256 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+257 
+	`´štf
+("%c %c",219,219);
+
+258 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+);
+
+259 
+	`´štf
+("%c",219);
+
+260 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+);
+
+261 
+	`´štf
+("%c",219);
+
+262 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+);
+
+263 
+	`´štf
+("%c",219);
+
+264 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
+);
+
+265 
+	`´štf
+("%c",219);
+
+267 ià(
+num
+ == 19) {
+
+268 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+269 
+	`´štf
+("%c",219);
+
+270 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-2);
+
+271 
+	`´štf
+("%c %c",219,219);
+
+272 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-1);
+
+273 
+	`´štf
+("%c%c",219,219);
+
+274 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+);
+
+275 
+	`´štf
+("%c",219);
+
+276 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++1);
+
+277 
+	`´štf
+("%c",219);
+
+278 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
++1);
+
+279 
+	`´štf
+("%c",219);
+
+281 ià(
+num
+ == 20) {
+
+282 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+283 
+	`´štf
+("%c",219);
+
+284 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
++1);
+
+285 
+	`´štf
+("%c",219);
+
+286 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+287 
+	`´štf
+("%c %c",219,219);
+
+288 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+289 
+	`´štf
+("%c %c",219,219);
+
+290 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++1);
+
+291 
+	`´štf
+("%c",219);
+
+292 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
++2);
+
+293 
+	`´štf
+("%c",219);
+
+295 ià(
+num
+ == 21) {
+
+296 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+297 
+	`´štf
+("%c",219);
+
+298 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
++1);
+
+299 
+	`´štf
+("%c",219);
+
+300 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+301 
+	`´štf
+("%c %c",219,219);
+
+302 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+303 
+	`´štf
+("%c %c",219,219);
+
+304 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++2);
+
+305 
+	`´štf
+("%c",219);
+
+306 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
++3);
+
+307 
+	`´štf
+("%c",219);
+
+309 ià(
+num
+ == 22) {
+
+310 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+311 
+	`´štf
+("%c",219);
+
+312 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
++1);
+
+313 
+	`´štf
+("%c",219);
+
+314 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+315 
+	`´štf
+("%c %c",219,219);
+
+316 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+317 
+	`´štf
+("%c %c%c",219,219,219);
+
+318 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++3);
+
+319 
+	`´štf
+("%c",219);
+
+321 ià(
+num
+ == 23) {
+
+322 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+-1);
+
+323 
+	`´štf
+("%c",219);
+
+324 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+);
+
+325 
+	`´štf
+("%c",219);
+
+326 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+327 
+	`´štf
+("%c %c%c",219,219,219);
+
+328 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+329 
+	`´štf
+("%c %c%c",219,219,219);
+
+331 
 	}
 }
 
-250 
+334 
 	$sh_ş—r
 (
 ¥aûsh
@@ -157301,579 +160559,15 @@ s
 ªgË
 ) {
 
-251 
+335 
 num
  = 
 ªgË
  / 15;
 
-252 ià(
+336 ià(
 num
  == 24) {
-
-253 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-254 
-	`´štf
-("%c%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32,32);
-
-256 ià(
-num
- == 1) {
-
-257 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-258 
-	`´štf
-("%c%c%c%c",32,32,32,32);
-
-259 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
-+4);
-
-260 
-	`´štf
-("%c%c%c%c%c%c",32,32,32,32,32,32);
-
-262 ià(
-num
- == 2) {
-
-263 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-264 
-	`´štf
-("%c%c",32,32);
-
-265 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
-+2);
-
-266 
-	`´štf
-("%c%c%c%c",32,32,32,32);
-
-267 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
-+6);
-
-268 
-	`´štf
-("%c%c",32,32);
-
-270 ià(
-num
- == 3) {
-
-271 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-272 
-	`´štf
-("%c%c",32,32);
-
-273 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
-+2);
-
-274 
-	`´štf
-("%c%c",32,32);
-
-275 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
-+4);
-
-276 
-	`´štf
-("%c%c",32,32);
-
-277 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+3,s->
-x
-+6);
-
-278 
-	`´štf
-("%c%c",32,32);
-
-280 ià(
-num
- == 4) {
-
-281 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-282 
-	`´štf
-("%c%c",32,32);
-
-283 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
-+2);
-
-284 
-	`´štf
-("%c%c",32,32);
-
-285 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
-+2);
-
-286 
-	`´štf
-("%c%c",32,32);
-
-287 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+3,s->
-x
-+4);
-
-288 
-	`´štf
-("%c%c",32,32);
-
-290 ià(
-num
- == 5) {
-
-291 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-292 
-	`´štf
-("%c%c",32,32);
-
-293 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
-);
-
-294 
-	`´štf
-("%c%c",32,32);
-
-295 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
-+2);
-
-296 
-	`´štf
-("%c%c",32,32);
-
-297 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+3,s->
-x
-+2);
-
-298 
-	`´štf
-("%c%c",32,32);
-
-299 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+4,s->
-x
-+2);
-
-300 
-	`´štf
-("%c%c",32,32);
-
-302 ià(
-num
- == 6) {
-
-303 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-304 
-	`´štf
-("%c%c",32,32);
-
-305 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
-);
-
-306 
-	`´štf
-("%c%c",32,32);
-
-307 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
-);
-
-308 
-	`´štf
-("%c%c",32,32);
-
-309 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+3,s->
-x
-);
-
-310 
-	`´štf
-("%c%c",32,32);
-
-311 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+4,s->
-x
-);
-
-312 
-	`´štf
-("%c%c",32,32);
-
-314 ià(
-num
- == 7) {
-
-315 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-316 
-	`´štf
-("%c%c",32,32);
-
-317 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
-);
-
-318 
-	`´štf
-("%c%c",32,32);
-
-319 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
--2);
-
-320 
-	`´štf
-("%c%c",32,32);
-
-321 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+3,s->
-x
--2);
-
-322 
-	`´štf
-("%c%c",32,32);
-
-323 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+4,s->
-x
--2);
-
-324 
-	`´štf
-("%c%c",32,32);
-
-326 ià(
-num
- == 8) {
-
-327 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
-328 
-	`´štf
-("%c%c",32,32);
-
-329 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+1,s->
-x
--2);
-
-330 
-	`´štf
-("%c%c",32,32);
-
-331 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+2,s->
-x
--2);
-
-332 
-	`´štf
-("%c%c",32,32);
-
-333 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-+3,s->
-x
--4);
-
-334 
-	`´štf
-("%c%c",32,32);
-
-336 ià(
-num
- == 9) {
 
 337 
 	`´štf
@@ -157883,9 +160577,9 @@ ESC
 s
 ->
 y
-,s->
+-1,s->
 x
-);
+-2);
 
 338 
 	`´štf
@@ -157899,13 +160593,13 @@ ESC
 s
 ->
 y
-+1,s->
+,s->
 x
--2);
+);
 
 340 
 	`´štf
-("%c%c",32,32);
+("%c%c%c%c",32,32,32,32);
 
 341 
 	`´štf
@@ -157915,15 +160609,19 @@ ESC
 s
 ->
 y
-+2,s->
++1,s->
 x
--4);
+-2);
 
 342 
 	`´štf
 ("%c%c",32,32);
 
-343 
+344 ià(
+num
+ == 1) {
+
+345 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -157931,17 +160629,13 @@ ESC
 s
 ->
 y
-+3,s->
+-2,s->
 x
--6);
+-1);
 
-344 
+346 
 	`´štf
-("%c%c",32,32);
-
-346 ià(
-num
- == 10) {
+("%c",32);
 
 347 
 	`´štf
@@ -157951,13 +160645,13 @@ ESC
 s
 ->
 y
-,s->
+-1,s->
 x
 );
 
 348 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 349 
 	`´štf
@@ -157967,13 +160661,13 @@ ESC
 s
 ->
 y
-+1,s->
+,s->
 x
--4);
+-2);
 
 350 
 	`´štf
-("%c%c%c%c",32,32,32,32);
+("%c %c%c",32,32,32);
 
 351 
 	`´štf
@@ -157983,17 +160677,17 @@ ESC
 s
 ->
 y
-+2,s->
++1,s->
 x
--6);
+-1);
 
 352 
 	`´štf
-("%c%c",32,32);
+("%c %c%c",32,32,32);
 
 354 ià(
 num
- == 11) {
+ == 2) {
 
 355 
 	`´štf
@@ -158003,13 +160697,13 @@ ESC
 s
 ->
 y
-,s->
+-2,s->
 x
--2);
+);
 
 356 
 	`´štf
-("%c%c%c%c",32,32,32,32);
+("%c",32);
 
 357 
 	`´štf
@@ -158019,39 +160713,15 @@ ESC
 s
 ->
 y
-+1,s->
+-1,s->
 x
--8);
++1);
 
 358 
 	`´štf
-("%c%c%c%c%c%c",32,32,32,32,32,32);
+("%c",32);
 
-360 ià(
-num
- == 12) {
-
-361 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
--8);
-
-362 
-	`´štf
-("%c%c%c%c%c%c%c%c%c%c",32,32,32,32,32,32,32,32,32,32);
-
-364 ià(
-num
- == 13) {
-
-365 
+359 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158063,9 +160733,45 @@ y
 x
 -2);
 
-366 
+360 
 	`´štf
-("%c%c%c%c",32,32,32,32);
+("%c %c",32,32);
+
+361 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+362 
+	`´štf
+("%c %c%c",32,32,32);
+
+363 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
++3);
+
+364 
+	`´štf
+("%c",32);
+
+366 ià(
+num
+ == 3) {
 
 367 
 	`´štf
@@ -158075,17 +160781,29 @@ ESC
 s
 ->
 y
--1,s->
+-2,s->
 x
--8);
+);
 
 368 
 	`´štf
-("%c%c%c%c%c%c",32,32,32,32,32,32);
+("%c",32);
 
-370 ià(
-num
- == 14) {
+369 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
++1);
+
+370 
+	`´štf
+("%c",32);
 
 371 
 	`´štf
@@ -158097,11 +160815,11 @@ s
 y
 ,s->
 x
-);
+-2);
 
 372 
 	`´štf
-("%c%c",32,32);
+("%c %c",32,32);
 
 373 
 	`´štf
@@ -158111,13 +160829,13 @@ ESC
 s
 ->
 y
--1,s->
++1,s->
 x
--4);
+-1);
 
 374 
 	`´štf
-("%c%c%c%c",32,32,32,32);
+("%c %c",32,32);
 
 375 
 	`´štf
@@ -158127,19 +160845,15 @@ ESC
 s
 ->
 y
--2,s->
++2,s->
 x
--6);
++2);
 
 376 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-378 ià(
-num
- == 15) {
-
-379 
+377 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158147,13 +160861,17 @@ ESC
 s
 ->
 y
-,s->
++3,s->
 x
-);
++3);
 
-380 
+378 
 	`´štf
-("%c%c",32,32);
+("%c",32);
+
+380 ià(
+num
+ == 4) {
 
 381 
 	`´štf
@@ -158163,13 +160881,13 @@ ESC
 s
 ->
 y
--1,s->
+-2,s->
 x
--2);
+);
 
 382 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 383 
 	`´štf
@@ -158179,13 +160897,13 @@ ESC
 s
 ->
 y
--2,s->
+-1,s->
 x
--4);
++1);
 
 384 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 385 
 	`´štf
@@ -158195,17 +160913,29 @@ ESC
 s
 ->
 y
--3,s->
+,s->
 x
--6);
+-2);
 
 386 
 	`´štf
-("%c%c",32,32);
+("%c %c",32,32);
 
-388 ià(
-num
- == 16) {
+387 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+388 
+	`´štf
+("%c %c",32,32);
 
 389 
 	`´štf
@@ -158215,15 +160945,51 @@ ESC
 s
 ->
 y
-,s->
++2,s->
 x
-);
++1);
 
 390 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 391 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++3,s->
+x
++2);
+
+392 
+	`´štf
+("%c",32);
+
+394 ià(
+num
+ == 5) {
+
+395 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+);
+
+396 
+	`´štf
+("%c",32);
+
+397 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158235,45 +161001,9 @@ y
 x
 -2);
 
-392 
+398 
 	`´štf
-("%c%c",32,32);
-
-393 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--2,s->
-x
--2);
-
-394 
-	`´štf
-("%c%c",32,32);
-
-395 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--3,s->
-x
--4);
-
-396 
-	`´štf
-("%c%c",32,32);
-
-398 ià(
-num
- == 17) {
+("%c %c",32,32);
 
 399 
 	`´štf
@@ -158285,7 +161015,7 @@ s
 y
 ,s->
 x
-);
+-1);
 
 400 
 	`´štf
@@ -158299,13 +161029,13 @@ ESC
 s
 ->
 y
--1,s->
++1,s->
 x
 );
 
 402 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 403 
 	`´štf
@@ -158315,13 +161045,13 @@ ESC
 s
 ->
 y
--2,s->
++2,s->
 x
--2);
++1);
 
 404 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 405 
 	`´štf
@@ -158331,15 +161061,19 @@ ESC
 s
 ->
 y
--3,s->
++3,s->
 x
--2);
++1);
 
 406 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-407 
+408 ià(
+num
+ == 6) {
+
+409 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158347,19 +161081,31 @@ ESC
 s
 ->
 y
--4,s->
+-2,s->
 x
--2);
+-1);
 
-408 
+410 
 	`´štf
-("%c%c",32,32);
-
-410 ià(
-num
- == 18) {
+("%c %c",32,32);
 
 411 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+412 
+	`´štf
+("%c %c",32,32);
+
+413 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158371,11 +161117,11 @@ y
 x
 );
 
-412 
+414 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-413 
+415 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158383,15 +161129,51 @@ ESC
 s
 ->
 y
--1,s->
++1,s->
 x
 );
 
-414 
+416 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-415 
+417 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+418 
+	`´štf
+("%c",32);
+
+419 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++3,s->
+x
+);
+
+420 
+	`´štf
+("%c",32);
+
+422 ià(
+num
+ == 7) {
+
+423 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158403,61 +161185,9 @@ y
 x
 );
 
-416 
-	`´štf
-("%c%c",32,32);
-
-417 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--3,s->
-x
-);
-
-418 
-	`´štf
-("%c%c",32,32);
-
-419 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--4,s->
-x
-);
-
-420 
-	`´štf
-("%c%c",32,32);
-
-422 ià(
-num
- == 19) {
-
-423 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
-,s->
-x
-);
-
 424 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 425 
 	`´štf
@@ -158469,11 +161199,11 @@ s
 y
 -1,s->
 x
-);
+-1);
 
 426 
 	`´štf
-("%c%c",32,32);
+("%c %c",32,32);
 
 427 
 	`´štf
@@ -158483,9 +161213,9 @@ ESC
 s
 ->
 y
--2,s->
+,s->
 x
-+2);
+);
 
 428 
 	`´štf
@@ -158499,13 +161229,13 @@ ESC
 s
 ->
 y
--3,s->
++1,s->
 x
-+2);
+);
 
 430 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 431 
 	`´štf
@@ -158515,19 +161245,15 @@ ESC
 s
 ->
 y
--4,s->
++2,s->
 x
-+2);
+-1);
 
 432 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-434 ià(
-num
- == 20) {
-
-435 
+433 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158535,13 +161261,17 @@ ESC
 s
 ->
 y
-,s->
++3,s->
 x
-);
+-1);
 
-436 
+434 
 	`´štf
-("%c%c",32,32);
+("%c",32);
+
+436 ià(
+num
+ == 8) {
 
 437 
 	`´štf
@@ -158551,13 +161281,13 @@ ESC
 s
 ->
 y
--1,s->
+-2,s->
 x
-+2);
+);
 
 438 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 439 
 	`´štf
@@ -158567,35 +161297,15 @@ ESC
 s
 ->
 y
--2,s->
+-1,s->
 x
-+2);
+-1);
 
 440 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 441 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--3,s->
-x
-+4);
-
-442 
-	`´štf
-("%c%c",32,32);
-
-444 ià(
-num
- == 21) {
-
-445 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158607,9 +161317,41 @@ y
 x
 );
 
+442 
+	`´štf
+("%c %c",32,32);
+
+443 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+444 
+	`´štf
+("%c %c",32,32);
+
+445 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+-1);
+
 446 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
 447 
 	`´štf
@@ -158619,29 +161361,17 @@ ESC
 s
 ->
 y
--1,s->
++3,s->
 x
-+2);
+-2);
 
 448 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-449 
-	`´štf
-("%c[%d;%dH",
-ESC
-,
-s
-->
-y
--2,s->
-x
-+4);
-
-450 
-	`´štf
-("%c%c",32,32);
+450 ià(
+num
+ == 9) {
 
 451 
 	`´štf
@@ -158651,17 +161381,29 @@ ESC
 s
 ->
 y
--3,s->
+-2,s->
 x
-+6);
+);
 
 452 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-454 ià(
-num
- == 22) {
+453 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+454 
+	`´štf
+("%c",32);
 
 455 
 	`´štf
@@ -158677,7 +161419,7 @@ x
 
 456 
 	`´štf
-("%c%c",32,32);
+("%c %c",32,32);
 
 457 
 	`´štf
@@ -158687,13 +161429,13 @@ ESC
 s
 ->
 y
--1,s->
++1,s->
 x
-+2);
+-1);
 
 458 
 	`´štf
-("%c%c%c%c",32,32,32,32);
+("%c %c",32,32);
 
 459 
 	`´štf
@@ -158703,19 +161445,67 @@ ESC
 s
 ->
 y
--2,s->
++2,s->
 x
-+6);
+-2);
 
 460 
 	`´štf
-("%c%c",32,32);
+("%c",32);
 
-462 ià(
+461 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++3,s->
+x
+-3);
+
+462 
+	`´štf
+("%c",32);
+
+464 ià(
 num
- == 23) {
+ == 10) {
 
-463 
+465 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+);
+
+466 
+	`´štf
+("%c",32);
+
+467 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+468 
+	`´štf
+("%c",32);
+
+469 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158727,11 +161517,63 @@ y
 x
 );
 
-464 
+470 
 	`´štf
-("%c%c%c%c",32,32,32,32);
+("%c %c",32,32);
 
-465 
+471 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-2);
+
+472 
+	`´štf
+("%c%c %c",32,32,32);
+
+473 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+-3);
+
+474 
+	`´štf
+("%c",32);
+
+476 ià(
+num
+ == 11) {
+
+477 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++1);
+
+478 
+	`´štf
+("%c",32);
+
+479 
 	`´štf
 ("%c[%d;%dH",
 ESC
@@ -158741,17 +161583,1105 @@ s
 y
 -1,s->
 x
-+4);
+);
 
-466 
+480 
 	`´štf
-("%c%c%c%c%c%c",32,32,32,32,32,32);
+("%c",32);
 
-468 
+481 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-1);
+
+482 
+	`´štf
+("%c%c %c",32,32,32);
+
+483 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-3);
+
+484 
+	`´štf
+("%c%c %c",32,32,32);
+
+486 ià(
+num
+ == 12) {
+
+487 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
++1);
+
+488 
+	`´štf
+("%c%c",32,32);
+
+489 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-3);
+
+490 
+	`´štf
+("%c%c%c%c",32,32,32,32);
+
+491 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
++1);
+
+492 
+	`´štf
+("%c%c",32,32);
+
+494 ià(
+num
+ == 13) {
+
+495 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
++1);
+
+496 
+	`´štf
+("%c",32);
+
+497 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+);
+
+498 
+	`´štf
+("%c",32);
+
+499 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-1);
+
+500 
+	`´štf
+("%c%c %c",32,32,32);
+
+501 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-3);
+
+502 
+	`´štf
+("%c%c %c",32,32,32);
+
+504 ià(
+num
+ == 14) {
+
+505 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+506 
+	`´štf
+("%c",32);
+
+507 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+508 
+	`´štf
+("%c",32);
+
+509 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+);
+
+510 
+	`´štf
+("%c %c",32,32);
+
+511 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-2);
+
+512 
+	`´štf
+("%c%c %c",32,32,32);
+
+513 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+-3);
+
+514 
+	`´štf
+("%c",32);
+
+516 ià(
+num
+ == 15) {
+
+517 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+518 
+	`´štf
+("%c",32);
+
+519 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+520 
+	`´štf
+("%c",32);
+
+521 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+);
+
+522 
+	`´štf
+("%c %c",32,32);
+
+523 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+524 
+	`´štf
+("%c %c",32,32);
+
+525 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+-2);
+
+526 
+	`´štf
+("%c",32);
+
+527 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
+-3);
+
+528 
+	`´štf
+("%c",32);
+
+530 ià(
+num
+ == 16) {
+
+531 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+532 
+	`´štf
+("%c",32);
+
+533 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+534 
+	`´štf
+("%c",32);
+
+535 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+);
+
+536 
+	`´štf
+("%c %c",32,32);
+
+537 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+538 
+	`´štf
+("%c %c",32,32);
+
+539 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+-1);
+
+540 
+	`´štf
+("%c",32);
+
+541 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
+-2);
+
+542 
+	`´štf
+("%c",32);
+
+544 ià(
+num
+ == 17) {
+
+545 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+546 
+	`´štf
+("%c",32);
+
+547 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+548 
+	`´štf
+("%c %c",32,32);
+
+549 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+);
+
+550 
+	`´štf
+("%c%c",32,32);
+
+551 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+);
+
+552 
+	`´štf
+("%c",32);
+
+553 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+-1);
+
+554 
+	`´štf
+("%c",32);
+
+555 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
+-1);
+
+556 
+	`´štf
+("%c",32);
+
+558 ià(
+num
+ == 18) {
+
+559 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+-1);
+
+560 
+	`´štf
+("%c %c",32,32);
+
+561 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-1);
+
+562 
+	`´štf
+("%c %c",32,32);
+
+563 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+);
+
+564 
+	`´štf
+("%c",32);
+
+565 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+);
+
+566 
+	`´štf
+("%c",32);
+
+567 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
+);
+
+568 
+	`´štf
+("%c",32);
+
+569 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
+);
+
+570 
+	`´štf
+("%c",32);
+
+572 ià(
+num
+ == 19) {
+
+573 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+574 
+	`´štf
+("%c",32);
+
+575 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+-2);
+
+576 
+	`´štf
+("%c %c",32,32);
+
+577 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-1);
+
+578 
+	`´štf
+("%c%c",32,32);
+
+579 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+);
+
+580 
+	`´štf
+("%c",32);
+
+581 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++1);
+
+582 
+	`´štf
+("%c",32);
+
+583 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
++1);
+
+584 
+	`´štf
+("%c",32);
+
+586 ià(
+num
+ == 20) {
+
+587 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+588 
+	`´štf
+("%c",32);
+
+589 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
++1);
+
+590 
+	`´štf
+("%c",32);
+
+591 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+592 
+	`´štf
+("%c %c",32,32);
+
+593 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+594 
+	`´štf
+("%c %c",32,32);
+
+595 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++1);
+
+596 
+	`´štf
+("%c",32);
+
+597 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
++2);
+
+598 
+	`´štf
+("%c",32);
+
+600 ià(
+num
+ == 21) {
+
+601 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+602 
+	`´štf
+("%c",32);
+
+603 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
++1);
+
+604 
+	`´štf
+("%c",32);
+
+605 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+606 
+	`´štf
+("%c %c",32,32);
+
+607 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+608 
+	`´štf
+("%c %c",32,32);
+
+609 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++2);
+
+610 
+	`´štf
+("%c",32);
+
+611 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-3,s->
+x
++3);
+
+612 
+	`´štf
+("%c",32);
+
+614 ià(
+num
+ == 22) {
+
+615 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+);
+
+616 
+	`´štf
+("%c",32);
+
+617 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
++1);
+
+618 
+	`´štf
+("%c",32);
+
+619 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+620 
+	`´štf
+("%c %c",32,32);
+
+621 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+622 
+	`´štf
+("%c %c%c",32,32,32);
+
+623 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-2,s->
+x
++3);
+
+624 
+	`´štf
+("%c",32);
+
+626 ià(
+num
+ == 23) {
+
+627 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++2,s->
+x
+-1);
+
+628 
+	`´štf
+("%c",32);
+
+629 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
++1,s->
+x
+);
+
+630 
+	`´štf
+("%c",32);
+
+631 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+,s->
+x
+-2);
+
+632 
+	`´štf
+("%c %c%c",32,32,32);
+
+633 
+	`´štf
+("%c[%d;%dH",
+ESC
+,
+s
+->
+y
+-1,s->
+x
+-1);
+
+634 
+	`´štf
+("%c %c%c",32,32,32);
+
+636 
 	}
 }
 
-470 
+638 
 	$sh_h—Éh
 (
 ¥aûsh
@@ -158759,47 +162689,171 @@ x
 s
 ) {
 
-471 ià(
+639 ià(
 s
 ->
 hp
  == 3) {
 
-472 
+640 
 	`RGB_£t
 (2);
 
-474 ià(
+642 ià(
 s
 ->
 hp
  == 2) {
 
-475 
+643 
 	`RGB_£t
 (4);
 
-477 ià(
+645 ià(
 s
 ->
 hp
  == 1) {
 
-478 
+646 
 	`RGB_£t
 (1);
 
-480 ià(
+648 ià(
 s
 ->
 hp
  == 0) {
 
-481 
+649 
 	`RGB_£t
 (0);
 
-483 
+651 
+	}
+}
+
+	@C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\stage.c
+
+1 
+	~"¡age.h
+"
+
+2 
+	~"¡ruù.h
+"
+
+3 
+	~"sh.h
+"
+
+4 
+	~<¡dio.h
+>
+
+6 
+	#ESC
+ 0x1B
+
+	)
+
+8 
+	$¡age_š™
+(
+¡age
+, 
+¥aûsh
+ *
+s
+, 
+ªgË
+, 
+¶ª‘
+ *
+p
+) {
+
+10 ià(
+¡age
+ == 1) {
+
+11 
+	`¶ª‘_š™
+(
+p
+, 225, 30, 0);
+
+12 
+	`¶ª‘_š™
+(
+p
+, 225, 70, 1);
+
+15 ià(
+¡age
+ == 2) {
+
+16 
+	`¶ª‘_š™
+(
+p
+, 225, 21, 0);
+
+17 
+	`¶ª‘_š™
+(
+p
+, 125, 69, 1);
+
+18 
+	`¶ª‘_š™
+(
+p
+, 300, 33, 2);
+
+21 ià(
+¡age
+ == 3) {
+
+22 
+	`¶ª‘_š™
+(
+p
+, 387, 30, 0);
+
+23 
+	`¶ª‘_š™
+(
+p
+, 355, 70, 1);
+
+24 
+	`¶ª‘_š™
+(
+p
+, 76, 30, 0);
+
+25 
+	`¶ª‘_š™
+(
+p
+, 200, 70, 1);
+
+28 
+	`sh_d¿w
+(
+s
+,
+ªgË
+);
+
+29 
+	`¶ª‘_d¿w
+(
+p
+);
+
+30 
 	}
 }
 
@@ -158807,8 +162861,8 @@ hp
 1
 .
 0
-130
-8340
+132
+8440
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\SPL\inc\ST048A~1.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\SPL\inc\ST0C81~1.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\SPL\inc\ST1470~1.H
@@ -158862,24 +162916,25 @@ C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\cmsis\CORE_C~3.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\cmsis\arm_math.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\cmsis\core_cm4.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\30010_io.h
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\ALIENP~1.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\COLLIS~1.H
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\EQUATI~1.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\LUT.h
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\MONSTE~1.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\PROJEC~1.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\STM32F~1.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\STM32F~2.H
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\SYSTEM~1.H
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\alien.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\ansi.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\charset.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\draw.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\input.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\lcd.h
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\maths.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\mc_io.h
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\monster.h
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\motion.h
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\menu.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\objects.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\ship.h
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\stage.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\inc\struct.h
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\obj\Debug\SPL\src\ST03E8~1.D
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\obj\Debug\SPL\src\ST1619~1.D
@@ -158921,21 +162976,22 @@ C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\obj\Debug\src\ship.d
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\obj\Debug\src\struct.d
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\readme.txt
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\30010_io.c
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\ALIENP~1.C
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\COLLIS~1.C
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\EQUATI~1.C
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\LUT.c
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\MONSTE~1.C
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\PROJEC~1.C
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\STARTU~1.S
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\SYSTEM~1.C
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\alien.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\ansi.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\charset.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\draw.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\input.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\lcd.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\main.c
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\maths.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\mc_io.c
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\monster.c
-C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\motion.c
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\menu.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\objects.c
 C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\ship.c
+C:\Users\Mathi\DOCUME~1\DTU\30010P~1\Project\src\stage.c

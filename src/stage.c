@@ -1,7 +1,10 @@
 #include "stage.h"
 #include "struct.h"
+#include "objects.h"
+#include "alien.h"
 #include "ship.h"
 
+#include <stdio.h>
 
 #define ESC 0x1B
 
@@ -27,4 +30,38 @@ void stage_init(int stage, struct spaceship *s, int angle, struct planet *p) {
 
     ship_draw(s,angle);
     planet_draw(p);
+}
+
+void stage_waves(int stage, struct alien *a, int time, int randwavetime) {
+
+    // Wave patterns for stage 1
+    if (stage == 1) {
+        if (time == (0 + randwavetime)) {
+            alien_spawn(a,380,100,0);
+        }
+        if (time == (300 + randwavetime)) {
+            alien_spawn(a,380,50,1);
+            alien_spawn(a,380,150,2);
+        }
+        if (time == (2600 + randwavetime)) {
+            alien_spawn(a,380,30,3);
+            alien_spawn(a,380,170,4);
+        }
+        if (time == (3000 + randwavetime)) {
+            alien_spawn(a,380,60,0);
+            alien_spawn(a,380,140,1);
+        }
+        if (time == (3400 + randwavetime)) {
+            alien_spawn(a,380,100,2);
+        }
+    }
+
+    // Wave patterns for stage 2
+    if (stage == 2) {
+
+    }
+    // Wave patterns for stage 3
+    if (stage == 3) {
+
+    }
 }

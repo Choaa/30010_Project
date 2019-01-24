@@ -14,5 +14,5 @@ void alien_clear(struct alien *a);
 void alien_draw(struct alien *a);
 void alien_animation(struct alien *a, int n);
 
-
 #endif /*! _ALIEN_H_ */
+

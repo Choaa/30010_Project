@@ -1,6 +1,6 @@
 #include "alienprojectile.h"
 #include "ansi.h"
-#include "equations.h"
+#include "maths.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -71,4 +71,5 @@ void alienprojectile_despawn(struct alienprojectile *ap, int n) {
     (ap+n)->x = 2;
     (ap+n)->y = 2;
 }
+
 

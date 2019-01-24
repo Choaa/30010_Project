@@ -182,7 +182,6 @@ void time_update() {
 }
 
 int flag2 = 0;
-int flag3 = 0;
 
 void flag2_update() {
     if (flag2 == 0) {

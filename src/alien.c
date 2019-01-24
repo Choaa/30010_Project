@@ -1,7 +1,4 @@
 #include "alien.h"
-#include "struct.h"
-#include "equations.h"
-#include "draw.h"
 
 #define ESC 0x1B
 
@@ -85,7 +82,7 @@ void alien_clear(struct alien *a) {
     }
 }
 
-void alien_draw(struct alien *m) {
+void alien_draw(struct alien *a) {
     int i = 0;
     for (i = 0; i < 10; i++) {
         if ((a+i)->alive == 1) {

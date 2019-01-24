@@ -1,6 +1,9 @@
 #include "projectile.h"
 #include "ansi.h"
-#include "equations.h"
+#include "alien.h"
+#include "alienprojectile.h"
+#include "maths.h"
+#include "mc_io.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -182,17 +185,17 @@ void bomb_pos(struct bomb *b) {
     b->y = b->y + b->vy;
 }
 
-void bomb_explode(struct bomb *b, struct monsterprojectile *p, struct monster *m) {
-    int n = 0;
-    for (n = 0; n < 10; n++) {
-        if ((m+n)->alive == 1) {
-            if (b->x >= (m+n)->x - 50 && b->x <= (m+n)->x + 50 && b->y >= (m+n)->y - 50 && b->y <= (m+n)->y + 50) {
-                monster_despawn(m,n);
+void bomb_explode(struct bomb *b, struct alienprojectile *ap, struct alien *a) {
+    int i = 0;
+    for (i = 0; i < 10; i++) {
+        if ((a+i)->alive == 1) {
+            if (b->x >= (a+i)->x - 50 && b->x <= (a+i)->x + 50 && b->y >= (a+i)->y - 50 && b->y <= (a+i)->y + 50) {
+                alien_despawn(a,i);
             }
         }
-        if ((p+n)->alive == 1) {
-            if (b->x >= (p+n)->x - 50 && b->x <= (p+n)->x + 50 && b->y >= (p+n)->y - 50 && b->y <= (p+n)->y + 50) {
-                monsterprojectile_despawn(p,n);
+        if ((ap+i)->alive == 1) {
+            if (b->x >= (ap+i)->x - 50 && b->x <= (ap+i)->x + 50 && b->y >= (ap+i)->y - 50 && b->y <= (ap+i)->y + 50) {
+                alienprojectile_despawn(ap,i);
             }
         }
     }
@@ -267,9 +270,6 @@ void bomb_draw(struct bomb *b) {
         fgcolor(15);
 }
 
-
-
-
 void bomb_clear(struct bomb *b) {
         printf("%c[%d;%dH",ESC,b->y+4,b->x-2);
         printf("%c%c%c%c%c",32,32,32,32,32);
@@ -291,9 +291,13 @@ void bomb_clear(struct bomb *b) {
         printf("%c%c%c%c%c",32,32,32,32,32);
 }
 
-void bomb_create(struct bomb *b, int time) {
-    srand(time);
-    (b+1)->x = rand() % 300;
-    (b+1)->y = rand() % 100;
-
+void bomb_create(struct bomb *b) {
+    // Clear any bombs that can be picked up that haven't been picked up
+    bomb_clear(b+1);
+    // Set the random seed
+    srand(get_hs());
+    (b+1)->alive = 1;
+    (b+1)->x = rand() % (360 + 1 - 40) + 40;
+    (b+1)->y = rand() % (185 + 1 - 40) + 40;
+    bomb_draw(b+1);
 }

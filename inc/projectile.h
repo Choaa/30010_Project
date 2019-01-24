@@ -16,10 +16,10 @@ void bomb_init(struct bomb *b);
 void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v);
 void bomb_pos(struct bomb *b);
 void bomb_draw(struct bomb *b);
-void bomb_explode(struct bomb *b, struct monsterprojectile *p, struct monster *m);
+void bomb_explode(struct bomb *b, struct alienprojectile *ap, struct alien *a);
 void bomb_clear(struct bomb *b);
 void bomb_despawn(struct bomb *b);
-void bomb_create(struct bomb *b, int time);
+void bomb_create(struct bomb *b);
 
 
 #endif /*! _PROJECTILE_H_ */

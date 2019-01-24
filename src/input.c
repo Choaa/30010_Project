@@ -1,4 +1,3 @@
-#include "lcd.h"
 #include "30010_io.h"
 #include <string.h>
 

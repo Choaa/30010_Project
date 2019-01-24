@@ -90,19 +90,18 @@
 		<Unit filename="cmsis\core_cmFunc.h" />
 		<Unit filename="cmsis\core_cmInstr.h" />
 		<Unit filename="inc\30010_io.h" />
+		<Unit filename="inc\alien.h" />
+		<Unit filename="inc\alienprojectile.h" />
 		<Unit filename="inc\ansi.h" />
 		<Unit filename="inc\charset.h" />
 		<Unit filename="inc\collision.h" />
 		<Unit filename="inc\draw.h" />
-		<Unit filename="inc\equations.h" />
 		<Unit filename="inc\input.h" />
 		<Unit filename="inc\lcd.h" />
 		<Unit filename="inc\LUT.h" />
+		<Unit filename="inc\maths.h" />
 		<Unit filename="inc\mc_io.h" />
 		<Unit filename="inc\menu.h" />
-		<Unit filename="inc\monster.h" />
-		<Unit filename="inc\monsterprojectile.h" />
-		<Unit filename="inc\motion.h" />
 		<Unit filename="inc\objects.h" />
 		<Unit filename="inc\projectile.h" />
 		<Unit filename="inc\ship.h" />
@@ -241,6 +240,12 @@
 		<Unit filename="src\30010_io.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\alien.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\alienprojectile.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\ansi.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -252,9 +257,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\draw.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="src\equations.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\input.c">
@@ -269,19 +271,13 @@
 		<Unit filename="src\main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src\maths.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src\mc_io.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\menu.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="src\monster.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="src\monsterprojectile.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="src\motion.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src\objects.c">

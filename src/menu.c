@@ -1,13 +1,11 @@
 #include "stm32f30x_conf.h"
-#include <stdio.h>
-#include "struct.h"
 #include "ansi.h"
 #include "draw.h"
 #include "menu.h"
 #include "lcd.h"
 #include "input.h"
 #include "30010_io.h"
-
+#include <stdio.h>
 
 #define ESC 0x1B
 
