@@ -1,8 +1,8 @@
 #include "lcd.h"
 #include <string.h>
 
+// Function to write strings to the LCD
 void lcd_write_string(char str[], uint8_t* buffer, int slice, int line) {
-
     int counter = strlen(str);
     int a = 0;
     for (a = 0; a < counter; a++) {
@@ -15,7 +15,6 @@ void lcd_write_string(char str[], uint8_t* buffer, int slice, int line) {
 }
 
 void lcd_draw_hearts(int amount, uint8_t* buffer, int pos, int row) {
-
     int i = 0;
     int offset;
     for (i = 0; i < amount; i++) {

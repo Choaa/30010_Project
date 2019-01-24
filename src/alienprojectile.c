@@ -8,7 +8,6 @@
 
 #define ESC 0x1B
 
-// projectile_ functions
 void alienprojectile_init(struct alienprojectile *ap) {
     int i = 0;
     for (i = 0; i < 20; i++) {
@@ -18,9 +17,12 @@ void alienprojectile_init(struct alienprojectile *ap) {
     }
 }
 
+
 void alienprojectile_spawn(struct alien *a, struct spaceship *s, struct alienprojectile *ap, int n) {
     (ap+n)->x = (a->x - 10) << SHIFT_AMOUNT;
     (ap+n)->y = (a->y) << SHIFT_AMOUNT;
+
+    // Calculates the alien projectile direction from the player position
     int dist = newton_sqrt((s->x-((ap+n)->x >> SHIFT_AMOUNT))*(s->x-((ap+n)->x >> SHIFT_AMOUNT))*2+(s->y-((ap+n)->y >> SHIFT_AMOUNT))*(s->y-((ap+n)->y >> SHIFT_AMOUNT)),500);
     (ap+n)->x = (ap+n)->x >> SHIFT_AMOUNT;
     (ap+n)->y = (ap+n)->y >> SHIFT_AMOUNT;
@@ -30,6 +32,7 @@ void alienprojectile_spawn(struct alien *a, struct spaceship *s, struct alienpro
     (ap+n)->alive = 1;
 }
 
+// Updates the alien projectile position
 void alienprojectile_pos(struct alienprojectile *ap, int n) {
     if ((ap+n)->alive == 1) {
         (ap+n)->x = (ap+n)->x + (ap+n)->rx;

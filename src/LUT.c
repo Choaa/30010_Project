@@ -9,7 +9,7 @@
 
 #include "LUT.h"
 // -----------------------------------------------------------------------
-// SIN: a 512 long LUT of 16bit values in 2.14 format
+// SIN: a 24 long LUT of 16bit values in 2.14 format
 // sin(x*pi/256)
 const signed short SIN[24]=
 {

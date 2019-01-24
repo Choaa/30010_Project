@@ -2,6 +2,7 @@
 
 #define ESC 0x1B
 
+// Initialize the asteroids
 void planet_init(struct planet *p, int x, int y, int n) {
     (p+n)->x = x;
     (p+n)->y = y;

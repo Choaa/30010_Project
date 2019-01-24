@@ -7,8 +7,8 @@
 /*
    Last committed:     $Revision: 99 $
    Last changed by:    $Author: Mathias $
-   Last changed date:  $Date:  24/01/2019 $
-   ID:                 $Id:  $
+   Last changed date:  $Date:  25/01/2019 $
+   ID:                 $Id: $
 **********************************************************************/
 #include "stm32f30x_conf.h"
 #include "30010_io.h"
@@ -37,24 +37,24 @@
 
 int main(void) {
 
-    // Set baud and clear FIFO buffer
-    uart_init(576000);
+    // Set baud rate and clear FIFO buffer
+    uart_init(1152000);
     uart_clear();
 
-    // Initialize lcd, IRQ and RGB
+    // Initialize LCD, IRQ and RGB
     lcd_init();
     time_init();
     RGB_init();
     RGB_set(0);
 
-    // Clear the lcd
+    // Clear the LCD
     uint8_t buffer[512];
     memset(buffer,0x00,512);
 
-    // Clear the screen
+    // Clear the console
     printf("%c[2J",ESC);
 
-    // Create input array for reading characters
+    // Create input array for reading key presses
     char input[2];
     input[0] = 0x00;
     input[1] = 0x00;
@@ -94,7 +94,7 @@ int main(void) {
         // Wipe the screen
         printf("%c[2J",ESC);
 
-        // Default settings
+        // Default settings for certain variables
         int bullets = 20;
         int score = 0;
         int angle = 360;
@@ -117,6 +117,7 @@ int main(void) {
         sprintf(high2,"%04d", highscore2);
         sprintf(high3,"%04d", highscore3);
 
+        // Only loads the main menu at start of game or if you exit the stages
         if (stagevictory == 0) {
             // Draw main menu
             menu_main_draw(buffer);
@@ -125,6 +126,7 @@ int main(void) {
             stage = menu(buffer,input,menuonlcd, high1, high2, high3);
         }
 
+        // Ensures that you haven't won the stage before it began
         stagevictory = 0;
 
         // Create score counter
@@ -142,7 +144,7 @@ int main(void) {
         struct alienprojectile alienprojectile[20];
         struct bomb bomb[2];
 
-        // General inits
+        // Initialize game objects
         alien_init(alien);
         alienprojectile_init(alienprojectile);
         projectile_init(playerprojectile);
@@ -159,37 +161,40 @@ int main(void) {
         srand(get_hs());
         // Set a random amount of extra time for the bomb spawn
         int randnuketime = rand() % ((1000 + 1 - 1) + 1);
-        // Set a random amount of extra time for the waves to spawn
-        int randwavetime = rand() & ((500 + 1 - 1) + 1);
 
         // Reset the timer
         time_set(0);
 
         while(1) {
 
+            // Get the flag from the IRQ
             int flag = get_flag2();
 
+            // Only run if the flag is raised (Every 1/100th of a second)
             if (flag == 1) {
 
                 // Read the time from the timer
                 int hs = get_hs();
 
+                // Put the last keypress from the FIFO buffer into the input array
                 input[0] = uart_get_char();
 
-                stage_waves(stage, alien, hs, randwavetime);
+                // Set the alien wave patterns
+                stage_waves(stage, alien, hs);
 
                 // Move in the direction of the ship
                 if (check_char(input,"w") == 0 || check_char(input,"W") == 0) {
                     ship_clear(&playership,angle);
                     ship_pos(&playership,&shipangle);
                     ship_draw(&playership,angle);
+                    // Ensures that the ship will float after you release w at the angle of the ship
                     toggledrift = 1;
                     drift = 0;
                     saveanglex = shipangle.x;
                     saveangley = shipangle.y;
                 }
 
-                // Drift for a distance after releasing w
+                // Drift for a certain distance after releasing w
                 if (toggledrift == 1 && hs % 5 == 0 && check_char(input,"w") != 0 && check_char(input,"W") != 0) {
                     drift++;
                     ship_clear(&playership,angle);
@@ -221,7 +226,7 @@ int main(void) {
                     ship_draw(&playership,angle);
                 }
 
-                // Shoot missiles with space
+                // Launch NUKES with space and explode them if you've launched one
                 if (check_char(input," ") == 0) {
                     if (nuke > 0 && bomb->alive == 0) {
                         bomb_spawn(bomb,&playership,&shipangle,angle);
@@ -230,10 +235,6 @@ int main(void) {
                     else if (bomb->alive == 1) {
                         bomb_explode(bomb,alienprojectile,alien);
                     }
-                }
-
-                if (check_char(input,"o") == 0) {
-                    playership.hp--;
                 }
 
                 // Reload the ammunition with r
@@ -245,6 +246,7 @@ int main(void) {
                     }
                 }
 
+                // Update the position of the NUKE every 30/100th of a second
                 if (hs % 30 == 0 && bomb->alive == 1) {
                     bomb_clear(bomb);
                     bomb_pos(bomb);
@@ -262,32 +264,36 @@ int main(void) {
 
                 // Everything that should be called every 5/100th second
                 if (hs % 5 == 0) {
+                    // Shoot with the joystick in a certain direction
                     if ((joyval > 0) & (bullets > 0)) {
-                        // Pressed down
+                        // Center - Shooting in the facing direction
                         if (joyval == 32) {
                             projectile_spawn(&playership,playerprojectile,&shipangle,pnum,0,angle);
                         }
-                        // Down
+                        // Down - Shooting down
                         else if (joyval == 1) {
                             projectile_spawn(&playership,playerprojectile,&shipangle,pnum,2,angle);
                         }
-                        // Left
+                        // Left - Shooting left
                         else if (joyval == 2) {
                             projectile_spawn(&playership,playerprojectile,&shipangle,pnum,3,angle);
                         }
-                        // Right
+                        // Right - Shooting right
                         else if (joyval == 3) {
                             projectile_spawn(&playership,playerprojectile,&shipangle,pnum,1,angle);
                         }
-                        // Up
+                        // Up - Shooting up
                         else if (joyval == 16) {
                             projectile_spawn(&playership,playerprojectile,&shipangle,pnum,4,angle);
                         }
+                        // Remove a bullet every time you shoot
                         bullets--;
+                        // Sets the projectile structure array index and loops it at 20
                         pnum++;
                         if (pnum == 20)
                             pnum = 0;
                     }
+
                     // Check for projectile collision
                     score += bullet_alien_collision(playerprojectile,alien)*10;
                     bullet_player_collision(alienprojectile,&playership,angle);
@@ -333,14 +339,6 @@ int main(void) {
                         bomb_despawn(bomb);
                     }
 
-                    // Death animation for aliens
-                    i = 0;
-                    for (i = 0; i < 10; i++) {
-                        if ((alien+i)->animation > 0) {
-                            alien_animation(alien,i);
-                        }
-                    }
-
                     // Destroy the aliens if they exit the game area
                     i = 0;
                     for (i = 0; i < 10; i++) {
@@ -349,13 +347,22 @@ int main(void) {
                             (alien+i)->alive = 0;
                             (alien+i)->animation = 15;
                             alien_clear(alien);
-                            score += 10;
+                            score -= 10;
+                        }
+                    }
+
+                    // Death animation for aliens
+                    i = 0;
+                    for (i = 0; i < 10; i++) {
+                        if ((alien+i)->animation > 0) {
+                            alien_animation(alien,i);
                         }
                     }
                 }
 
-                // Everything that should be called every 2nd second
+                // Everything that should be called every 2. second
                 if (hs % 200 == 0) {
+                    // Make the aliens shoot
                     int i = 0;
                     for (i = 0; i < 10; i++) {
                         if ((alien+i)->alive == 1) {
@@ -366,48 +373,59 @@ int main(void) {
                             }
                         }
                     }
-                    score = score + 5;
+
+                    // Gives you 5 score
+                    score += 5;
                 }
 
-                // Gradual speed increase in the aliens movement
+                // Gradual speed increase in the aliens movement depending on the elapsed game time
                 if (hs < 2000) {
-                    if (hs % 20 == 0) {
-                        alien_clear(alien);
-                        alien_pos(alien,playerprojectile);
-                        alien_draw(alien);
-                    }
-                }
-                else if (hs >= 2000 && hs < 4000) {
-                    if (hs % 15 == 0) {
-                        alien_clear(alien);
-                        alien_pos(alien,playerprojectile);
-                        alien_draw(alien);
-                    }
-                }
-                else if (hs >= 4000 && hs < 6000) {
                     if (hs % 10 == 0) {
                         alien_clear(alien);
                         alien_pos(alien,playerprojectile);
                         alien_draw(alien);
                     }
                 }
-                else if (hs >= 6000 && hs < 9000) {
-                    if (hs % 5 == 0) {
+                else if (hs >= 2000 && hs < 4000) {
+                    if (hs % 6 == 0) {
                         alien_clear(alien);
                         alien_pos(alien,playerprojectile);
                         alien_draw(alien);
                     }
                 }
-                else if (hs >= 9000) {
-                    stagevictory = 1;
+                else if (hs >= 4000 && hs < 6000) {
+                    if (hs % 3 == 0) {
+                        alien_clear(alien);
+                        alien_pos(alien,playerprojectile);
+                        alien_draw(alien);
+                    }
+                }
+                else if (hs >= 6000 && hs < 9000) {
+                    if (hs % 2 == 0) {
+                        alien_clear(alien);
+                        alien_pos(alien,playerprojectile);
+                        alien_draw(alien);
+                    }
+                }
+                // Ends the stage at a certain time
+                if (stage == 1) {
+                    if (hs >= 5500) {
+                        stagevictory = 1;
+                    }
+                }
+                else if (stage == 2 || stage == 3) {
+                    if (hs >= 9000) {
+                        stagevictory = 1;
+                    }
                 }
 
-                // Spawn a nuke in the interval of every 40-50 seconds
+                // Spawn a nuke in the interval of every 40-50 seconds at a pseudo-random position
                 if (hs % (4000+randnuketime) == 0) {
                     bomb_create(bomb);
                 }
 
-                // LCD
+                // Update the LCD
+                // Draw a NUKE notification if you have one
                 if (nuke == 1) {
                     lcd_draw_nuke(buffer,1,4);
                 }
@@ -415,9 +433,11 @@ int main(void) {
                     memset(buffer,0x00,512);
                 }
 
+                // Take the score and the stage so the LCD can process it
                 sprintf(scores,"%04d", score);
                 sprintf(stg," %d",stage);
 
+                // Update all the info on the LCD
                 lcd_write_string("STAGE ",buffer,1,1);
                 lcd_write_string(stg,buffer,31,1);
                 lcd_write_string("SCORE: ",buffer,69,1);
@@ -425,6 +445,7 @@ int main(void) {
                 lcd_draw_hearts(playership.hp,buffer,1,2);
                 lcd_draw_bullets(bullets,buffer,1,3);
 
+                // Reload notification
                 if (bullets == 0) {
                     lcd_write_string("RELOAD",buffer,85,3);
                 }
@@ -435,7 +456,7 @@ int main(void) {
                 // Draw to the LCD
                 lcd_push_buffer(buffer);
 
-                // Set the RGB to the Ships health
+                // Set the RGB to the ships health
                 ship_health(&playership);
 
                 // Check to see if the player is dead
@@ -443,6 +464,7 @@ int main(void) {
                     dead = 1;
                 }
 
+                // Turn off the flag until next interrupt
                 flag2_update();
             }
 
@@ -454,6 +476,7 @@ int main(void) {
                 memset(buffer,0x00,512);
                 RGB_set(0);
                 while(1) {
+                    // Unbosskey the game
                     input[0] = uart_get_char();
                     if (check_char(input,"b") == 0 || check_char(input, "B") == 0) {
                         printf("%c[2J",ESC);
@@ -472,6 +495,7 @@ int main(void) {
                 menu_pause_draw(buffer,scores);
                 while(1) {
                     input[0] = uart_get_char();
+                    // Unpause the game
                     if (check_char(input,"p") == 0 || check_char(input, "P") == 0) {
                         printf("%c[2J",ESC);
                         memset(buffer,0x00,512);
@@ -479,6 +503,7 @@ int main(void) {
                         NVIC_EnableIRQ(TIM2_IRQn);
                         break;
                     }
+                    // Return to menu
                     else if (check_char(input,"e") == 0 || check_char(input,"E") == 0) {
                         menu_warning_draw(buffer);
                         while(1) {
@@ -575,11 +600,13 @@ int main(void) {
                 stage += 1;
                 while(1) {
                     input[0] = uart_get_char();
+                    // Next stage
                     if (check_char(input,"1") == 0) {
                         exitgame = 1;
                         NVIC_EnableIRQ(TIM2_IRQn);
                         break;
                     }
+                    // Return to menu
                     else if (check_char(input,"0") == 0 || (stage == 4 && check_char(input," ") == 0)) {
                         exitgame = 1;
                         stagevictory = 0;

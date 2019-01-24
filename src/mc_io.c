@@ -6,6 +6,7 @@
 
 #define ESC 0x1B
 
+// Reads the joystick input
 int16_t readIO() {
 
     // Enable clock for PA
@@ -22,6 +23,7 @@ int16_t readIO() {
 
     // Enable clock for PB
     RCC->AHBENR |= RCC_AHBPeriph_GPIOB;
+
     // Joystick down
     GPIOB->MODER &= ~(0x00000003 << (0 * 2));
     GPIOB->MODER |= (0x00000000 << (0 * 2));
@@ -66,6 +68,7 @@ int16_t readIO() {
     return (valu + vald + valc + valr + vall);
 }
 
+// Initialize the RGB
 void RGB_init() {
 
     // BLUE - A9
@@ -108,43 +111,51 @@ void RGB_init() {
     GPIOC->MODER |= (0x0000001 << (7 * 2));
 }
 
+// Change the RGB color
 void RGB_set(int color) {
-
+    // Black
     if (color == 0) {
         GPIOA->ODR |= (0x0001 << 9);
         GPIOB->ODR |= (0x0001 << 4);
         GPIOC->ODR |= (0x0001 << 7);
     }
+    // Red
     else if (color == 1) {
         GPIOA->ODR |= (0x0001 << 9);
         GPIOB->ODR &= ~(0x0001 << 4);
         GPIOC->ODR |= (0x0001 << 7);
     }
+    // Green
     else if (color == 2) {
         GPIOA->ODR |= (0x0001 << 9);
         GPIOB->ODR |= (0x0001 << 4);
         GPIOC->ODR &= ~(0x0001 << 7);
     }
+    // Blue
     else if (color == 3) {
         GPIOA->ODR &= ~(0x0001 << 9);
         GPIOB->ODR |= (0x0001 << 4);
         GPIOC->ODR |= (0x0001 << 7);
     }
+    // Yellow
     else if (color == 4) {
         GPIOA->ODR |= (0x0001 << 9);
         GPIOB->ODR &= ~(0x0001 << 4);
         GPIOC->ODR &= ~(0x0001 << 7);
     }
+    // Purple
     else if (color == 5) {
         GPIOA->ODR &= ~(0x0001 << 9);
         GPIOB->ODR &= ~(0x0001 << 4);
         GPIOC->ODR |= (0x0001 << 7);
     }
+    // Cyan
     else if (color == 6) {
         GPIOA->ODR &= ~(0x0001 << 9);
         GPIOB->ODR |= (0x0001 << 4);
         GPIOC->ODR &= ~(0x0001 << 7);
     }
+    // White
     else if (color == 7) {
         GPIOA->ODR &= ~(0x0001 << 9);
         GPIOB->ODR &= ~(0x0001 << 4);
@@ -152,6 +163,7 @@ void RGB_set(int color) {
     }
 }
 
+// Initialize the timer
 void time_init() {
     RCC->APB1ENR |= RCC_APB1Periph_TIM2;
     TIM2->CR1 = 0x000000000000000;
@@ -166,23 +178,28 @@ void time_init() {
     TIM2->CR1 |= 0x01;
 }
 
+// Time structure
 struct time {
     int hs;
 };
 
 volatile struct time timer;
 
+// Sets the time
 void time_set(int hs) {
     timer.hs = hs;
 }
 
+// Updates the time
 void time_update() {
     int hs = timer.hs + 1;
     timer.hs = hs;
 }
 
+// Variable to store the flag
 int flag2 = 0;
 
+// Updates the flag
 void flag2_update() {
     if (flag2 == 0) {
         flag2 = 1;
@@ -192,14 +209,17 @@ void flag2_update() {
     }
 }
 
+// Gets the value of the flag
 int get_flag2() {
     return flag2;
 }
 
+// Gets the time
 int get_hs() {
     return timer.hs;
 }
 
+// Updates the time and the flag every interrupt (1/100th of a second)
 void TIM2_IRQHandler(void) {
     time_update();
     flag2_update();

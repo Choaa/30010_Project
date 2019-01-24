@@ -2,6 +2,7 @@
 
 #define ESC 0x1B
 
+// Draws a matrix array in the console as pixels
 void draw_matrix(int cornerx, int cornery, int height, int length, const uint8_t sprite[][58], int drawempty) {
 
     int i = 0;

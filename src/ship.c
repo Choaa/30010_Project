@@ -18,6 +18,7 @@ void ship_pos(struct spaceship *s, struct angle *v) {
     s->y = s->y + (v->y*8 >> 14);
 }
 
+// Calculates the drift of the ship
 void ship_drift(struct spaceship *s, int angx, int angy, int drift) {
     angx = (angx*8 >> 14);
     angy = (angy*8 >> 14);
@@ -25,7 +26,7 @@ void ship_drift(struct spaceship *s, int angx, int angy, int drift) {
     s->y = s->y + angy / (drift / 2);
 }
 
-// Draw the ship
+// Draw the ship in a certain angle
 void ship_draw(struct spaceship *s, int angle) {
     int num = angle / 15;
     if (num == 24) {
@@ -330,7 +331,7 @@ void ship_draw(struct spaceship *s, int angle) {
     }
 }
 
-// Clear the ship
+// Clear the ship at a certain angle
 void ship_clear(struct spaceship *s, int angle) {
     int num = angle / 15;
     if (num == 24) {
@@ -635,6 +636,7 @@ void ship_clear(struct spaceship *s, int angle) {
     }
 }
 
+// Sets the RGB to specific colors depending on how much health you have
 void ship_health(struct spaceship *s) {
     if (s->hp == 3) {
         RGB_set(2);

@@ -18,6 +18,7 @@ void alien_spawn(struct alien *a, int x, int y, int n) {
     (a+n)->alive = 1;
 }
 
+// Update alien i's position if they're alive
 void alien_pos(struct alien *a, struct projectile *p) {
     int i = 0;
     for (i = 0; i < 10; i++)
@@ -31,6 +32,7 @@ void alien_despawn(struct alien *a, int n) {
     (a+n)->alive = 0;
 }
 
+// Alien death animation
 void alien_animation(struct alien *a, int n) {
     if ((a+n)->animation == 1) {
         printf("%c[%d;%dH",ESC,(a+n)->y-2,(a+n)->x+1);

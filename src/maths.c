@@ -17,12 +17,13 @@ int32_t newton_sqrt(int32_t x, int guess) {
     return guess;
 }
 
-// Rotate vector
+// Initialize a vector by bitshifting
 void vector_init(struct angle *v) {
     v->x = v->x << 14;
     v->y = v->y << 14;
 }
 
+// Rotate a vector
 void vector_rot(struct angle *v, int angle) {
      int x = FIX14_MULT(1 << 14,calccos(angle)) - FIX14_MULT(0 << 14,calcsin(angle));
      int y = FIX14_MULT(1 << 14,calcsin(angle)) + FIX14_MULT(0 << 14,calccos(angle));

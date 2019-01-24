@@ -237,7 +237,7 @@
 1547217108 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\system_stm32f30x.c
 	"stm32f30x.h"
 
-1548335126 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
+1548342397 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -312,7 +312,7 @@
 
 1547647661 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\struct.c
 
-1548334915 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\projectile.c
+1548335373 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\projectile.c
 	"projectile.h"
 	"ansi.h"
 	"ship.h"
@@ -366,7 +366,7 @@
 	"struct.h"
 	<stdio.h>
 
-1548332338 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\collision.c
+1548340742 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\collision.c
 	"stm32f30x_conf.h"
 	"collision.h"
 	"alien.h"
@@ -385,7 +385,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1548331200 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\menu.c
+1548342373 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\menu.c
 	"stm32f30x_conf.h"
 	"ansi.h"
 	"draw.h"
@@ -399,13 +399,13 @@
 	"stm32f30x_conf.h"
 	<stdio.h>
 
-1548267506 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\stage.h
+1548340286 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\stage.h
 	"stm32f30x_conf.h"
 	"struct.h"
 	"objects.h"
 	"ship.h"
 
-1548326499 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\stage.c
+1548342326 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\stage.c
 	"stage.h"
 	"struct.h"
 	"objects.h"
@@ -425,7 +425,7 @@
 	"struct.h"
 	<stdio.h>
 
-1548261605 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\alien.c
+1548339797 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\alien.c
 	"alien.h"
 
 1548260297 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\alien.h

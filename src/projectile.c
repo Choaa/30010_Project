@@ -17,7 +17,7 @@
 
 #define ESC 0x1B
 
-// projectile_ functions
+// Initialize the player projectiles
 void projectile_init(struct projectile *p) {
     int i = 0;
     for (i = 0; i < 20; i++) {
@@ -28,6 +28,7 @@ void projectile_init(struct projectile *p) {
     }
 }
 
+// Spawn a player projectile at a certain direction
 void projectile_spawn(struct spaceship *s, struct projectile *p, struct angle *v, int n, int dir, int angle) {
     if (n >= 20)
         return;
@@ -165,6 +166,7 @@ void projectile_spawn(struct spaceship *s, struct projectile *p, struct angle *v
     projectile_draw(p,n);
 }
 
+// Updates the position of the player projectiles
 void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int n) {
     if ((p+n)->alive == 1) {
     int32_t gm = 100;
@@ -177,11 +179,14 @@ void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int
     (p+n)->ax = (p+n)->ax << SHIFT_AMOUNT;
     (p+n)->ay = (p+n)->ay << SHIFT_AMOUNT;
 
+    // Calculates the gravity on the player projectiles
     for(i = 0; i < 10; i++) {
         if ((c+i)->active == 1) {
             int32_t dist = newton_sqrt(((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))*((c+i)->x-((p+n)->x >> SHIFT_AMOUNT))+((c+i)->y-((p+n)->y >> SHIFT_AMOUNT))*((c+i)->y-((p+n)->y >> SHIFT_AMOUNT)),500);
             int32_t ax = 0;
             int32_t ay = 0;
+
+            // Only pull if closer than 100 pixels
             if (dist <= 100) {
                 ax = (p+n)->ax + ((((c+i)->x << SHIFT_AMOUNT)-(p+n)->x)*gm)/(dist*dist*dist);
                 ay = (p+n)->ay + ((((c+i)->y << SHIFT_AMOUNT)-(p+n)->y)*gm)/(dist*dist*dist);
@@ -190,6 +195,8 @@ void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int
                 ax = 0;
                 ay = 0;
             }
+
+            // Sets a max acceleration
             if (abs(ax >> SHIFT_AMOUNT) > MAX_A) {
                 ax = MAX_A * ax/abs(ax);
                 ax = ax << SHIFT_AMOUNT;
@@ -207,6 +214,7 @@ void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int
     int x = (p+n)->x + (p+n)->vx + (p+n)->ax/2;
     int y = (p+n)->y + (p+n)->vy + (p+n)->ay/2;
 
+    // Sets a max velocity
     if (abs(vx >> SHIFT_AMOUNT) > MAX_V) {
         vx = MAX_V * vx/abs(vx);
         vx = vx << SHIFT_AMOUNT;
@@ -272,6 +280,7 @@ void bomb_init(struct bomb *b) {
     (b+1)->alive = 0;
 }
 
+// Spawn a NUKE in a certain direction
 void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v, int angle) {
     int num = angle / 15;
     if (num == 24) {
@@ -377,11 +386,13 @@ void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v, int angle)
     bomb_draw(b);
 }
 
+// Update the position of the bomb
 void bomb_pos(struct bomb *b) {
     b->x = b->x + b->vx;
     b->y = b->y + b->vy;
 }
 
+// Explodes the bomb and destroy any alien / alien projectile in the explosion
 void bomb_explode(struct bomb *b, struct alienprojectile *ap, struct alien *a) {
     int i = 0;
     for (i = 0; i < 10; i++) {
@@ -488,10 +499,11 @@ void bomb_clear(struct bomb *b) {
         printf("%c%c%c%c%c",32,32,32,32,32);
 }
 
+// Create a NUKE that can be picked up
 void bomb_create(struct bomb *b) {
-    // Clear any bombs that can be picked up that haven't been picked up
+    // Clear any NUKES that can be picked up that haven't been picked up
     bomb_clear(b+1);
-    // Set the random seed
+    // Set the random seed for the collectible NUKE spawn position
     srand(get_hs());
     (b+1)->alive = 1;
     (b+1)->x = rand() % (360 + 1 - 40) + 40;
