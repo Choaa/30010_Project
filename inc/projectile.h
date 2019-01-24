@@ -6,14 +6,14 @@
 #define _PROJECTILE_H_
 
 void projectile_init(struct projectile *p);
-void projectile_spawn(struct spaceship *s, struct projectile *p, struct angle *v, int n, int dir);
+void projectile_spawn(struct spaceship *s, struct projectile *p, struct angle *v, int n, int dir, int angle);
 void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int n);
 void projectile_draw(struct projectile *p, int n);
 void projectile_clear(struct projectile *p, int n);
 void projectile_despawn(struct projectile *p, int n);
 
 void bomb_init(struct bomb *b);
-void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v);
+void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v, int angle);
 void bomb_pos(struct bomb *b);
 void bomb_draw(struct bomb *b);
 void bomb_explode(struct bomb *b, struct alienprojectile *ap, struct alien *a);

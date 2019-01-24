@@ -11,4 +11,5 @@ obj\debug\src\projectile.o: src\projectile.c inc/projectile.h \
  SPL\inc/stm32f30x_rcc.h SPL\inc/stm32f30x_rtc.h SPL\inc/stm32f30x_spi.h \
  SPL\inc/stm32f30x_tim.h SPL\inc/stm32f30x_usart.h \
  SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/struct.h \
- inc/ansi.h inc/alien.h inc/alienprojectile.h inc/maths.h inc/mc_io.h
+ inc/ansi.h inc/ship.h inc/alien.h inc/alienprojectile.h inc/maths.h \
+ inc/mc_io.h

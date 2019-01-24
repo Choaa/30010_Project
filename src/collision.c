@@ -17,7 +17,7 @@
 int bullet_alien_collision(struct projectile *p, struct alien *a) {
     int i = 0;
     int j = 0;
-    int check = 0;
+    int hits = 0;
     for (i = 0; i < 20; i++) {
         if ((p+i)->alive == 1) {
             for (j = 0; j < 10 ; j++) {
@@ -25,33 +25,32 @@ int bullet_alien_collision(struct projectile *p, struct alien *a) {
                     projectile_despawn(p,i);
                     alien_despawn(a,j);
                     alien_animation(a,j);
-                    check = 1;
-                    return 10;
+                    hits += 1;
                 }
             }
         }
     }
-    if (check == 0) {
-        return 0;
-    }
+    return hits;
 }
 
-void bullet_player_collision(struct alienprojectile *ap, struct spaceship *s) {
+void bullet_player_collision(struct alienprojectile *ap, struct spaceship *s, int angle) {
     int i = 0;
     for (i = 0; i < 10; i++) {
         if ((ap+i)->alive == 1 && (ap+i)->x >= s->x - PLAYERLENGTH/2 && (ap+i)->x <= s->x + PLAYERLENGTH/2 && (ap+i)->y >= s->y - PLAYERRHEIGHT/2 && (ap+i)->y <= (s)->y + PLAYERRHEIGHT/2) {
             alienprojectile_despawn(ap,i);
+            ship_draw(s,angle);
             s->hp = s->hp - 1;
         }
     }
 }
 
-void player_alien_collision(struct alien *a, struct spaceship *s) {
+void player_alien_collision(struct alien *a, struct spaceship *s, int angle) {
     int i = 0;
     for (i = 0; i < 20; i++) {
         if ((a+i)->alive == 1 && s->x >= (a+i)->x - ALIENLENGTH/2 && s->x <= (a+i)->x + ALIENLENGTH/2 && s->y >= (a+i)->y - ALIENHEIGHT/2 && s->y <= (a+i)->y + ALIENHEIGHT/2) {
             alien_despawn(a,i);
             alien_animation(a,i);
+            ship_draw(s,angle);
             s->hp = s->hp - 1;
         }
     }
@@ -70,10 +69,10 @@ void player_stage_collision(struct spaceship *s, int angle, int leftx, int topy,
         s->y = topy + 13;
         ship_draw(s,angle);
     }
-    if (s->x >= rightx-12) {
+    if (s->x >= rightx-30) {
         ship_clear(s,angle);
         s->vx = 0;
-        s->x = rightx - 20;
+        s->x = rightx - 31;
         ship_draw(s,angle);
     }
     if (s->y >= bottomy-12) {

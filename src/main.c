@@ -38,7 +38,7 @@
 int main(void) {
 
     // Set baud and clear FIFO buffer
-    uart_init(1152000);
+    uart_init(576000);
     uart_clear();
 
     // Initialize lcd, IRQ and RGB
@@ -79,9 +79,20 @@ int main(void) {
     {1,0,1,0,1,0,1,1,1,1,0,1,0,0,1,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,1,0,0,1,0,0,0,0,0,1,1,1,1,0,0,1,1,0,0,1,1,1,0},
     };
 
+    // Variables that shouldn't be looped at all
     int stage;
+    int stagevictory = 0;
+    int highscore1 = 0;
+    int highscore2 = 0;
+    int highscore3 = 0;
+    char high1[6] = "";
+    char high2[6] = "";
+    char high3[6] = "";
 
     while(1) {
+
+        // Wipe the screen
+        printf("%c[2J",ESC);
 
         // Default settings
         int bullets = 20;
@@ -96,22 +107,31 @@ int main(void) {
         int nuke = 1;
         int dead = 0;
         int exitgame = 0;
-        int stagevictory = 0;
 
         // Projectile variables
         int pnum = 0;
         int apnum= 0;
 
-        if (stagevictory == 0) {
-        // Draw main menu
-        menu_main_draw(buffer);
+        // Set the high scores so they can be read
+        sprintf(high1,"%04d", highscore1);
+        sprintf(high2,"%04d", highscore2);
+        sprintf(high3,"%04d", highscore3);
 
-        // Set stage level
-        stage = menu(buffer,input,menuonlcd);
+        if (stagevictory == 0) {
+            // Draw main menu
+            menu_main_draw(buffer);
+
+            // Set stage level
+            stage = menu(buffer,input,menuonlcd, high1, high2, high3);
         }
 
+        stagevictory = 0;
+
         // Create score counter
-        char scores[100] = "";
+        char scores[6] = "";
+        // Create stage counter
+        char stg[1] = "";
+
 
         // Create necessary structures
         struct angle shipangle = { 1,0 };
@@ -204,7 +224,7 @@ int main(void) {
                 // Shoot missiles with space
                 if (check_char(input," ") == 0) {
                     if (nuke > 0 && bomb->alive == 0) {
-                        bomb_spawn(bomb,&playership,&shipangle);
+                        bomb_spawn(bomb,&playership,&shipangle,angle);
                         nuke--;
                     }
                     else if (bomb->alive == 1) {
@@ -240,27 +260,28 @@ int main(void) {
                 // Read Joystick input
                 int joyval = readIO();
 
+                // Everything that should be called every 5/100th second
                 if (hs % 5 == 0) {
                     if ((joyval > 0) & (bullets > 0)) {
                         // Pressed down
                         if (joyval == 32) {
-                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,0);
+                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,0,angle);
                         }
                         // Down
                         else if (joyval == 1) {
-                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,2);
+                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,2,angle);
                         }
                         // Left
                         else if (joyval == 2) {
-                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,3);
+                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,3,angle);
                         }
                         // Right
                         else if (joyval == 3) {
-                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,1);
+                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,1,angle);
                         }
                         // Up
                         else if (joyval == 16) {
-                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,4);
+                            projectile_spawn(&playership,playerprojectile,&shipangle,pnum,4,angle);
                         }
                         bullets--;
                         pnum++;
@@ -268,97 +289,117 @@ int main(void) {
                             pnum = 0;
                     }
                     // Check for projectile collision
-                    score += bullet_alien_collision(playerprojectile,alien);
-                    bullet_player_collision(alienprojectile,&playership);
+                    score += bullet_alien_collision(playerprojectile,alien)*10;
+                    bullet_player_collision(alienprojectile,&playership,angle);
 
-                }
-
-
-                if (hs % 20 == 0) {
-                        int i = 0;
-                        for (i = 0; i < 4; i++) {
-                            if ((alien+i)->x <= 20) {
-                                alien_despawn(alien,i);
-                                (alien+i)->alive = 0;
-                                (alien+i)->animation = 15;
-                                alien_clear(alien);
-                            }
-                        }
-                    }
-
-                if (hs % 5 == 0) {
-                    int i = 0;
-                    for (i = 0; i < 4; i++) {
-                        if ((alien+i)->animation > 0) {
-                            alien_animation(alien,i);
-                        }
-                    }
-                }
-                if (hs % 5 == 0) {
                     // Check for player collision
-                    player_alien_collision(alien, &playership);
+                    player_alien_collision(alien, &playership,angle);
                     player_stage_collision(&playership, angle, 1, 1, 400, 225);
                     nuke += player_pickup_collision(&playership, bomb);
-                    asteroid_collision(&playership,playerprojectile,alienprojectile,alien,planet,bomb);
+
+                    // Ensure you can't have more than 1 nuke at a time
                     if (nuke > 1) {
                         nuke = 1;
                     }
-                }
 
-                if (hs < 2000) {
-                if (hs % 10 == 0) {
-                alien_clear(alien);
-                alien_pos(alien,playerprojectile);
-                alien_draw(alien);
-                }
-                }
-                else if (hs >= 2000) {
-                if (hs % 5 == 0) {
-                alien_clear(alien);
-                alien_pos(alien,playerprojectile);
-                alien_draw(alien);
-                }
-                }
-
-                if (hs % 200 == 0) {
-                    int i = 0;
-                    for (i = 0; i < 10; i++) {
-                        if ((alien+i)->alive == 1) {
-                            alienprojectile_spawn(alien+i,&playership, alienprojectile,apnum);
-                            apnum++;
-                            if (apnum == 20)
-                                apnum = 0;
-                        }
+                    // Ensure that you can't have less than 0 hp
+                    if (playership.hp < 0) {
+                        playership.hp = 0;
                     }
-                    score = score + 5;
-                }
 
-                // Projectile movement
-                if (hs % 5 == 0) {
+                    // Check for asteroid collision
+                    asteroid_collision(&playership,playerprojectile,alienprojectile,alien,planet,bomb);
+
+                    // Destroy the projectiles if they exit the game area
                     int i = 0;
                     for (i = 0; i < 20; i++) {
-                        if (((playerprojectile+i)->x >= 399) || ((playerprojectile+i)->x <= 10) || ((playerprojectile+i)->y >= 224) || ((playerprojectile+i)->y <=10))
+                        if (((playerprojectile+i)->x >= 380) || ((playerprojectile+i)->x <= 20) || ((playerprojectile+i)->y >= 205) || ((playerprojectile+i)->y <=20)) {
                             projectile_despawn(playerprojectile,i);
+                        }
                         projectile_clear(playerprojectile,i);
                         projectile_pos(playerprojectile,planet,&shipangle,i);
                         projectile_draw(playerprojectile,i);
                     }
                     i = 0;
                     for (i = 0; i < 10; i++) {
-                        if (((alienprojectile+i)->x >= 399) || ((alienprojectile+i)->x <= 10) || ((alienprojectile+i)->y >= 224) || ((alienprojectile+i)->y <=10))
-                        alienprojectile_despawn(alienprojectile,i);
+                        if (((alienprojectile+i)->x >= 380) || ((alienprojectile+i)->x <= 20) || ((alienprojectile+i)->y >= 205) || ((alienprojectile+i)->y <=20)) {
+                            alienprojectile_despawn(alienprojectile,i);
+                        }
                     alienprojectile_clear(alienprojectile,i);
                     alienprojectile_pos(alienprojectile,i);
                     alienprojectile_draw(alienprojectile,i);
                     }
+                    if (((bomb)->x >= 380) || ((bomb)->x <= 20) || ((bomb)->y >= 205) || ((bomb)->y <=20)) {
+                        bomb_despawn(bomb);
+                    }
+
+                    // Death animation for aliens
+                    i = 0;
+                    for (i = 0; i < 10; i++) {
+                        if ((alien+i)->animation > 0) {
+                            alien_animation(alien,i);
+                        }
+                    }
+
+                    // Destroy the aliens if they exit the game area
+                    i = 0;
+                    for (i = 0; i < 10; i++) {
+                        if ((alien+i)->x <= 20) {
+                            alien_despawn(alien,i);
+                            (alien+i)->alive = 0;
+                            (alien+i)->animation = 15;
+                            alien_clear(alien);
+                            score += 10;
+                        }
+                    }
                 }
 
-                if (playership.hp < 0) {
-                    playership.hp = 0;
+                // Everything that should be called every 2nd second
+                if (hs % 200 == 0) {
+                    int i = 0;
+                    for (i = 0; i < 10; i++) {
+                        if ((alien+i)->alive == 1) {
+                            alienprojectile_spawn(alien+i,&playership, alienprojectile,apnum);
+                            apnum++;
+                            if (apnum == 20) {
+                                apnum = 0;
+                            }
+                        }
+                    }
+                    score = score + 5;
                 }
 
-                if (playership.hp == 0) {
-                    dead = 1;
+                // Gradual speed increase in the aliens movement
+                if (hs < 2000) {
+                    if (hs % 20 == 0) {
+                        alien_clear(alien);
+                        alien_pos(alien,playerprojectile);
+                        alien_draw(alien);
+                    }
+                }
+                else if (hs >= 2000 && hs < 4000) {
+                    if (hs % 15 == 0) {
+                        alien_clear(alien);
+                        alien_pos(alien,playerprojectile);
+                        alien_draw(alien);
+                    }
+                }
+                else if (hs >= 4000 && hs < 6000) {
+                    if (hs % 10 == 0) {
+                        alien_clear(alien);
+                        alien_pos(alien,playerprojectile);
+                        alien_draw(alien);
+                    }
+                }
+                else if (hs >= 6000 && hs < 9000) {
+                    if (hs % 5 == 0) {
+                        alien_clear(alien);
+                        alien_pos(alien,playerprojectile);
+                        alien_draw(alien);
+                    }
+                }
+                else if (hs >= 9000) {
+                    stagevictory = 1;
                 }
 
                 // Spawn a nuke in the interval of every 40-50 seconds
@@ -366,14 +407,13 @@ int main(void) {
                     bomb_create(bomb);
                 }
 
+                // LCD
                 if (nuke == 1) {
                     lcd_draw_nuke(buffer,1,4);
                 }
                 if (nuke == 0) {
                     memset(buffer,0x00,512);
                 }
-
-                char stg[1];
 
                 sprintf(scores,"%04d", score);
                 sprintf(stg," %d",stage);
@@ -386,26 +426,32 @@ int main(void) {
                 lcd_draw_bullets(bullets,buffer,1,3);
 
                 if (bullets == 0) {
-                        lcd_write_string("RELOAD",buffer,85,3);
+                    lcd_write_string("RELOAD",buffer,85,3);
                 }
                 if (bullets > 0) {
-                        lcd_write_string("      ",buffer,85,3);
+                    lcd_write_string("      ",buffer,85,3);
                 }
-
-                ship_health(&playership);
 
                 // Draw to the LCD
                 lcd_push_buffer(buffer);
 
+                // Set the RGB to the Ships health
                 ship_health(&playership);
+
+                // Check to see if the player is dead
+                if (playership.hp == 0) {
+                    dead = 1;
+                }
 
                 flag2_update();
             }
+
             // Boss key
             if (check_char(input, "b") == 0 || check_char(input, "B") == 0) {
                 NVIC_DisableIRQ(TIM2_IRQn);
                 printf("%c[2J",ESC);
                 draw_matrix(3,3,41,6,excelexe,1);
+                memset(buffer,0x00,512);
                 RGB_set(0);
                 while(1) {
                     input[0] = uart_get_char();
@@ -417,19 +463,20 @@ int main(void) {
                 }
                 stage_init(stage,&playership,angle,planet);
             }
+
             // Pause key
             if (check_char(input, "p") == 0 || check_char(input, "P") == 0) {
                 NVIC_DisableIRQ(TIM2_IRQn);
                 printf("%c[2J",ESC);
                 draw_matrix(3,3,53,6,menuonlcd,1);
-                menu_pause_draw(buffer);
+                menu_pause_draw(buffer,scores);
                 while(1) {
                     input[0] = uart_get_char();
                     if (check_char(input,"p") == 0 || check_char(input, "P") == 0) {
                         printf("%c[2J",ESC);
                         memset(buffer,0x00,512);
-                        NVIC_EnableIRQ(TIM2_IRQn);
                         stage_init(stage,&playership,angle,planet);
+                        NVIC_EnableIRQ(TIM2_IRQn);
                         break;
                     }
                     else if (check_char(input,"e") == 0 || check_char(input,"E") == 0) {
@@ -440,11 +487,26 @@ int main(void) {
                                 exitgame = 1;
                                 printf("%c[2J",ESC);
                                 memset(buffer,0x00,512);
+                                if (stage == 1) {
+                                    if (score >= highscore1) {
+                                        highscore1 = score;
+                                    }
+                                }
+                                else if (stage == 2) {
+                                    if (score >= highscore2) {
+                                        highscore2 = score;
+                                    }
+                                }
+                                else if (stage == 3) {
+                                    if (score >= highscore3) {
+                                        highscore3 = score;
+                                    }
+                                }
                                 NVIC_EnableIRQ(TIM2_IRQn);
                                 break;
                             }
                             else if (check_char(input,"2") == 0) {
-                                menu_pause_draw(buffer);
+                                menu_pause_draw(buffer,scores);
                                 break;
                             }
                         }
@@ -454,61 +516,83 @@ int main(void) {
                     }
                 }
             }
+
             // Death screen
             if (dead == 1) {
                 NVIC_DisableIRQ(TIM2_IRQn);
                 printf("%c[2J",ESC);
                 draw_matrix(3,3,53,6,menuonlcd,1);
-                menu_dead_draw(buffer);
+                menu_dead_draw(buffer,scores);
+                if (stage == 1) {
+                    if (score >= highscore1) {
+                        highscore1 = score;
+                    }
+                }
+                else if (stage == 2) {
+                    if (score >= highscore2) {
+                        highscore2 = score;
+                    }
+                }
+                else if (stage == 3) {
+                    if (score >= highscore3) {
+                        highscore3 = score;
+                    }
+                }
                 while(1) {
                     input[0] = uart_get_char();
                     if (check_char(input," ") == 0) {
-                        NVIC_EnableIRQ(TIM2_IRQn);
                         exitgame = 1;
+                        NVIC_EnableIRQ(TIM2_IRQn);
                         break;
                     }
                 }
             }
+
             // Stage victory
             if (stagevictory == 1) {
-                 NVIC_DisableIRQ(TIM2_IRQn);
+                NVIC_DisableIRQ(TIM2_IRQn);
                 printf("%c[2J",ESC);
                 draw_matrix(3,3,53,6,menuonlcd,1);
-                /*
-                menu_victory_draw(buffer,score);
-                */
+                if (stage == 1) {
+                    menu_victory_draw(buffer,scores,stg);
+                    if (score >= highscore1) {
+                        highscore1 = score;
+                    }
+                }
+                else if (stage == 2) {
+                    menu_victory_draw(buffer,scores,stg);
+                    if (score >= highscore2) {
+                        highscore2 = score;
+                    }
+                }
+                else if (stage == 3) {
+                    menu_gamevictory_draw(buffer,scores);
+                    if (score >= highscore3) {
+                        highscore3 = score;
+                    }
+                    stagevictory = 0;
+                }
+                stage += 1;
                 while(1) {
                     input[0] = uart_get_char();
-                    if (check_char(input," ") == 0) {
-                        NVIC_EnableIRQ(TIM2_IRQn);
-                        stage += 1;
-                        stagevictory = 1;
+                    if (check_char(input,"1") == 0) {
                         exitgame = 1;
+                        NVIC_EnableIRQ(TIM2_IRQn);
+                        break;
+                    }
+                    else if (check_char(input,"0") == 0 || (stage == 4 && check_char(input," ") == 0)) {
+                        exitgame = 1;
+                        stagevictory = 0;
+                        NVIC_EnableIRQ(TIM2_IRQn);
                         break;
                     }
                 }
             }
+
+            // Checks if the stage should be exited
             if (exitgame == 1) {
                 break;
             }
         }
     }
 }
-/*
-// Test timer
-    char hundsec[50];
-    int hs = get_hs();
-    sprintf(hundsec,"%02d", hs);
-    char second[50];
-    int sec = get_s();
-    sprintf(second, "%02d", sec);
-    char minute[50];
-    int minu = get_m();
-    sprintf(minute, "%02d", minu);
-    int a = 36;
-    lcd_write_string(minute,buffer,1+a,4);
-    lcd_write_string(":",buffer,12+a,4);
-    lcd_write_string(second,buffer,16+a,4);
-    lcd_write_string(".",buffer,27+a,4);
-    lcd_write_string(hundsec,buffer,31+a,4);
-*/

@@ -6,8 +6,8 @@
 #define _COLLISION_H_
 
 int bullet_alien_collision(struct projectile *p, struct alien *a);
-void bullet_player_collision(struct alienprojectile *ap, struct spaceship *s);
-void player_alien_collision(struct alien *a, struct spaceship *s);
+void bullet_player_collision(struct alienprojectile *ap, struct spaceship *s, int angle);
+void player_alien_collision(struct alien *a, struct spaceship *s, int angle);
 void player_stage_collision(struct spaceship *s, int angle, int leftx, int topy, int rightx, int bottomy);
 void asteroid_collision(struct spaceship *s, struct projectile *p, struct alienprojectile *ap, struct alien *a,struct planet *pla, struct bomb *b);
 int player_pickup_collision(struct spaceship *s, struct bomb *b);

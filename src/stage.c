@@ -24,8 +24,8 @@ void stage_init(int stage, struct spaceship *s, int angle, struct planet *p) {
     else if (stage == 3) {
     planet_init(p, 387, 30, 0);
     planet_init(p, 355, 70, 1);
-    planet_init(p, 76, 30, 0);
-    planet_init(p, 200, 70, 1);
+    planet_init(p, 76, 30, 2);
+    planet_init(p, 200, 70, 3);
     }
 
     ship_draw(s,angle);
@@ -43,16 +43,12 @@ void stage_waves(int stage, struct alien *a, int time, int randwavetime) {
             alien_spawn(a,380,50,1);
             alien_spawn(a,380,150,2);
         }
-        if (time == (2600 + randwavetime)) {
+        if (time == (3000 + randwavetime)) {
             alien_spawn(a,380,30,3);
             alien_spawn(a,380,170,4);
         }
-        if (time == (3000 + randwavetime)) {
-            alien_spawn(a,380,60,0);
-            alien_spawn(a,380,140,1);
-        }
         if (time == (3400 + randwavetime)) {
-            alien_spawn(a,380,100,2);
+            alien_spawn(a,380,100,5);
         }
     }
 

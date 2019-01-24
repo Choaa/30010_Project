@@ -1,5 +1,6 @@
 #include "projectile.h"
 #include "ansi.h"
+#include "ship.h"
 #include "alien.h"
 #include "alienprojectile.h"
 #include "maths.h"
@@ -27,37 +28,133 @@ void projectile_init(struct projectile *p) {
     }
 }
 
-void projectile_spawn(struct spaceship *s, struct projectile *p, struct angle *v, int n, int dir) {
+void projectile_spawn(struct spaceship *s, struct projectile *p, struct angle *v, int n, int dir, int angle) {
     if (n >= 20)
         return;
 
     if (dir == 0) {
-        (p+n)->x = s->x+10;
-        (p+n)->y = s->y;
+        int num = angle / 15;
+        if (num == 24) {
+            (p+n)->x = s->x + 5;
+            (p+n)->y = s->y;
+        }
+        if (num == 1) {
+            (p+n)->x = s->x + 5;
+            (p+n)->y = s->y + 1;
+        }
+        if (num == 2) {
+            (p+n)->x = s->x + 4;
+            (p+n)->y = s->y + 3;
+        }
+        if (num == 3) {
+            (p+n)->x = s->x + 4;
+            (p+n)->y = s->y + 4;
+        }
+        if (num == 4) {
+            (p+n)->x = s->x + 3;
+            (p+n)->y = s->y + 4;
+        }
+        if (num == 5) {
+            (p+n)->x = s->x + 1;
+            (p+n)->y = s->y + 5;
+        }
+        if (num == 6) {
+            (p+n)->x = s->x;
+            (p+n)->y = s->y + 5;
+        }
+        if (num == 7) {
+            (p+n)->x = s->x - 1;
+            (p+n)->y = s->y + 5;
+        }
+        if (num == 8) {
+            (p+n)->x = s->x - 3;
+            (p+n)->y = s->y + 4;
+        }
+        if (num == 9) {
+            (p+n)->x = s->x - 4;
+            (p+n)->y = s->y + 4;
+        }
+        if (num == 10) {
+            (p+n)->x = s->x - 4;
+            (p+n)->y = s->y + 3;
+        }
+        if (num == 11) {
+            (p+n)->x = s->x - 5;
+            (p+n)->y = s->y + 1;
+        }
+        if (num == 12) {
+            (p+n)->x = s->x - 5;
+            (p+n)->y = s->y;
+        }
+        if (num == 13) {
+            (p+n)->x = s->x - 5;
+            (p+n)->y = s->y - 1;
+        }
+        if (num == 14) {
+            (p+n)->x = s->x - 4;
+            (p+n)->y = s->y - 3;
+        }
+        if (num == 15) {
+            (p+n)->x = s->x - 4;
+            (p+n)->y = s->y - 4;
+        }
+        if (num == 16) {
+            (p+n)->x = s->x - 3;
+            (p+n)->y = s->y - 4;
+        }
+        if (num == 17) {
+            (p+n)->x = s->x - 1;
+            (p+n)->y = s->y - 5;
+        }
+        if (num == 18) {
+            (p+n)->x = s->x;
+            (p+n)->y = s->y - 5;
+        }
+        if (num == 19) {
+            (p+n)->x = s->x + 1;
+            (p+n)->y = s->y - 5;
+        }
+        if (num == 20) {
+            (p+n)->x = s->x + 3;
+            (p+n)->y = s->y - 4;
+        }
+        if (num == 21) {
+            (p+n)->x = s->x + 4;
+            (p+n)->y = s->y - 4;
+        }
+        if (num == 22) {
+            (p+n)->x = s->x + 4;
+            (p+n)->y = s->y - 3;
+        }
+        if (num == 23) {
+            (p+n)->x = s->x + 5;
+            (p+n)->y = s->y - 1;
+        }
+
         (p+n)->vx = (v->x*8 >> 14)*2;
         (p+n)->vy = (v->y*8 >> 14);
     }
     else if (dir == 1) {
-        (p+n)->x = s->x+10;
+        (p+n)->x = s->x+8;
         (p+n)->y = s->y;
         (p+n)->vx = 16;
         (p+n)->vy = 0;
     }
     else if (dir == 2) {
         (p+n)->x = s->x;
-        (p+n)->y = s->y+10;
+        (p+n)->y = s->y+8;
         (p+n)->vx = 0;
         (p+n)->vy = 8;
     }
     else if (dir == 3) {
-        (p+n)->x = s->x-10;
+        (p+n)->x = s->x-8;
         (p+n)->y = s->y;
         (p+n)->vx = -16;
         (p+n)->vy = 0;
     }
     else if (dir == 4) {
         (p+n)->x = s->x;
-        (p+n)->y = s->y-10;
+        (p+n)->y = s->y-8;
         (p+n)->vx = 0;
         (p+n)->vy = -8;
     }
@@ -65,6 +162,7 @@ void projectile_spawn(struct spaceship *s, struct projectile *p, struct angle *v
     (p+n)->ay = 0;
     (p+n)->alive = 1;
     (p+n)->dir = dir;
+    projectile_draw(p,n);
 }
 
 void projectile_pos(struct projectile *p, struct planet *c, struct angle *v, int n) {
@@ -169,12 +267,111 @@ void bomb_init(struct bomb *b) {
     b->vx = 0;
     b->vy = 0;
     b->alive = 0;
+    (b+1)->x = 2;
+    (b+1)->y = 2;
+    (b+1)->alive = 0;
 }
 
-void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v) {
-    b->x = s->x+10;
-    b->y = s->y;
-    b->vx = (v->x*8 >> 14)*2;
+void bomb_spawn(struct bomb *b, struct spaceship *s, struct angle *v, int angle) {
+    int num = angle / 15;
+    if (num == 24) {
+        b->x = s->x + 8;
+        b->y = s->y;
+    }
+    if (num == 1) {
+        b->x = s->x + 8;
+        b->y = s->y + 4;
+    }
+    if (num == 2) {
+        b->x = s->x + 7;
+        b->y = s->y + 6;
+    }
+    if (num == 3) {
+        b->x = s->x + 7;
+        b->y = s->y + 7;
+    }
+    if (num == 4) {
+        b->x = s->x + 6;
+        b->y = s->y + 7;
+    }
+    if (num == 5) {
+        b->x = s->x + 4;
+        b->y = s->y + 8;
+    }
+    if (num == 6) {
+        b->x = s->x;
+        b->y = s->y + 8;
+    }
+    if (num == 7) {
+        b->x = s->x - 4;
+        b->y = s->y + 8;
+    }
+    if (num == 8) {
+        b->x = s->x - 6;
+        b->y = s->y + 7;
+    }
+    if (num == 9) {
+        b->x = s->x - 7;
+        b->y = s->y + 7;
+    }
+    if (num == 10) {
+        b->x = s->x - 7;
+        b->y = s->y + 6;
+    }
+    if (num == 11) {
+        b->x = s->x - 8;
+        b->y = s->y + 4;
+    }
+    if (num == 12) {
+        b->x = s->x - 8;
+        b->y = s->y;
+    }
+    if (num == 13) {
+        b->x = s->x - 8;
+        b->y = s->y - 4;
+    }
+    if (num == 14) {
+        b->x = s->x - 7;
+        b->y = s->y - 6;
+    }
+    if (num == 15) {
+        b->x = s->x - 7;
+        b->y = s->y - 7;
+    }
+    if (num == 16) {
+        b->x = s->x - 6;
+        b->y = s->y - 7;
+    }
+    if (num == 17) {
+        b->x = s->x - 4;
+        b->y = s->y - 8;
+    }
+    if (num == 18) {
+        b->x = s->x;
+        b->y = s->y - 8;
+    }
+    if (num == 19) {
+        b->x = s->x + 4;
+        b->y = s->y - 8;
+    }
+    if (num == 20) {
+        b->x = s->x + 6;
+        b->y = s->y - 7;
+    }
+    if (num == 21) {
+        b->x = s->x + 7;
+        b->y = s->y - 7;
+    }
+    if (num == 22) {
+        b->x = s->x + 7;
+        b->y = s->y - 6;
+    }
+    if (num == 23) {
+        b->x = s->x + 8;
+        b->y = s->y - 4;
+    }
+
+    b->vx = (v->x*8 >> 14);
     b->vy = (v->y*8 >> 14);
     b->alive = 1;
     bomb_draw(b);
