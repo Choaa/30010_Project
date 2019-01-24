@@ -12,4 +12,4 @@ obj\debug\src\collision.o: src\collision.c inc/stm32f30x_conf.h \
  SPL\inc/stm32f30x_tim.h SPL\inc/stm32f30x_usart.h \
  SPL\inc/stm32f30x_wwdg.h SPL\inc/stm32f30x_misc.h inc/collision.h \
  inc/struct.h inc/alien.h inc/alienprojectile.h inc/projectile.h \
- inc/ship.h
+ inc/ship.h inc/objects.h

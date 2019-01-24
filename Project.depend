@@ -237,7 +237,7 @@
 1547217108 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\system_stm32f30x.c
 	"stm32f30x.h"
 
-1548322116 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
+1548322738 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\main.c
 	"stm32f30x_conf.h"
 	"30010_io.h"
 	"ansi.h"
@@ -360,18 +360,19 @@
 	"equations.h"
 	"draw.h"
 
-1548321907 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\collision.h
+1548322729 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\collision.h
 	"stm32f30x_conf.h"
 	"struct.h"
 	<stdio.h>
 
-1548321872 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\collision.c
+1548323010 source:c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\src\collision.c
 	"stm32f30x_conf.h"
 	"collision.h"
 	"alien.h"
 	"alienprojectile.h"
 	"projectile.h"
 	"ship.h"
+	"objects.h"
 	<string.h>
 
 1548260268 c:\users\mathi\documents\dtu\30010 programmeringsprojekt\project\inc\monsterprojectile.h

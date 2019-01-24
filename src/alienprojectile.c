@@ -40,15 +40,15 @@ void alienprojectile_pos(struct alienprojectile *ap, int n) {
 void alienprojectile_draw(struct alienprojectile *ap, int n) {
     if  ((ap+n)->alive == 1) {
         printf("%c[%d;%dH",ESC,(ap+n)->y-1,(ap+n)->x);
-        fgcolor(1);
+        fgcolor(11);
         printf("%c",223);
         fgcolor(15);
         printf("%c[%d;%dH",ESC,(ap+n)->y,(ap+n)->x-1);
-        fgcolor(1);
+        fgcolor(11);
         printf("%c%c%c",223,223,223);
         fgcolor(15);
         printf("%c[%d;%dH",ESC,(ap+n)->y+1,(ap+n)->x);
-        fgcolor(1);
+        fgcolor(11);
         printf("%c",223);
         fgcolor(15);
         printf("%c[H",ESC);

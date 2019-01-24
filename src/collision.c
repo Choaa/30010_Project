@@ -4,18 +4,20 @@
 #include "alienprojectile.h"
 #include "projectile.h"
 #include "ship.h"
+#include "objects.h"
 #include <string.h>
 
-#define ALIENLENGTH 8
-#define ALIENHEIGHT 6
+#define ALIENLENGTH 20
+#define ALIENHEIGHT 20
 #define PLAYERLENGTH 8
 #define PLAYERRHEIGHT 8
 #define NUKEDIAMETER 8
-#define PLANETDIAMETER 12
+#define PLANETDIAMETER 14
 
 int bullet_alien_collision(struct projectile *p, struct alien *a) {
     int i = 0;
     int j = 0;
+    int check = 0;
     for (i = 0; i < 20; i++) {
         if ((p+i)->alive == 1) {
             for (j = 0; j < 10 ; j++) {
@@ -23,13 +25,14 @@ int bullet_alien_collision(struct projectile *p, struct alien *a) {
                     projectile_despawn(p,i);
                     alien_despawn(a,j);
                     alien_animation(a,j);
+                    check = 1;
                     return 10;
                 }
             }
         }
-        else {
-            return 0;
-        }
+    }
+    if (check == 0) {
+        return 0;
     }
 }
 
@@ -93,7 +96,7 @@ int player_pickup_collision(struct spaceship *s, struct bomb *b) {
     }
 }
 
-void asteroid_collision(struct spaceship *s, struct projectile *p, struct alienprojectile *ap, struct planet *pla, struct bomb *b) {
+void asteroid_collision(struct spaceship *s, struct projectile *p, struct alienprojectile *ap, struct alien *a, struct planet *pla, struct bomb *b) {
     int i = 0;
     for (i = 0; i < 10; i++) {
         if ((pla+i)->active == 1) {
@@ -104,7 +107,10 @@ void asteroid_collision(struct spaceship *s, struct projectile *p, struct alienp
                     planet_draw(pla);
                 }
                 if ((ap+j)->alive == 1 && (ap+j)->x >= (pla+i)->x - PLANETDIAMETER/2 && (ap+j)->x <= (pla+i)->x + PLANETDIAMETER/2 && (ap+j)->y >= (pla+i)->y - PLANETDIAMETER/2 && (ap+j)->y <= (pla+i)->y + PLANETDIAMETER/2) {
-                    alienprojectile_despawn(p,j);
+                    alienprojectile_despawn(ap,j);
+                    planet_draw(pla);
+                }
+                if ((a+j)->alive == 1 && (a+j)->x >= (pla+i)->x - PLANETDIAMETER/2 && (a+j)->x <= (pla+i)->x + PLANETDIAMETER/2 && (a+j)->y >= (pla+i)->y - PLANETDIAMETER/2 && (a+j)->y <= (pla+i)->y + PLANETDIAMETER/2) {
                     planet_draw(pla);
                 }
             }

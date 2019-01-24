@@ -38,7 +38,7 @@
 int main(void) {
 
     // Set baud and clear FIFO buffer
-    uart_init(1958400);
+    uart_init(1152000);
     uart_clear();
 
     // Initialize lcd, IRQ and RGB
@@ -299,7 +299,7 @@ int main(void) {
                     player_alien_collision(alien, &playership);
                     player_stage_collision(&playership, angle, 1, 1, 400, 225);
                     nuke += player_pickup_collision(&playership, bomb);
-                    asteroid_collision(&playership,playerprojectile,alienprojectile,planet,bomb);
+                    asteroid_collision(&playership,playerprojectile,alienprojectile,alien,planet,bomb);
                     if (nuke > 1) {
                         nuke = 1;
                     }
